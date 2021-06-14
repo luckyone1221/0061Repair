@@ -1,0 +1,33 @@
+mixin sAny(data)
+	// start sAny
+	+b.SECTION.sAny.section#sAny&attributes(attributes)
+		.container
+			+b.section-title--lined
+				h2 Дизайн-проекты любых помещений:
+			+e.row.row
+				+sAnyItem(1, 'Дизайн-проекты квартир')
+					li Дизайн квартиры-студии
+					li Дизайн однокомнатной квартыры
+					li Дизайн двухкомнатной квартыры
+					li Дизайн трехкомнатной квартыры
+				+sAnyItem(2, 'Дизайн-проекты коммерческой недвижимости')
+					li Дизайн-проекты офисов
+					li Дизайн-проекты ресторанов
+					li Дизайн-проекты кафе
+				+sAnyItem(3, 'Дизайн-проекты загородных домов')
+					li Дизайн-проекты коттеджей
+					li Ландшафтрый дизайн
+	// end sAny
+
+mixin sAnyItem(imgNum, title)
+	.col-md-4
+		+e.item(href='#')
+			+e.box
+				+e.img
+					img(loading="lazy" src=`img/@2x/sAny-${imgNum}.jpg` alt="")
+				+e.title=title
+				+e.UL.list
+					block
+			+e.btn-cont.text-center.d-block
+				.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button")
+					span Оставить заявку

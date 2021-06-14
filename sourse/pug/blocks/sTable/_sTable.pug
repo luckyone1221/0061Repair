@@ -1,0 +1,78 @@
+mixin sTable(data)
+	// start sTable
+	+b.SECTION.sTable.section#sTable&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Состав дизайн-проекта:
+			+e.table
+				+e.tr--head.row
+					+e.key-col.col-auto.d-none.d-md-block
+						+e.bold Состав работ:
+					+e.val-col.col.d-block
+						+e.bold Планировка
+						+e.sm от 820 руб. за м2
+					+e.val-col.col.d-block
+						+e.bold Полный проект
+						+e.sm от 1 350 руб. за м2
+					+e.val-col.col.d-block
+						+e.bold VR-дизайн
+						+e.sm от 500 руб. за м2
+				//true 4
+				+sTableTR('Выезд дизайнера на объект + консультация')
+				+sTableTR('Титульный лист')
+				+sTableTR('Состав работ')
+				+sTableTR('Обмерный план помещений')
+				//-
+				+sTableTR('Планировочное решение', 'до 3 вариантов', 'до 5 вариантов', 'до 5 вариантов')
+				//- true 6
+				+sTableTR('План демонтируемых перегородок и конструкций')
+				+sTableTR('План возводимых перегородок и конструкций')
+				+sTableTR('План расстановки мебели')
+				+sTableTR('План сантехнического оборудования')
+				+sTableTR('План раскладки напольных покрытий')
+				+sTableTR('План теплых полов')
+				//-
+				+sTableTR('План напольных покрытий', 'схематично', 'с указание материала', 'с указание материала')
+				//true 3
+				+sTableTR('План дверей и проемов с указанием направления открывания полотен')
+				+sTableTR('План потолков')
+				+sTableTR('План размещения электротехнического оборудования с указанием силового щита')
+				//-
+				+sTableTR('План осветительного оборудования с привязками', 'схематично', 'с указание материала', 'с указание материала')
+				//-ftt 6
+				+sTableTR('План размещения радиаторов и конвекторов', false, true, true)
+				+sTableTR('План схема монтажа плинтусов', false, true, true)
+				+sTableTR('План потолков с указанием размеров, привязок и высотных отметок', false, true, true)
+				+sTableTR('План схема карнизов и молдингов', false, true, true)
+				+sTableTR('Раскладка плитки полов, стен и фартука на кухне', false, true, true)
+				+sTableTR('Развертки стен основных помещений', false, true, true)
+				//-
+				+sTableTR('Разрезы и узлы сложных элементов', false, 'доп.', true)
+				+sTableTR('Чертежи нестандартных узлов и элементов', false, 'доп.', true)
+				//-
+				+sTableTR('Ведомость отделочных материалов', false, true, true)
+				+sTableTR('Подбор мебели и поставщиков материалов (плитка, двери, сантехоборудования...)', false, true, true)
+				+sTableTR('Коллажи (подобранные в единую иллюстрацию элементы будущего интерьера)', false, true, true)
+				+sTableTR('Фотореалистичная визуализация интерьера', false, false, true)
+				+sTableTR('Просчет проектной сметы по работам', false, true, true)
+	// end sTable
+
+mixin sTableTR(key, val1=true, val2=true, val3=true)
+	+e.tr.row
+		+e.key-col.col-md-auto=key
+		+e.val-col.col
+			+sTableVal(val1)
+		+e.val-col.col
+			+sTableVal(val2)
+		+e.val-col.col
+			+sTableVal(val3)
+
+mixin sTableVal(val)
+	if val === true
+		+e.icon
+			img(loading="lazy" src="img/svg/check-circle.svg" alt="")
+	else if val === false
+		+e.icon
+			img(loading="lazy" src="img/svg/cross-circle.svg" alt="")
+	else
+		+e.txt=val

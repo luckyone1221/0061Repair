@@ -386,7 +386,30 @@ function eventHandler() {
 		step: 1 //postfix: " ❤",
 		//prefix: "+",
 
-	}); //end luckyone js
+	});
+	$('.sCalculation-open-btn-js').click(function () {
+		$(this).toggleClass('active').closest('.sCalculation-item-js').find('.sCalculation-list-js').toggleClass('active');
+	}); //.sData-slider-js
+
+	let sDataSliderBoxes = document.querySelectorAll('.sData-slider-box-js');
+
+	for (let sliderBox of sDataSliderBoxes) {
+		let sDataSlider = new Swiper(sliderBox.querySelector('.sData-slider-js'), {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+			lazy: {
+				loadPrevNext: true
+			},
+			loop: true,
+			navigation: {
+				nextEl: sliderBox.querySelector('.swiper-button-next'),
+				prevEl: sliderBox.querySelector('.swiper-button-prev')
+			}
+		});
+	} //end luckyone js
+
 }
 
 ;

@@ -1,0 +1,89 @@
+// start .sAny
+.sAny {
+
+	&__row{
+		--bs-gutter-y: #{rem(30)};
+
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(30)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(38)};
+		}
+	}
+	&__item{
+		display: block;
+		color: $body-color;
+		&:hover{
+			color: $white;
+			--box-bor-col:#{$primary};
+			--box-bg:#{$primary};
+			--bot-btn-bg: #{$primary};
+			--li-dot-bg: #{$body-color};
+		}
+	}
+	&__box{
+		display: block;
+
+		border-radius: rem(5);
+		border: 2px solid var(--box-bor-col, #{$body-color});
+		background-color: var(--box-bg, transparent);
+
+		padding: rem(20) rem(25) rem(30);
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (151/283) * 100%;
+		border-radius: rem(5);
+		margin-bottom: rem(35);
+	}
+	&__title{
+		display: block;
+		font-size: rem(21);
+		margin-bottom: rem(20);
+		font-weight: 700;
+		color: $body-color;
+	}
+	&__list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li{
+			display: flex;
+			align-items: center;
+
+			&:before{
+				content: '';
+				flex-shrink: 0;
+				width: 6px;
+				height: 6px;
+				background-color: var(--li-dot-bg, #{$primary});
+				border-radius: 50%;
+				margin-right: rem(10);
+			}
+
+			font-size: rem(17);
+			margin-bottom: rem(5);
+		}
+	}
+	&__btn-cont{
+		.ui-button{
+			@include media-breakpoint-between(md,lg){
+				padding: 4px 5px 9px;
+				min-width: 150px;
+			}
+
+			display: inline-block!important;
+			background: var(--bot-btn-bg, #{$body-color})!important;
+			border-color: var(--bot-btn-bg, #{$body-color})!important;
+
+			&:before,
+			&:after{
+				box-shadow: 0 0 0 16px var(--bot-btn-bg, #{$body-color})!important;
+			}
+		}
+	}
+	&__{}
+	&__{}
+} // end.sAny

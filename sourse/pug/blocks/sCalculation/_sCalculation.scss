@@ -1,0 +1,175 @@
+// start .sCalculation
+.sCalculation {
+	.section-title{
+		h2{
+			margin-bottom: rem(37);
+		}
+		&__row{
+			--bs-gutter-y: #{rem(20)};
+
+			--bs-gutter-x: #{rem(20)};
+			@include media-breakpoint-up(xl){
+				--bs-gutter-x: #{rem(36)};
+			}
+		}
+		&__title{
+			font-size: rem(21);
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+
+
+	&__row{
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(48)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(48)};
+		}
+	}
+	&__item{
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		position: relative;
+		z-index: 1;
+		&:hover{
+			z-index: 2;
+			--box-bord-col: #{$primary};
+			--box-bg: #{$primary};
+			--li-color: #{$white};
+
+			--white-circle-o: 1;
+			--black-circle-o: 0;
+			--btn-bg: #{$body-color};
+			--bot-btn-bg: #{$primary};
+		}
+	}
+	&__box{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		flex-grow: 1;
+		width: 100%;
+		@include mt();
+		border-radius: rem(5px);
+
+		padding: rem(28) rem(20);
+		@include media-breakpoint-up(xl){
+			padding: rem(28);
+		}
+
+		border: 2px solid var(--box-bord-col, #{$body-color});
+		background-color: var(--box-bg, #{$white});
+	}
+	&__title{
+		font-size: rem(33);
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: rem(5);
+	}
+	&__price{
+		font-size: rem(33);
+		margin-bottom: rem(25);
+	}
+	&__list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		&:not(.active){
+			& > *:nth-child(n + 6){
+				display: none;
+			}
+		}
+
+		li{
+			@include mt();
+			color: var(--li-color, #{$body-color});
+
+			display: flex;
+			line-height: rem(23);
+			font-size: rem(21);
+			padding-left: rem(36);
+			margin-bottom: rem(10);
+
+			position: relative;
+			z-index: 1;
+
+			&:before,
+			&:after{
+				@include mt();
+				flex-shrink: 0;
+				content: '';
+				width: rem(23);
+				height: rem(23);
+
+				position: absolute;
+				left: 0;
+				top: 0;
+
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			&:before{
+				opacity: var(--white-circle-o, 0);
+				background-image: url(../img/svg/plus-circle-white.svg);
+			}
+			&:after{
+				opacity: var(--black-circle-o, 1);
+				background-image: url(../img/svg/plus-circle-black.svg);
+			}
+		}
+	}
+
+	&__open-btn{
+		margin-top: auto;
+		@extend .btn;
+		@extend .btn-primary;
+
+		color: $white!important;
+		border: none!important;
+		background-color: var(--btn-bg, #{$primary}) !important;
+
+		padding: rem(10) rem(16);
+		font-size: rem(19);
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		span:first-child{
+			display: none;
+		}
+		span:last-child{
+			display: block;
+		}
+		&.active{
+			span:first-child{
+				display: block;
+			}
+			span:last-child{
+				display: none;
+			}
+		}
+	}
+	&__result{
+		font-size: rem(29);
+		font-weight: 700;
+	}
+	&__order-btn-cont{
+		.ui-button{
+			background: var(--bot-btn-bg, #{$body-color})!important;
+			border-color: var(--bot-btn-bg, #{$body-color})!important;
+
+			&:before,
+			&:after{
+				box-shadow: 0 0 0 16px var(--bot-btn-bg, #{$body-color})!important;
+			}
+		}
+	}
+	&__{}
+	&__{}
+} // end.sCalculation

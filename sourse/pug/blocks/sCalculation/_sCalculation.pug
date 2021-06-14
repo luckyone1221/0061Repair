@@ -1,0 +1,67 @@
+mixin sCalculation(data)
+	// start sCalculation
+	+b.SECTION.sCalculation.section#sCalculation&attributes(attributes)
+		.container
+			+b.section-title--pushed
+				h2 Расчет стоимости дизайн-проекта:
+				+e.row.row.align-items-center
+					.col-lg-auto
+						+e.title Выберите общую площадь квартиры (м2):
+					.col-lg
+						+range("10", "150", '₽')(class='with-symbol')
+			+e.row.row
+				+sCalculationCard({
+					title: 'Планировка',
+					price: 'от 800 руб./м2',
+					result: 'Итого:  39 000 руб.',
+				})
+					li Обмерный план
+					li Планировочные решения
+					li План демонтажа/монтажа перегородок
+					li План потолков
+					li План укладки напольного покрытия
+					li План разводки электрики
+					li План расстановки сантехники
+					li План раскладки плитки
+				+sCalculationCard({
+					title: 'Полный проект',
+					price: 'от 1200 руб./м2',
+					result: 'Итого: 63 960 руб.',
+				})
+					li Обмерный план
+					li Планировочные решения
+					li План демонтажа
+					li План потолков
+					li План раскладки плитки
+					li План расстановки сантехники
+					li План раскладки плитки
+				+sCalculationCard({
+					title: 'VR-дизайн',
+					price: 'от 1700 руб./м2',
+					result: 'Итого: 101 400 руб.',
+				})
+					li Обмерный план
+					li Планировочные решения
+					li План демонтажа
+					li План потолков
+					li План раскладки плитки
+					li План расстановки сантехники
+					li План раскладки плитки
+	// end sCalculation
+
+mixin sCalculationCard(data)
+	.col-lg-4
+		+e.item.sCalculation-item-js
+			+e.box
+				+e.title=data.title
+				+e.price=data.price
+				+e.UL.list.sCalculation-list-js
+					block
+				+e.open-btn.active.sCalculation-open-btn-js(type='button')
+					span Развернуть +
+					span Cкрыть -
+				+e.result=data.result
+			+e.order-btn-cont.text-center
+				a.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button" href="#")
+					span Оставить заявку
+

@@ -1,0 +1,114 @@
+// start .sSteps
+.sSteps {
+	.section-title{
+		h2{
+			margin-bottom: rem(35);
+		}
+		p{
+			margin-bottom: rem(25);
+
+			color: $body-color;
+			font-size: rem(19);
+			line-height: (33/19);
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(0)};
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(30)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(50)};
+		}
+
+		counter-reset: list 0;
+	}
+	&__col{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		border-bottom: 1px dashed $gray-590;
+		padding-bottom: rem(20);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg){
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+
+			width: 20%;
+
+			border-right: 1px dashed $gray-590;
+			&:last-child{
+				border-right: none;
+				border-bottom: none;
+			}
+			&:nth-child(5n){
+				border-right: none;
+			}
+		}
+
+		&:before{
+			display: inline-block;
+			counter-increment: list;
+			content: counter(list) " Этап";
+
+			padding: rem(10) rem(16);
+			font-size: rem(29);
+			line-height: 1;
+			font-weight: 700;
+			text-transform: uppercase;
+			background-color: $primary;
+			border-radius: rem(5);
+			margin-bottom: rem(15);
+		}
+	}
+	&__step{
+		flex-grow: 1;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__title{
+		font-size: rem(19);
+		font-weight: 700;
+		margin-bottom: rem(25);
+	}
+	&__txt{
+		font-size: rem(19);
+		margin-bottom: rem(20);
+	}
+	&__time{
+		margin-top: auto;
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(35);
+	}
+	&__t-icon{
+		width: rem(25);
+		height: rem(25);
+		margin-right: rem(10);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__t-txt{
+		font-weight: bold;
+		font-size: rem(19);
+	}
+	&__foot{
+		text-transform: uppercase;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sSteps

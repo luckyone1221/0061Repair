@@ -59,9 +59,10 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "inputmask": "^5.0.5",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",
-    "swiper": "^6.6.2",
-    "ion-rangeslider": "^2.3.1"
+    "round-slider": "^1.6.1",
+    "swiper": "^6.6.2"
   }
 }
