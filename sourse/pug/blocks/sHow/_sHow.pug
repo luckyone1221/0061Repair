@@ -1,0 +1,60 @@
+mixin sHow(data)
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2
+					| Как будет происходить работа
+					|
+					br.d-none.d-sm-block
+					| по ремонту Вашего дома:
+			+e.row.row
+				+sHowItem({
+					imgNum: 1,
+					title: 'Оставить заявку',
+					descr: 'Бесплатная консультация',
+				})
+				+sHowItem({
+					imgNum: 2,
+					title: 'ВСТРЕЧА С ИНЖЕНЕРОМ',
+					descr: 'Мастер учтет все нюансы:',
+				})
+				+sHowItem({
+					imgNum: 3,
+					title: 'стоимость ремонта',
+					descr: 'Подробная смета',
+				})
+				+sHowItem({
+					imgNum: 4,
+					title: 'подписание договора',
+					descr: 'Зафиксируем сроки и цену',
+				})
+				+sHowItem({
+					imgNum: 5,
+					title: 'приступаем к ремонту',
+					descr: 'Работаем по графику',
+				})
+				+sHowItem({
+					imgNum: 6,
+					title: 'ремонт готов',
+					descr: 'Сдаем объект в чистом виде',
+				})
+	// end sHow
+
+mixin sHowItem(data)
+	+e.col.col-sm-6.col-lg-4
+		+e.item
+			+e.bg
+				img(loading="lazy" src=`img/@2x/sHow-${data.imgNum}.jpg` alt="")
+			+e.content
+				//-+e.num=`0${data.num}`
+				+e.title=data.title
+				+e.descr=data.descr
+			+e.hidden-content
+				+e.title--hidden=data.title
+				+e.descr--hidden=data.descr
+				+e.UL.list
+					li Замер помещения
+					li Уточнение деталей
+					li Консультация клиента на объекте
+					li Консультация по материалам

@@ -1,0 +1,71 @@
+// start .sArticals
+.sArticals {
+	&__container{
+		@include media-breakpoint-up(lg){
+			max-width: 1040px;
+		}
+	}
+	&__main-row{
+		--bs-gutter-y: #{rem(30)};
+		--bs-gutter-x: #{rem(40)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-y: #{rem(38)};
+			--bs-gutter-x: #{rem(60)};
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(17)};
+	}
+	&__icon{
+		width: rem(32);
+		height: rem(32);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg{
+			@include mt();
+			path,rect,circle{
+				fill: var(--icon-color, #{$primary})!important;
+			}
+		}
+
+		& > *{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title{
+		display: block;
+		min-height: rem(62);
+		font-size: rem(23);
+		font-weight: 700;
+		margin-bottom: rem(15);
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (185/391) * 100%;
+		margin-bottom: rem(20);
+	}
+	&__descr{
+		font-size: rem(21);
+		line-height: 1.2;
+		margin-bottom: rem(30);
+	}
+	&__read-more{
+		color: $primary;
+		font-size: rem(23);
+	}
+	&__btn{
+		@extend .btn-default;
+		@include media-breakpoint-up(sm){
+			margin-left: rem(49);
+		}
+	}
+
+	&__{}
+	&__{}
+} // end.sArticals

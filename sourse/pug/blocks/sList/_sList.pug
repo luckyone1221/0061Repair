@@ -1,0 +1,20 @@
+mixin sList(data)
+	// start sList
+	+b.SECTION.sList.section#sList&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Ремонт домов:
+			+e.row.row.align-items-center
+				+e.txt-col.col-sm
+					+e.bold Осуществляем ремонт и делаем отделку в коттеджах и на дачах без предоплаты, с гарантией по договору
+					ul
+						li Выезд технолога-замерщика по всей области
+						li Соответствие работ ГОСТам, СП, СНиПам
+						li Доставка стройматериалов на участок
+						li WhatsApp чат с бригадой и видеоконтроль
+						li Уборка и вывоз строительного мусора
+						li Гарантия на все работы по договору 2 года
+				.col-sm-auto
+					+e.img
+						img(loading="lazy" src="img/svg/sList-img.svg" alt="")
+	// end sList

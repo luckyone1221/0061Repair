@@ -408,6 +408,28 @@ function eventHandler() {
 		});
 	}
 
+	//
+	let sProjectSliderBoxes = document.querySelectorAll('.sProject-sliderBox-js');
+	for (let sliderBox of sProjectSliderBoxes){
+		let sProjectSlider = new Swiper(sliderBox.querySelector('.sProject-slider-js'), {
+			observer: true,
+			observeParents: true,
+
+			slidesPerView: 'auto',
+			spaceBetween: 24,
+
+			lazy: {
+				loadPrevNext: true,
+			},
+			loop: true,
+
+			navigation: {
+				nextEl: sliderBox.querySelector('.swiper-button-next'),
+				prevEl: sliderBox.querySelector('.swiper-button-prev'),
+			},
+		});
+	}
+
 
 	//end luckyone js
 

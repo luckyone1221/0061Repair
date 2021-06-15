@@ -309,8 +309,10 @@ ul {
 	justify-content: center;
 
 	background-color: $white;
+	border: 1px solid $gray-400;
 	@include media-breakpoint-up(xxl){
 		background-color: transparent;
+		border: 1px solid transparent;
 	}
 
 	&-prev{
@@ -647,4 +649,30 @@ iframe {
 			max-width: 1040px!important;
 		}
 	}
+}
+
+//
+.check-list-li{
+	display: flex;
+	align-items: center;
+
+	margin-bottom: rem(16);
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	&:before{
+		content: '';
+		width: rem(19);
+		height: rem(19);
+		flex-shrink: 0;
+		margin-right: rem(15);
+
+		background-image: url(../img/svg/correct-orange.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	font-size: rem(19);
 }

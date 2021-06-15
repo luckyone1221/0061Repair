@@ -1,0 +1,63 @@
+mixin sProject(data)
+	// start sProject
+	+b.SECTION.sProject.section#sProject&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Цены, сроки и фото выполненных проектов:
+				p Мы гарантируем что, заказывая дизайн проект в компании СК «АРТ-ДЕКОР» наши Заказчики получат бонусом бесплатные консультации технических специалистов. Также мы гарантируем, что выполненные проекты не содержат нарушений правил перепланировки и при необходимости мы согласуем наш проект в надлежащих инстанциях.
+			.tabs
+				.tabs__caption
+					+e.caption-row.row
+						+sProjectCaptionItem('планировка', 'active')
+						+sProjectCaptionItem('полный проект')
+						+sProjectCaptionItem('VR-дизайн')
+					.tabs__wrap
+						.tabs__content.active
+							+sProjectContent(1)
+						.tabs__content
+							+sProjectContent(2)
+						.tabs__content
+							+sProjectContent(3)
+
+	// end sProject
+mixin sProjectContent(fancyId)
+	+e.content
+		+e.top-txt Планировочные решения позволят яснее представить будущее жилье и максимально оптимально распланировать площади помещений.
+		+e.title В пакет включены следующие услуги:
+		+e.row.row
+			.col-md-6
+				+e.UL.check-list
+					li Планировочные решения: 5 эскизных; 1 финальный
+					li Итоговая планировка. План монтажа и демонтажа стен
+					li Экспликация и размерные планы помещений
+			.col-md-6
+				+e.chars
+					+sProjectIconItem(1, 'Цена за проект:', 'от 349 р/м2')
+					+sProjectIconItem(2, 'Время работы:', 'от 3 дней')
+		+e.sl-title ПРИМЕРЫ ПРОЕКТОВ:
+		+e.slider-wrap.sProject-sliderBox-js
+			+arrow()
+			.swiper-container.sProject-slider-js
+				.swiper-wrapper
+					+sProjectSlide(1, fancyId)
+					+sProjectSlide(1, fancyId)
+					+sProjectSlide(1, fancyId)
+					+sProjectSlide(1, fancyId)
+					+sProjectSlide(1, fancyId)
+
+mixin sProjectSlide(imgNum, fancyId)
+	.swiper-slide
+		+e.img-link(href=`img/@2x/plan-img-${imgNum}.png` data-fancybox=`sProject-${fancyId}`)
+			img(loading="lazy" src=`img/@2x/plan-img-${imgNum}.png` alt="")
+
+mixin sProjectIconItem(imgNum, boldTxt, txt)
+	+e.char
+		+e.icon
+			img.img-svg-js(loading="lazy" src=`img/svg/sData-icon-${imgNum}.svg`)
+		+e.c-txt
+			b=boldTxt
+			span=txt
+
+mixin sProjectCaptionItem(txt,addClasses='')
+	.col-md-auto
+		+e.tabs-btn.tabs__btn(class=addClasses)=txt
