@@ -1,0 +1,197 @@
+// start .sOffice
+.sOffice {
+	--sTPB: #{rem(25)};
+
+	&__descr{
+		font-size: rem(21);
+		margin-bottom: rem(33);
+	}
+	.tabs__caption{
+		overflow: hidden;
+		border-radius: rem(5);
+		background-color: $gray-300;
+		margin-bottom: rem(35);
+
+		.swiper-container{}
+		.swiper-wrapper{}
+		.swiper-slide{
+			width: rem(220);
+			@include media-breakpoint-up(lg){
+				width: calc(100%/4 - (30px*3/4));
+			}
+
+			margin-right: 30px;
+			&:last-child{
+				margin-right: 0;
+			}
+
+			position: relative;
+			z-index: 1;
+			&:after{
+				content: '';
+				position: absolute;
+				left: calc(100% + 15px);
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				width: 16px;
+				height: 16px;
+
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				background-image: url(../img/svg/arrow-r.svg);
+			}
+
+			&:last-child{
+				&:after{
+					content: none;
+				}
+			}
+		}
+	}
+
+	//
+	&__tabs-btn{
+		text-transform: uppercase;
+
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+		//@include media-breakpoint-up(sm){
+		//	width: auto;
+		//}
+
+		font-size: rem(18);
+		padding: rem(10) rem(10);
+		@include media-breakpoint-up(xl){
+			font-size: rem(21);
+			padding: rem(10) rem(20);
+		}
+
+		&:before{
+			@include mt();
+			content: '';
+			height: rem(17);
+
+			opacity: 0;
+
+			width: rem(17);
+			margin-right: rem(12);
+			@include media-breakpoint-up(sm){
+				width: 0;
+				margin-right: 0;
+			}
+
+
+			background-image: url(../img/svg/correct.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+
+		border-radius: rem(5px);
+
+		background-color: transparent;
+		&.active{
+			text-decoration: underline;
+			background-color: $primary;
+
+			&:before{
+				opacity: 1;
+				width: rem(17);
+				margin-right: rem(12);
+			}
+		}
+	}
+	//
+	&__content{
+
+		@include media-breakpoint-up(lg){
+			max-width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+	&__t-descr{
+		font-size: rem(21);
+		margin-bottom: rem(10);
+	}
+	&__row{
+		--bs-gutter-y: #{rem(30)};
+		--bs-gutter-x: #{rem(24)};
+		@include media-breakpoint-up(lg){
+			--bs-gutter-y: #{rem(40)};
+			--bs-gutter-x: #{rem(40)};
+		}
+
+		&--top{
+			padding-bottom: rem(40);
+		}
+	}
+	//
+	&__work{
+		color: $primary;
+		font-weight: 700;
+		font-size: rem(21);
+		@include media-breakpoint-between(md, lg){
+			font-size: rem(18);
+		}
+		line-height: (37.5/21);
+	}
+	&__price{
+		font-size: rem(21);
+		font-weight: 700;
+	}
+
+	&__title{
+		font-size: rem(29);
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: rem(25);
+	}
+	&__item-col{
+		--item-bw: 2px;
+		--item-px: #{rem(20px)};
+		--item-py: #{rem(30px)};
+		--item-li-pl: #{rem(34px)};
+	}
+	&__item{
+		border: var(--item-bw, 2px) solid $body-color;
+		border-radius: rem(5);
+
+		padding: var(--item-py) var(--item-px);
+		margin-bottom: rem(28);
+	}
+	&__i-title{
+		color: $primary;
+		font-weight: 700;
+		font-size: rem(21);
+		line-height: 1.2;
+		margin-bottom: rem(16);
+	}
+	&__list{
+
+		li{
+			@extend .check-list-li;
+			align-items: flex-start;
+
+			&:before{
+				margin-top: rem(3);
+			}
+
+
+		}
+	}
+	&__time{
+		padding-left: calc(var(--item-bw) + var(--item-px) + var(--item-li-pl));
+
+		font-size: rem(21);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__{}
+	&__{}
+} // end.sOffice

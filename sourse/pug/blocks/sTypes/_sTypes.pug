@@ -1,0 +1,23 @@
+mixin sTypes(data)
+	// start sTypes
+	+b.SECTION.sTypes.section#sTypes&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Виды ремонтных работ:
+			+e.slider-wrap.sTypes-slider-wrap
+				+arrow()
+				.swiper-container.sTypes-slider-js
+					.swiper-wrapper
+						+sTypesSlide(1,'Демонтажные работы')
+						+sTypesSlide(2,'Малярные работы')
+						+sTypesSlide(3,'Сантехнические работы')
+						+sTypesSlide(4,'Электромонтажные работы')
+	// end sTypes
+
+mixin sTypesSlide(imgNum,name)
+	.swiper-slide
+		+e.item
+			+e.img(href="#")
+				img(loading="lazy" src=`img/@2x/sTypes-${imgNum}.png` alt="")
+			+e.name=name
+			+e.more-btn(href="#") ПОДРОБНЕЕ

@@ -1,0 +1,54 @@
+mixin sBlack(data)
+	// start sBlack
+	+b.SECTION.sBlack.section#sBlack&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2
+					| Этапы проведения черновых
+					|
+					br.d-none.d-sm-block
+					| и отделочных работ в доме
+			+e.row.row.tabs
+				+e.caption-col.col-auto.tabs__caption
+					+e.slider-wrap
+						.swiper-container.sProjects-slider-js
+							.swiper-wrapper
+								+sBlackTabsBtn('Монтаж перегородок', 'active')
+								+sBlackTabsBtn('Штукатурка стен')
+								+sBlackTabsBtn('Электромонтажные работы')
+								+sBlackTabsBtn('Монтаж систем отопления')
+								+sBlackTabsBtn('Монтаж теплых полов')
+								+sBlackTabsBtn('Монтаж водоснабжения и канализации')
+								+sBlackTabsBtn('Стяжка пола')
+								+sBlackTabsBtn('Монтаж системы вентиляции')
+								+sBlackTabsBtn('Прокладка трасс для кондиционеров')
+								+sBlackTabsBtn('Монтаж гипсокартона')
+								+sBlackTabsBtn('Укладка плитки')
+								+sBlackTabsBtn('Малярные работы (шпатлевка)')
+								+sBlackTabsBtn('Укладка напольных покрытий')
+								+sBlackTabsBtn('Поклейка обоев, окраска стен и потолков')
+								+sBlackTabsBtn('Монтаж натяжных пололков')
+								+sBlackTabsBtn('Финальные работы')
+				.tabs__wrap.col
+					+sBlackTabsContent(1)(class="active")
+					-for(var i = 2; i < 17; i++)
+						+sBlackTabsContent(i)
+	// end sBlack
+mixin sBlackTabsContent(number)
+	.tabs__content&attributes(attributes)
+		+e.img
+			img(loading="lazy" src="img/@2x/sBlack-img.png" alt="")
+		+e.txt-box
+			+e.step=`${number}-й этап:`
+			+e.name Монтаж перегородок
+			+e.UL.list
+				li делаем разметку возводимых стен;
+				li армируем перегородки через равные промежутки;
+				li деформационный шов между перегородкой и плитой перекрытия заделываем монтажной пеной.
+
+
+mixin sBlackTabsBtn(txt, addClasses)
+	.swiper-slide
+		+e.tabs-btn.tabs__btn(class=addClasses)
+			span=txt
+			+icon('arrow-right')

@@ -1,29 +1,186 @@
+// start .sForm
+.sForm {
+	--sPT: #{rem(55)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(25)};
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	color: $white;
+	position: relative;
+	z-index: 1;
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.form-wrap{
+		&__main-row{
+			margin-bottom: rem(30);
+
+		}
+		.section-title{
+			h2{
+				line-height: 1;
+				margin-bottom: rem(5);
+			}
+			p{
+				margin: 0 0 rem(40);
+				font-size: rem(33);
+			}
+			&__sm{
+				font-size: rem(21);
+			}
+		}
+		//
+		&__sub-row{
+			--bs-gutter-y: #{rem(13)};
+			--bs-gutter-x: #{rem(18)};
+
+		}
+		&__input-wrap{
+
+		}
+		&__input{
+			border-radius: rem(5);
+			background-color: $white;
+			text-align: center;
+		}
+		&__send-btn{
+			@extend .btn;
+			@extend .btn-dark;
+			border: none!important;
+			width: 100%;
+			padding: $input-padding-y $input-padding-x;
+
+			font-size: rem(25);
+			line-height: $input-line-height;
+			text-transform: uppercase;
+		}
+		&__white-box{
+			width: 100%;
+
+			padding: rem(30) rem(20);
+			@include media-breakpoint-up(sm){
+				padding: rem(32) rem(24);
+			}
+			@include media-breakpoint-up(lg){
+				width: rem(348);
+				padding: rem(30) rem(35) rem(32) rem(25);
+			}
+			@include media-breakpoint-up(xl){
+				margin-left: rem(60);
+			}
+			border-radius: rem(10);
+			border: 2px solid $white;
+
+		}
+		&__w-title{
+			color: $black;
+			font-size: rem(25);
+			font-weight: 700;
+			margin-bottom: rem(40);
+		}
+		&__chb-group{
+			& > *{
+				margin-bottom: rem(44);
+				position: relative;
+				z-index: 1;
+				&:after{
+					content: '';
+					position: absolute;
+					top: calc(100% + #{rem(14)});
+					left: 0;
+					width: rem(21);
+					height: 14px;
+
+					background-image: url(../img/svg/arrow-down.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+				}
+
+				&:last-child{
+					margin-bottom: 0;
+					&:after{
+						content: none;
+					}
+				}
+			}
+		}
+		&__policy{
+			color: $body-color;
+			a{
+				color: $body-color;
+				&:hover{
+					color: $white;
+				}
+			}
+
+			font-size: rem(17);
+			font-weight: 300;
+			line-height: 1.2;
+		}
+		&__{}
+	}
+
+	//
+	&__{}
+	&__{}
 } // end.sForm
+
+.custom-radio{
+	cursor: pointer;
+	display: flex!important;
+	align-items: center;
+
+	input:checked + .c-circle{
+		&:after{
+			opacity: 1;
+		}
+	}
+	.c-circle{
+		width: rem(21);
+		height: rem(21);
+		margin-right: rem(19);
+		border-radius: 50%;
+		background-color: $white;
+
+		position: relative;
+		z-index: 1;
+		&:after{
+			@include mt();
+			opacity: 0;
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: rem(7);
+			height: rem(7);
+			background: $black;
+			border-radius: 50%;
+		}
+	}
+	.c-txt{
+		@include mt();
+		font-size: rem(25);
+		line-height: 1.2;
+
+		color: $black;
+	}
+
+	&:hover{
+		.c-txt{
+			color: $white;
+		}
+	}
+}

@@ -305,15 +305,7 @@ function eventHandler() {
 			// }
 
 		}
-	};
-	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	})); // modal window
+	}; // modal window
 	//luckyone js
 
 	let sProjectsSlider = new Swiper('.sProjects-slider-js', {
@@ -391,45 +383,64 @@ function eventHandler() {
 		$(this).toggleClass('active').closest('.sCalculation-item-js').find('.sCalculation-list-js').toggleClass('active');
 	}); //.sData-slider-js
 
+	let tabsDefaultSl = {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		lazy: {
+			loadPrevNext: true
+		},
+		loop: true
+	};
 	let sDataSliderBoxes = document.querySelectorAll('.sData-slider-box-js');
 
 	for (let sliderBox of sDataSliderBoxes) {
-		let sDataSlider = new Swiper(sliderBox.querySelector('.sData-slider-js'), {
-			observer: true,
-			observeParents: true,
-			slidesPerView: 'auto',
+		let sDataSlider = new Swiper(sliderBox.querySelector('.sData-slider-js'), _objectSpread(_objectSpread({}, tabsDefaultSl), {}, {
 			spaceBetween: 10,
-			lazy: {
-				loadPrevNext: true
-			},
-			loop: true,
 			navigation: {
 				nextEl: sliderBox.querySelector('.swiper-button-next'),
 				prevEl: sliderBox.querySelector('.swiper-button-prev')
 			}
-		});
+		}));
 	} //
 
 
 	let sProjectSliderBoxes = document.querySelectorAll('.sProject-sliderBox-js');
 
 	for (let sliderBox of sProjectSliderBoxes) {
-		let sProjectSlider = new Swiper(sliderBox.querySelector('.sProject-slider-js'), {
-			observer: true,
-			observeParents: true,
-			slidesPerView: 'auto',
+		let sProjectSlider = new Swiper(sliderBox.querySelector('.sProject-slider-js'), _objectSpread(_objectSpread({}, tabsDefaultSl), {}, {
 			spaceBetween: 24,
-			lazy: {
-				loadPrevNext: true
-			},
-			loop: true,
 			navigation: {
 				nextEl: sliderBox.querySelector('.swiper-button-next'),
 				prevEl: sliderBox.querySelector('.swiper-button-prev')
 			}
-		});
-	} //end luckyone js
+		}));
+	} //.sBath-slider-box-js
 
+
+	let sBathSliderBoxes = document.querySelectorAll('.sBath-slider-box-js');
+
+	for (let sliderBox of sBathSliderBoxes) {
+		let sBathSlider = new Swiper('.sBath-slider-js', _objectSpread(_objectSpread({}, tabsDefaultSl), {}, {
+			spaceBetween: 8,
+			navigation: {
+				nextEl: sliderBox.querySelector('.swiper-button-next'),
+				prevEl: sliderBox.querySelector('.swiper-button-prev')
+			}
+		}));
+	} //
+
+
+	let sTypesWrap = document.querySelector('.sTypes-slider-wrap');
+	let sTypesSlider = new Swiper('.sTypes-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		loop: true,
+		navigation: {
+			nextEl: sTypesWrap.querySelector('.swiper-button-next'),
+			prevEl: sTypesWrap.querySelector('.swiper-button-prev')
+		}
+	}); //end luckyone js
 }
 
 ;

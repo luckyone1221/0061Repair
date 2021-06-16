@@ -1,0 +1,72 @@
+mixin sOffice(data)
+	// start sOffice
+	+b.SECTION.sOffice.section#sOffice&attributes(attributes)
+		.container
+			+b.section-title--pushed
+				h2 Цены и состав работ по ремонту офисов под ключ:
+			+e.descr Цена ремонта офиса за м2 зависит от состава работ. Для удобства мы подготовили пакетные предложения, в которых состав услуг может быть сужен или расширен по желанию клиент. Оплата поэтапная, предоплата не требуется. Вы можете прервать сотрудничество на любом этапе.
+			.tabs
+				.tabs__caption
+					.swiper-container.sProjects-slider-js
+						.swiper-wrapper
+							+sOfficeTabsBtn('Косметический ремонт', 'active')
+							+sOfficeTabsBtn('Комплексный ремонт')
+							+sOfficeTabsBtn('бизнес ремонт')
+							+sOfficeTabsBtn('премиум ремонт')
+				.tabs__wrap
+					.tabs__content.active
+						+sOfficeTabContent()
+					.tabs__content 2
+					.tabs__content 3
+					.tabs__content 4
+			+giftForm()
+	// end sOffice
+
+mixin sOfficeTabContent()
+	+e.content
+		+e.t-descr Косметический ремонт офисов включает отделку, в том числе плиточные работы, доработку системы отопления, электрики, монтаж осветительных приборов, уборку, и стоит от 900Руб за м2 (от 2 000Руб с материалами).
+		+e.row--top.row
+			+sOfficeWorkItem('СТОИМОСТЬ РАБОТЫ (м2):', 'от 900 руб.')
+			+sOfficeWorkItem('СТОИМОСТЬ МАТЕРИАЛОВ (м2):', 'от 1 100 руб.')
+			+sOfficeWorkItem('ОБЩАЯ СТОИМОСТЬ ПОД КЛЮЧ (м2):', 'от 2.000 руб.')
+		+e.title ЭТАПЫ И СОСТАВ РАБОТ:
+		+e.row--bot.row
+			+sOfficeItem('ПОДГОТОВКА И СОГЛАСОВАНИЕ', '3-5 дней')
+				li Замер помещений прорабом
+				li Обсуждение концепции отделки
+				li Разработка сметы
+				li Подготовка КП для заказчика
+				li Заключение договора
+			+sOfficeItem('ПРОИЗВОДСТВО РАБОТ', '10-12 дней')
+				li Закупка отделочных материалов
+				li Доставка материалов на объект
+				li Демонтажные работы
+				li Выравнивание поверхностей
+				li Укладка напольного покрытия
+				li Отделка стен и потолков
+				li Монтаж освещения
+			+sOfficeItem('СДАЧА РАБОТ', '1-5 дней')
+				li Сдача работ представителю заказчика
+				li Устранение недочетов (при обнаружении)
+				li Подписание документации
+
+mixin sOfficeItem(title, time)
+	+e.item-col.col-md-4
+		+e.item
+			+e.i-title=title
+			+e.UL.list
+				block
+		+e.time
+			span
+				| Срок:
+				|
+			span.text-primary=time
+
+mixin sOfficeTabsBtn(txt, addClasses)
+	.swiper-slide
+		+e.tabs-btn.tabs__btn(class=addClasses)=txt
+
+mixin sOfficeWorkItem(work, price)
+	.col-md-4
+		+e.work=work
+		+e.price=price

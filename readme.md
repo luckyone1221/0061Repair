@@ -7,4 +7,6 @@
 1.<https://luckyone1221.github.io/0061Repair/public/new-blocks22-25.html>
 1.<https://luckyone1221.github.io/0061Repair/public/new-blocks25-30.html>
 1.<https://luckyone1221.github.io/0061Repair/public/new-blocks30-36.html>
-1.<https://luckyone1221.github.io/0061Repair/public/new-blocks39.html>
+1.<https://luckyone1221.github.io/0061Repair/public/new-blocks39-41.html>
+1.<https://luckyone1221.github.io/0061Repair/public/new-blocks42-46.html>
+1.<https://luckyone1221.github.io/0061Repair/public/new-blocks47.html>

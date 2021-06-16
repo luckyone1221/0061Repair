@@ -1,0 +1,86 @@
+mixin sBath(data)
+	// start sBath
+	+b.SECTION.sBath.section#sBath&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Цены на ремонт ванной комнаты под ключ
+				p наиболее распространенных планировок:
+			.row
+				.tabs
+					.tabs__caption
+						.swiper-container.sProjects-slider-js
+							.swiper-wrapper
+								+sBathTabsBtn('Проект 1', 'active')
+								+sBathTabsBtn('Проект 2')
+								+sBathTabsBtn('Проект 3')
+								+sBathTabsBtn('Проект 4')
+								+sBathTabsBtn('Проект 5')
+								.swiper-slide
+									+e.know-btn(href="#") Узнать цену на ремонт Вашей ванной
+					.tabs__wrap
+						.tabs__content.active
+							+sBathTabConetnt(1)
+						.tabs__content
+							+sBathTabConetnt(2)
+						.tabs__content
+							+sBathTabConetnt(3)
+						.tabs__content
+							+sBathTabConetnt(4)
+						.tabs__content
+							+sBathTabConetnt(5)
+	// end sBath
+
+mixin sBathTabConetnt(fancyId)
+	+e.content
+		+e.c-row.row
+			.col-sm-auto
+				+e.scheme-img
+					img(loading="lazy" src="img/@2x/sBath-sceme.png" alt="")
+			.col-sm
+				+e.sub-row.row
+					.col-lg-6
+						+sBathIconedItem('place','АДРЕС:','Москва, ул.Новомарьинская, д.14/15')
+					.col-md-6.col-lg-3
+						+sBathIconedItem('clock','СРОКИ:','12 дней')
+					.col-md-6.col-lg-3
+						+sBathIconedItem('ruble','СТОИМОСТЬ:','64 990 руб')
+					.col-12
+						+sBathIconedItem('contract','ОПИСАНИЕ РАБОТ:','Ремонт ванной комнаты (2.6мх1.7м=4.4м2) под ключ, перепланировка-совмещение со сломом «сантехкабины».')
+					.col-12.d-none.d-lg-block
+						+sBathGalery()
+		+sBathGalery('mb-4 d-lg-none')
+		+e.slider-wrap.sBath-slider-box-js
+			+arrow()
+			.swiper-container.sBath-slider-js
+				.swiper-wrapper
+					+sBathSlide(1,fancyId)
+					+sBathSlide(2,fancyId)
+					+sBathSlide(3,fancyId)
+					+sBathSlide(4,fancyId)
+
+
+mixin sBathSlide(imgNum,fancyId)
+	.swiper-slide
+		+e.img-link(href=`img/@2x/sBath-${imgNum}.png` data-fancybox=`sBath-${fancyId}`)
+			img(loading="lazy" src=`img/@2x/sBath-${imgNum}.png` alt="")
+
+mixin sBathGalery(addClasses)
+	.row.align-items-end.gy-3(class=addClasses)
+		.col-sm
+			+e.galery-title Галерея:
+		.col-sm-auto
+			+e.btn-all(href="#")
+				span Показать перечень работ проекта
+				+icon('arrow-down')
+
+mixin sBathIconedItem(iconName,title, txt)
+	+e.iconed
+		+e.icon
+			img.img-svg-js(loading="lazy" src=`img/svg/${iconName}.svg` alt="")
+		+e.content
+			+e.i-title=title
+			+e.i-txt=txt
+
+mixin sBathTabsBtn(txt, addClasses)
+	.swiper-slide
+		+e.tabs-btn.tabs__btn(class=addClasses)=txt

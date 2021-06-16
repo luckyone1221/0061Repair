@@ -1,0 +1,78 @@
+// start .sTypes
+.sTypes {
+	&__container{
+		@include media-breakpoint-up(lg){
+			max-width: 1060px!important;
+		}
+	}
+	&__slider-wrap{
+		position: relative;
+		.swiper-container{
+			@include media-breakpoint-down(md){
+				overflow: visible!important;
+			}
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			width: 270px;
+			@include media-breakpoint-up(md){
+				width: calc(100%/3 - (10px * 2/3));
+			}
+			@include media-breakpoint-up(lg){
+				width: calc(100%/4 - (10px * 3/4));
+			}
+		}
+	}
+	&__item{
+		@include mt();
+		padding: 5px;
+		border-radius: rem(5);
+		background-color: transparent;
+		color: $body-color;
+
+		&:hover{
+			background-color: $primary;
+			//color: $white;
+			//--sq-color: #{$black};
+			//--sq-bg: #{$white};
+			//--icon-color:#{$body-color};
+
+			--btn-bc: #{$body-color};
+			--btn-col: #{$body-color};
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (189/234) * 100%;
+		border-radius: rem(5);
+		margin-bottom: rem(20);
+	}
+	&__name{
+		padding: 0 rem(20);
+		margin-bottom: rem(15);
+		font-size: rem(21);
+	}
+	&__more-btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		@include mt();
+		width: 100%;
+
+		border: 2px solid var(--btn-bc, #{$primary}) !important;
+		color: var(--btn-col, #{$body-color}) !important;
+		&:hover{
+			background-color: $body-color!important;
+			color: $white!important;
+		}
+
+		padding: rem(20);
+		font-size: rem(25);
+		line-height: 1;
+		font-weight: 700;
+	}
+	&__{}
+	&__{}
+} // end.sTypes

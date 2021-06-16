@@ -64,23 +64,7 @@
 			}
 		}
 
-		position: relative;
-		&:after{
-			opacity: 0;
-			@include mt();
-			content: '';
-			position: absolute;
-
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 17px 8px 0 8px;
-			border-color: $primary transparent transparent transparent;
-
-			left: (100/270) * 100%;
-			top: calc(100% - 1px);
-
-		}
+		@extend .bot-triangle;
 	}
 	//
 	&__item{

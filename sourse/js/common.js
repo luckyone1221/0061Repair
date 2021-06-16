@@ -290,17 +290,6 @@ function eventHandler() {
 			// }
 		},
 	}
-
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-	});
 	// modal window
 
 	//luckyone js
@@ -386,21 +375,22 @@ function eventHandler() {
 		$(this).toggleClass('active').closest('.sCalculation-item-js').find('.sCalculation-list-js').toggleClass('active');
 	});
 	//.sData-slider-js
+	let tabsDefaultSl = {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		lazy: {
+			loadPrevNext: true,
+		},
+		loop: true,
+	}
+
 	let sDataSliderBoxes = document.querySelectorAll('.sData-slider-box-js');
 	for (let sliderBox of sDataSliderBoxes){
 
 		let sDataSlider = new Swiper(sliderBox.querySelector('.sData-slider-js'), {
-			observer: true,
-			observeParents: true,
-
-			slidesPerView: 'auto',
+			...tabsDefaultSl,
 			spaceBetween: 10,
-
-			lazy: {
-				loadPrevNext: true,
-			},
-			loop: true,
-
 			navigation: {
 				nextEl: sliderBox.querySelector('.swiper-button-next'),
 				prevEl: sliderBox.querySelector('.swiper-button-prev'),
@@ -412,16 +402,20 @@ function eventHandler() {
 	let sProjectSliderBoxes = document.querySelectorAll('.sProject-sliderBox-js');
 	for (let sliderBox of sProjectSliderBoxes){
 		let sProjectSlider = new Swiper(sliderBox.querySelector('.sProject-slider-js'), {
-			observer: true,
-			observeParents: true,
-
-			slidesPerView: 'auto',
+			...tabsDefaultSl,
 			spaceBetween: 24,
-
-			lazy: {
-				loadPrevNext: true,
+			navigation: {
+				nextEl: sliderBox.querySelector('.swiper-button-next'),
+				prevEl: sliderBox.querySelector('.swiper-button-prev'),
 			},
-			loop: true,
+		});
+	}
+	//.sBath-slider-box-js
+	let sBathSliderBoxes = document.querySelectorAll('.sBath-slider-box-js');
+	for (let sliderBox of sBathSliderBoxes){
+		let sBathSlider = new Swiper('.sBath-slider-js', {
+			...tabsDefaultSl,
+			spaceBetween: 8,
 
 			navigation: {
 				nextEl: sliderBox.querySelector('.swiper-button-next'),
@@ -429,7 +423,18 @@ function eventHandler() {
 			},
 		});
 	}
+	//
+	let sTypesWrap = document.querySelector('.sTypes-slider-wrap');
+	let sTypesSlider = new Swiper('.sTypes-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		loop: true,
 
+		navigation: {
+			nextEl: sTypesWrap.querySelector('.swiper-button-next'),
+			prevEl: sTypesWrap.querySelector('.swiper-button-prev'),
+		},
+	});
 
 	//end luckyone js
 

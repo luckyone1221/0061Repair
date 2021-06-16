@@ -1,9 +1,42 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		+pic('sForm-bg.png',undefined, 0)(class="sForm__bg")
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+form-wrap()
+				+e.main-row.row.gy-4.align-items-end
+					.col-lg
+						+b.section-title
+							h2
+								| Оставьте заявку
+								br
+								| на бесплатную консультацию
+							p и мы перезвоним Вам в течении 10 минут
+							+e.sm Консультация бесплатна и ник чему Вас не обязывает.
+						+e.sub-row.row
+							.col-sm-6
+								+input('Ваше имя', 'text')
+							.col-sm-6
+								+input('+7   ( * * * ) * * * - * * - * *', 'tel')
+							.col-sm-6
+								+input('Удобное время для звонка', 'text')
+							.col-sm-6
+								+e.send-btn(type="submit") Отправить
+					.col-lg-auto
+						+e.white-box
+							+e.w-title С кем Вы бы хотели пообщаться после отправки заявки?
+							+e.chb-group
+								+customRadio('Инженер-сметчик')(checked)
+								+customRadio('Дизайнер интерьеров')
+								+customRadio('Менеджер проектов')
+				+e.policy
+					| Нажимая "Задать вопрос", Вы даете согласие на обработку
+					|
+					a(href="#") персональных данных
 	// end sForm
+
+mixin customRadio(value, name='name')
+	+b.LABEL.custom-radio
+		input(type="radio" name=name value=value class="invisible")&attributes(attributes)
+		.c-circle
+		.c-txt=value
