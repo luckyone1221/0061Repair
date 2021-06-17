@@ -35,17 +35,20 @@ include ../blocks/sOffice/_sOffice.pug
 include ../blocks/sBath/_sBath.pug
 include ../blocks/sTypes/_sTypes.pug
 include ../blocks/sBlack/_sBlack.pug
+include ../blocks/sComplex/_sComplex.pug
 
 block variables
 	- let  mainPage= null
 	- let  bg= null
 
 block title
-	- let  title= '42'
+	- let  title= '47-50'
 	title= title
 block pagecontent
 	+oldMobMenu()
 	+HeaderOld()
 	+sTypes()
 	+sBlack()
+	+sComplex()
+	+sDiscountOld()
 	+footerOld()

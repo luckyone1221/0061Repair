@@ -1,0 +1,32 @@
+mixin sIcons(data)
+	// start sIcons
+	+b.SECTION.sIcons.section#sIcons&attributes(attributes)
+		.container
+			+e.row.row
+				+sIconsItem(1,'Разработка дизайн-проекта')
+				+sIconsItem(2,'Перепланировка помещений')
+				+sIconsItem(3,'Электромонтажные работы')
+				+sIconsItem(4,'Сантехнические работы')
+				//-
+				+sIconsItem(5,'Замена систем отопления')
+				+sIconsItem(6,'Вентиляция и кондиционирование')
+				+sIconsItem(7,'Штукатурка и шпатлевка')
+				+sIconsItem(8,'Плиточные работы')
+				//-
+				+sIconsItem(9,'Отделка стен')
+				+sIconsItem(10,'Монтаж потолков и света')
+				+sIconsItem(11,'Установка сантехники')
+				+sIconsItem(12,'Система "теплый пол"')
+				//-
+				+sIconsItem(13,'Система "умный дом"')
+				+sIconsItem(14,'Устройство напольных покрытий')
+				+sIconsItem(15,'Подбор мебели и аксессуаров')
+				+sIconsItem(16,'Уборка клининговой компанией')
+	// end sIcons
+
+mixin sIconsItem(imgNum, txt)
+	.col-6.col-md-4.col-lg-3
+		+e.item
+			+e.icon
+				img.img-svg-js(loading="lazy" src=`img/svg/sIcons-${imgNum}.svg` alt="")
+			+e.txt=txt

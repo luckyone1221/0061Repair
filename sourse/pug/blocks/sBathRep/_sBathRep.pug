@@ -1,0 +1,64 @@
+mixin sBathRep(data)
+	// start sBathRep
+	+b.SECTION.sBathRep.section#sBathRep&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Этапы работ по ремонту раздельного санузла:
+			+e.items.sBathRep-dd-group-js
+				+sBathRepItem({
+					title: 'Подготовительный этап',
+					time: 'Беплатно 1-2 дня',
+					activeClasses: 'active',
+				})
+				+sBathRepItem({
+					title: 'Демонтажные работы',
+					time: '1-2 дня',
+				})
+				+sBathRepItem({
+					title: 'Черновые работы',
+					time: '2-5 дней',
+				})
+				+sBathRepItem({
+					title: 'Первая оплата',
+					time: '50% стоимости',
+				})
+				+sBathRepItem({
+					title: 'Чистовые работы',
+					time: '4-6 дней',
+				})
+				+sBathRepItem({
+					title: 'Вывоз мусора и уборка помещения',
+					time: '',
+				})
+				+sBathRepItem({
+					title: 'Приемка работ / рассчет',
+					time: '50% стоимости',
+				})
+				// end sBathRep
+
+mixin sBathRepItem(data)
+	+e.item(class=data.activeClasses)
+		+e.head.dd-head-js
+			+e.h-row.row
+				.col-md-auto
+					+e.title=data.title
+				.col-md-auto
+					+e.time=data.time
+			+e.chevron
+				+icon('chevron-down')
+		+e.content.dd-content-js(class=data.activeClasses)
+			+e.c-title В этап входят следующие работы:
+			+e.c-row.row.align-items-center
+				.col-lg-auto
+					+e.img
+						img(loading="lazy" src="img/@2x/sBathRep-img.png" alt="")
+				.col-sm
+					+e.UL.list
+						li Выезд инженера на замер
+						li Составление сметы
+						li Проработка черновых и чистовых материалов
+				.col-sm
+					+e.UL.list
+						li Выезд прораба на объект
+						li Заключение договора без Авансовых платежей
+						li Составление дизайн проекта

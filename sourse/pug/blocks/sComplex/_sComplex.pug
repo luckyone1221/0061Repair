@@ -1,0 +1,81 @@
+mixin sComplex(data)
+	// start sComplex
+	+b.SECTION.sComplex.section#sComplex&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Цены на комплексный ремонт и отделку:
+			.tabs
+				+e.caption-row.row.tabs__caption
+					+sComplexTabsBtn('Новостройка', 'active')
+					+sComplexTabsBtn('Вторичка')
+				.tabs__wrap
+					.tabs__content.active
+						+sComplexTabsContent()
+					.tabs__content 2
+	// end sComplex
+
+mixin sComplexTabsContent()
+	+e.content
+		+e.row.row
+			+sComplexItem({
+				title: 'Чистовой ремонт',
+				info: 'Выполняется на ранее подготовленных поверхностях стен, полов и потолков',
+				time: 'Срок: от 8 до 20 дней',
+				priceWork: 'Стоимость работ за М2: 1600 Руб',
+				priceMaterial: 'Стоимость материалов за М2: 1350 Руб',
+			})
+				li Отделка потолков
+				li Отделка стен
+				li Отделка потолков
+				li Монтаж розеток и выключателей
+				li Установка светильников
+				li Установка сантехники
+			+sComplexItem({
+				title: 'Черновой ремонт',
+				info: 'Исправить геометрию, заменить электрику, водопровод, отопление',
+				time: 'Срок: от 20 до 45 дней',
+				priceWork: 'Стоимость работ за М2: 900 Руб',
+				priceMaterial: 'Стоимость материалов за М2: 750 Руб',
+			})
+				li Ремонт поверхностей
+				li Выравнивание поверхностей
+				li Выравнивание углов
+				li Замена водопровода
+				li Замена канализации
+				li Замена отопления
+			+sComplexItem({
+				title: 'Евро ремонт',
+				info: 'Точные углы и плоскости. Работаем по стандартам DIN EN ISO',
+				time: 'Срок: от 25 до 60 дней',
+				priceWork: 'Стоимость работ за М2: 1900 Руб',
+				priceMaterial: 'Стоимость материалов за М2: 1800 Руб',
+			})
+				li Выбор проекта
+				li Подбор материалов в скандинавском стиле
+				li Демонтаж старой отделки
+				li Перепланировка площади
+				li Ремонт поверхностей
+
+mixin sComplexItem(data)
+	.col-lg-4
+		+e.item
+			+e.box
+				+e.title=data.title
+				+e.info=data.info
+				+e.included ЧТО ВКЛЮЧЕНО?
+				+e.UL.in-list
+					block
+					li item for scroll
+					li item for scroll
+					li item for scroll
+					li item for scroll
+				+e.time-txt=data.time
+				+e.price=data.priceWork
+				+e.price=data.priceMaterial
+			+e.btn-cont.text-center.d-block
+				a.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button" href="#")
+					span Оставить заявку
+
+mixin sComplexTabsBtn(txt, addClasses)
+	.col-auto
+		+e.tabs-btn.tabs__btn(class=addClasses)=txt

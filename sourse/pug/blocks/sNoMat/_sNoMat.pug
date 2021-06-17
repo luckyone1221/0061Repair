@@ -1,0 +1,66 @@
+mixin sNoMat(data)
+	// start sNoMat
+	+b.SECTION.sNoMat.section#sNoMat&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2
+					| Цены на черновой ремонт
+					br
+					| без материалов:
+			+e.row.row
+				+sNoMatItem({
+					imgNum: 1,
+					title: '1-комнатная квартира',
+					square: 'S=37.2 м.кв',
+					time: 'Сроки: 3-4 недели',
+					priceFrom: '148 000 руб',
+					priceTo: '186 000 руб',
+					discount: 'ЭКОНОМИЯ 42 000 руб!',
+				})
+				+sNoMatItem({
+					imgNum: 2,
+					title: '2-комнатная квартира',
+					square: 'S=48.5 м.кв',
+					time: 'Сроки: 4-5 недель',
+					priceFrom: '193 000 руб',
+					priceTo: '240 000 руб',
+					discount: 'ЭКОНОМИЯ 47 000 руб!',
+				})
+				+sNoMatItem({
+					imgNum: 3,
+					title: '3-комнатная квартира',
+					square: 'S=84.1 м.кв',
+					time: 'Сроки: 5-6 недель',
+					priceFrom: '248 000 руб',
+					priceTo: '307 000 руб',
+					discount: 'ЭКОНОМИЯ 59 000 руб!',
+				})
+			+e.H3.q-title Быстрый расчет стоимости чернового ремонта:
+			+e.q-row.row.align-items-center
+				+e.enter-col.col-auto Введите площадь м2
+				+e.inp-col.col.col-sm-auto
+					+e.INPUT.input.form-control(type="number" min='0' max="99" value="0")
+				.col-12.d-md-none
+				+e.txt-col.col-auto Материалы: 0 руб.
+				+e.txt-col.col-auto Работы: 0 руб.
+				+e.result-col.col-auto ИТОГО: 0 руб.
+	// end sNoMat
+
+mixin sNoMatItem(data)
+	.col-md-4
+		+e.item(href='#')
+			+e.box
+				+e.img
+					img(loading="lazy" src=`img/@2x/sNoMat-${data.imgNum}.png` alt="")
+				+e.title=data.title
+				+e.square=data.square
+				+e.time=data.time
+				+e.price-row.row
+					.col-auto=`Стоимость: от `
+					.col-auto
+						+e.price--old=data.priceFrom
+						+e.price--new=data.priceTo
+				+e.discount=data.discount
+			+e.btn-cont
+				.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button")
+					span Оставить заявку

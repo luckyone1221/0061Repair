@@ -5,29 +5,28 @@ mixin sBath(data)
 			+b.section-title
 				h2 Цены на ремонт ванной комнаты под ключ
 				p наиболее распространенных планировок:
-			.row
-				.tabs
-					.tabs__caption
-						.swiper-container.sProjects-slider-js
-							.swiper-wrapper
-								+sBathTabsBtn('Проект 1', 'active')
-								+sBathTabsBtn('Проект 2')
-								+sBathTabsBtn('Проект 3')
-								+sBathTabsBtn('Проект 4')
-								+sBathTabsBtn('Проект 5')
-								.swiper-slide
-									+e.know-btn(href="#") Узнать цену на ремонт Вашей ванной
-					.tabs__wrap
-						.tabs__content.active
-							+sBathTabConetnt(1)
-						.tabs__content
-							+sBathTabConetnt(2)
-						.tabs__content
-							+sBathTabConetnt(3)
-						.tabs__content
-							+sBathTabConetnt(4)
-						.tabs__content
-							+sBathTabConetnt(5)
+			.tabs
+				.tabs__caption
+					.swiper-container.sProjects-slider-js
+						.swiper-wrapper
+							+sBathTabsBtn('Проект 1', 'active')
+							+sBathTabsBtn('Проект 2')
+							+sBathTabsBtn('Проект 3')
+							+sBathTabsBtn('Проект 4')
+							+sBathTabsBtn('Проект 5')
+							.swiper-slide
+								+e.know-btn(href="#") Узнать цену на ремонт Вашей ванной
+				.tabs__wrap
+					.tabs__content.active
+						+sBathTabConetnt(1)
+					.tabs__content
+						+sBathTabConetnt(2)
+					.tabs__content
+						+sBathTabConetnt(3)
+					.tabs__content
+						+sBathTabConetnt(4)
+					.tabs__content
+						+sBathTabConetnt(5)
 	// end sBath
 
 mixin sBathTabConetnt(fancyId)

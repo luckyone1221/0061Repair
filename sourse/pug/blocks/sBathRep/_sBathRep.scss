@@ -1,0 +1,121 @@
+// start .sBathRep
+.sBathRep {
+	.section-title{
+
+	}
+	&__items{
+		@include media-breakpoint-up(xl){
+			margin: 0 rem(-30);
+		}
+
+		counter-reset: list 0;
+	}
+	&__item{
+		--item-px: #{rem(35)};
+
+		&.active{
+			--chevron-col: #{$primary};
+			--chevron-rotate: #{180deg};
+		}
+	}
+	&__head{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-bottom: rem(18);
+		box-shadow: 0 0 rem(50) rgba(1, 23, 11, 0.12);
+		border-radius: rem(5);
+
+
+		background-color: $gray-200;
+		padding: rem(10) var(--item-px, #{rem(35)});
+	}
+	&__chevron{
+		@include mt();
+		transform: rotateX(var(--chevron-rotate, 0deg));
+		content: '';
+		width: rem(28);
+		height: rem(28);
+		margin-left: rem(20);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon{
+			@include mt();
+			font-size: rem(28);
+			color: var(--chevron-col, #{$body-color});
+		}
+	}
+
+	&__h-row{
+
+	}
+	&__title{
+		@include media-breakpoint-up(md){
+			min-width: rem(370);
+		}
+
+		font-size: rem(25);
+		text-transform: uppercase;
+		&:before{
+			display: inline-block;
+			vertical-align: baseline;
+			counter-increment: list;
+			content: counter(list) ".";
+
+			font-size: rem(25);
+			font-weight: 700;
+			margin-right: rem(5);
+		}
+	}
+	&__time{
+		color: $primary;
+		font-size: rem(25);
+		text-transform: uppercase;
+	}
+	&__content{
+		padding: rem(35) var(--item-px, #{rem(35)}) rem(45);
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	&__c-title{
+		font-size: rem(23);
+		font-weight: 700;
+		margin-bottom: rem(34);
+	}
+	&__c-row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(20)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-y: #{rem(30)};
+		}
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: #{rem(30)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(42)};
+		}
+	}
+	&__img{
+		width: rem(231);
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__list{
+		margin-bottom: 0;
+		li{
+			padding-left: rem(20);
+			@extend .doted-li;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sBathRep

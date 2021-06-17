@@ -1,0 +1,52 @@
+// start .sIcons
+.sIcons {
+	&__container{
+		@include media-breakpoint-up(lg){
+			max-width: 1040px!important;
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(20)};
+		--bs-gutter-x: #{rem(15)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-y: #{rem(30)};
+			--bs-gutter-x: #{rem(30)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-y: #{rem(40)};
+			--bs-gutter-x: #{rem(40)};
+		}
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+	&__icon{
+		flex-shrink: 0;
+		width: rem(50);
+		height: rem(50);
+		margin-right: rem(15);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		& > *{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		svg{
+			path,rect,circle{
+				fill: $primary!important;
+			}
+		}
+	}
+	&__txt{
+		font-weight: 700;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sIcons

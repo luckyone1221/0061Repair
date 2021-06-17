@@ -425,16 +425,51 @@ function eventHandler() {
 	}
 	//
 	let sTypesWrap = document.querySelector('.sTypes-slider-wrap');
-	let sTypesSlider = new Swiper('.sTypes-slider-js', {
-		slidesPerView: 'auto',
-		spaceBetween: 10,
-		loop: true,
+	if (sTypesWrap){
+		let sTypesSlider = new Swiper('.sTypes-slider-js', {
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+			loop: true,
 
-		navigation: {
-			nextEl: sTypesWrap.querySelector('.swiper-button-next'),
-			prevEl: sTypesWrap.querySelector('.swiper-button-prev'),
-		},
-	});
+			navigation: {
+				nextEl: sTypesWrap.querySelector('.swiper-button-next'),
+				prevEl: sTypesWrap.querySelector('.swiper-button-prev'),
+			},
+		});
+	}
+
+	function makeDDGroup(ArrSelectors){
+		for (let parentSelect of ArrSelectors){
+			let parent = document.querySelector(parentSelect);
+			if (parent){
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js');
+				$(ChildHeads).click(function (){
+					let clickedHead = this;
+
+					$(ChildHeads).each(function (){
+						if (this === clickedHead){
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+								$(this).toggleClass('active');
+							});
+						}
+						else{
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function (){
+								$(this).removeClass('active');
+							});
+						}
+					});
+
+				});
+			}
+		}
+	}
+	makeDDGroup([
+		'.sBathRep-dd-group-js'
+	]);
 
 	//end luckyone js
 

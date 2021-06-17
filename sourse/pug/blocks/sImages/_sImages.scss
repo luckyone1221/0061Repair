@@ -1,0 +1,26 @@
+// start .sImages
+.sImages {
+	&__row{
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(20)};
+			--bs-gutter-y: #{rem(20)};
+		}
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(35)};
+			--bs-gutter-y: #{rem(28)};
+		}
+
+		padding-bottom: rem(38);
+	}
+	&__img-link{
+		@extend .galery-link;
+		padding-top: (228/235) * 100%;
+	}
+	&__btn-more{
+		@extend .btn-default;
+	}
+	&__{}
+	&__{}
+} // end.sImages

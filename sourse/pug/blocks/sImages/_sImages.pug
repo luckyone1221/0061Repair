@@ -1,0 +1,19 @@
+mixin sImages(data)
+	// start sImages
+	+b.SECTION.sImages.section#sImages&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Галерея работ:
+			+e.row.row
+				-for(let i=1; i < 9; i++)
+					+sImagesItem(i)
+			.text-center
+				+e.btn-more(href="#")
+					| Показать еще работы
+					span +
+	// end sImages
+
+mixin sImagesItem(imgNum)
+	.col-6.col-md-3
+		+e.img-link(href=`img/@2x/sImages-${imgNum}.jpg` data-fancybox="sImages")
+			img(loading="lazy" src=`img/@2x/sImages-${imgNum}.jpg` alt="")

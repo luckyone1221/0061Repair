@@ -1,0 +1,158 @@
+// start .sNoMat
+.sNoMat {
+	&__container{
+		@include media-breakpoint-up(lg){
+			max-width: 1060px!important;
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(30)};
+
+		--bs-gutter-x: #{rem(30)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(42)};
+		}
+
+		padding-bottom: rem(60);
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+
+		color: $body-color;
+		&:hover{
+			color: $body-color;
+			--box-bc: #{$primary};
+			--bot-btn-bg: #{$primary};
+		}
+	}
+	&__box{
+		@include mt();
+		flex-grow: 1;
+		padding: rem(20);
+		border-radius: rem(5);
+		border: 2px solid var(--box-bc, #{$body-color});
+	}
+	&__img{
+		display: block;
+		height: 174px;
+		width: 100%;
+		margin-bottom: rem(18);
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title{
+		display: block;
+		font-size: rem(33);
+		font-weight: 700;
+		line-height: 1;
+	}
+	&__square{
+		display: block;
+		font-size: rem(21);
+		line-height: 1;
+		font-weight: 700;
+		margin-bottom: rem(25);
+	}
+	&__time{
+		display: block;
+		font-size: rem(21);
+		color: $primary;
+		margin-bottom: rem(20);
+	}
+	&__price-row{
+		--bs-gutter-x: 6px;
+		display: flex;
+		color: $primary;
+		font-weight: 700;
+		font-size: rem(21);
+
+		padding-bottom: rem(25);
+	}
+	&__price{
+		display: block;
+		&--old{
+			text-decoration: line-through;
+		}
+		&--new{
+			font-weight: 400;
+		}
+	}
+	&__discount{
+		font-size: rem(23);
+		font-weight: 700;
+	}
+	&__btn-cont{
+		text-align: center;
+		width: 100%;
+
+		.ui-button{
+			@include media-breakpoint-between(md,lg){
+				padding: 4px 5px 9px;
+				min-width: 150px;
+			}
+
+			display: inline-block!important;
+			background: var(--bot-btn-bg, #{$body-color})!important;
+			border-color: var(--bot-btn-bg, #{$body-color})!important;
+
+			&:before,
+			&:after{
+				box-shadow: 0 0 0 16px var(--bot-btn-bg, #{$body-color})!important;
+			}
+		}
+	}
+	//
+	&__{
+		color: $body-color;
+		font-size: rem(21);
+		font-weight: 700;
+		// Text style for "Введите пл"
+		font-weight: 700;
+	}
+	&__q-title{
+		@include media-breakpoint-up(sm){
+			font-size: rem(33);
+		}
+		font-weight: 700;
+		margin-bottom: rem(30);
+	}
+	&__q-row{
+		font-size: rem(21);
+
+		--bs-gutter-y: #{rem(15px)};
+		--bs-gutter-x: #{rem(20px)};
+	}
+	&__enter-col{
+		font-weight: 700;
+	}
+	&__inp-col{
+		width: auto;
+		@include media-breakpoint-up(sm){
+			width: rem(170);
+		}
+	}
+	&__input{
+		width: 100%;
+		padding: rem(10) rem(12);
+		line-height: 1;
+		font-weight: bold;
+		border-radius: 5px;
+		background-color: $gray-300;
+	}
+	&__txt-col{
+
+	}
+	&__result-col{
+		color: $primary;
+		font-weight: 700;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sNoMat

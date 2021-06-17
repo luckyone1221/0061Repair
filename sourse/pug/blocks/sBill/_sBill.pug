@@ -1,0 +1,59 @@
+mixin sBill(data)
+	// start sBill
+	+b.SECTION.sBill.section#sBill&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Расчет стоимости ремонта:
+			.tabs
+				+e.caption.tabs__caption
+					.swiper-container.sProjects-slider-js
+						.swiper-wrapper
+							+sBillTabsBtn('Потолки')
+							+sBillTabsBtn('Стены')
+							+sBillTabsBtn('Полы')
+							+sBillTabsBtn('Плитка')
+							+sBillTabsBtn('Сантехника')
+							+sBillTabsBtn('Электрика')
+							+sBillTabsBtn('Отопление', 'active')
+				.tabs__wrap
+					.tabs__content.active
+						+sBillTabsContent()
+					.tabs__content 2
+					.tabs__content 3
+					.tabs__content 4
+					.tabs__content 5
+					.tabs__content 6
+					.tabs__content 7
+	// end sBill
+mixin sBillTabsContent()
+	+e.content
+		+e.table
+			+e.tr--head.row
+				+e.name-col.col-auto.d-none.d-md-block Наименование работ
+				+e.col.col Ед.изм.
+				+e.col.col Количество
+				+e.col.col Цена, руб.
+				+e.col.col Сумма
+			+sBillTr('Демонтаж радиаторов', 'шт.', '500')
+			+sBillTr('Демонтаж+монтаж установленного радиатора для производства работ', 'шт.', '1500')
+			+sBillTr('Покраска подводящих труб отопления', 'м.п.', '180')
+			+sBillTr('Переварка стояка отопления+разводка и монтаж нового радиатора', 'компл.', '1050')
+			+sBillTr('Монтаж распределительного щита отопления', 'щит', '12500')
+
+
+mixin sBillTr(name, key1,key2)
+	+e.tr.row
+		+e.name-col.col-md-auto=name
+		+e.col.col=key1
+		+e.col.col
+			+e.amount
+				+e.a-btn -
+				+e.INPUT.a-input.form-control(type="number" min='0' max="99" value='99')
+				+e.a-btn +
+		+e.col.col=key2
+		+e.col.col 0
+
+
+mixin sBillTabsBtn(txt, addClasses)
+	.swiper-slide
+		+e.tabs-btn.tabs__btn(class=addClasses)=txt
