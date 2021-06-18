@@ -468,8 +468,45 @@ function eventHandler() {
 		}
 	}
 	makeDDGroup([
-		'.sBathRep-dd-group-js'
+		'.sBathRep-dd-group-js',
+		'.sFAQ-dd-group-js',
 	]);
+	//
+	let sDescrWrap = document.querySelector('.sDescr-slider-wrap-js');
+	if (sDescrWrap){
+		let sDescrSlider = new Swiper('.sDescr-slider-js', {
+			slidesPerView: 'auto',
+			spaceBetween: 30,
+			loop: true,
+
+			navigation: {
+				nextEl: sDescrWrap.querySelector('.swiper-button-next'),
+				prevEl: sDescrWrap.querySelector('.swiper-button-prev'),
+			},
+
+			pagination: {
+				el: sDescrWrap.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+	}
+	//custom select
+	$('.custom-select-js').select2({
+		minimumResultsForSearch: Infinity,
+	});
+	//
+	$('.sFeedBack-open-js').click(function (){
+		$(this).closest('.sFeedBack-item-js').find('.sFeedBack-feedback-js').slideDown(function (){
+			$(this).addClass('active');
+		})
+	})
+	$('.sFeedBack-close-js').click(function (){
+		$(this).closest('.sFeedBack-item-js').find('.sFeedBack-feedback-js').slideUp(function (){
+			$(this).removeClass('active');
+		})
+	})
+
 
 	//end luckyone js
 

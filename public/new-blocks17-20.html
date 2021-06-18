@@ -9,6 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<link href="css/oldCss.css" rel="stylesheet"/><head>
 <style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
@@ -1120,6 +1121,187 @@
 </header>
 </div>
 				<!-- end HeaderOld-->
+				<!-- start sDescr-->
+				<section class="sDescr section" id="sDescr">
+					<div class="sDescr__container container">
+						<div class="sDescr__slider-wrap sDescr-slider-wrap-js">
+							<div class="d-none d-xxl-block">
+								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+									<svg class="icon icon-arrow-left ">
+										<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="swiper-container sDescr-slider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="sDescr__row row">
+											<div class="col-md text-center text-md-start">
+												<div class="sDescr__thin">Ремонт квартиры
+												</div>
+												<div class="sDescr__bold">ЖК Достояние
+												</div>
+												<div class="sDescr__sub-row row">
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-1.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Объект:
+																</div>
+																<div class="sDescr__i-sm">Ленинградский просп., 29, корп. 3
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-2.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Площадь:
+																</div>
+																<div class="sDescr__i-sm">104 кв.м.
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-3.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Сроки:
+																</div>
+																<div class="sDescr__i-sm">4 месяца
+																</div>
+															</div>
+														</div>
+													</div>
+												</div><a class="sDescr__btn" href="#">Хочу такой же ремонт</a>
+											</div>
+											<div class="col-md-auto">
+												<div class="sDescr__img"><img loading="lazy" src="img/@2x/sDescr-img.png" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sDescr__row row">
+											<div class="col-md text-center text-md-start">
+												<div class="sDescr__thin">Ремонт квартиры
+												</div>
+												<div class="sDescr__bold">ЖК Достояние
+												</div>
+												<div class="sDescr__sub-row row">
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-1.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Объект:
+																</div>
+																<div class="sDescr__i-sm">Ленинградский просп., 29, корп. 3
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-2.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Площадь:
+																</div>
+																<div class="sDescr__i-sm">104 кв.м.
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-3.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Сроки:
+																</div>
+																<div class="sDescr__i-sm">4 месяца
+																</div>
+															</div>
+														</div>
+													</div>
+												</div><a class="sDescr__btn" href="#">Хочу такой же ремонт</a>
+											</div>
+											<div class="col-md-auto">
+												<div class="sDescr__img"><img loading="lazy" src="img/@2x/sDescr-img.png" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sDescr__row row">
+											<div class="col-md text-center text-md-start">
+												<div class="sDescr__thin">Ремонт квартиры
+												</div>
+												<div class="sDescr__bold">ЖК Достояние
+												</div>
+												<div class="sDescr__sub-row row">
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-1.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Объект:
+																</div>
+																<div class="sDescr__i-sm">Ленинградский просп., 29, корп. 3
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-2.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Площадь:
+																</div>
+																<div class="sDescr__i-sm">104 кв.м.
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<div class="sDescr__item">
+															<div class="sDescr__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sDescr-3.svg" alt=""/>
+															</div>
+															<div class="sDescr__i-txt">
+																<div class="sDescr__i-big">Сроки:
+																</div>
+																<div class="sDescr__i-sm">4 месяца
+																</div>
+															</div>
+														</div>
+													</div>
+												</div><a class="sDescr__btn" href="#">Хочу такой же ремонт</a>
+											</div>
+											<div class="col-md-auto">
+												<div class="sDescr__img"><img loading="lazy" src="img/@2x/sDescr-img.png" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination --corner --corner-top --black ui-price-download__button ui-button"></div>
+						</div>
+					</div>
+				</section>
+				<!-- end sDescr-->
 				<!--+sBaner()-->
 				<!-- start sGalery-->
 				<div class="sGalery section" id="sGalery">
@@ -1474,6 +1656,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<!--range slider-->
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/libs.js"></script>

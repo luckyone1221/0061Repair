@@ -12,6 +12,7 @@ include ../blocks/sProjects/_sProjects.pug
 include ../blocks/sBaner/_sBaner.pug
 include ../blocks/sGalery/_sGalery.pug
 include ../blocks/sFamiliar/_sFamiliar.pug
+include ../blocks/sDescr/_sDescr.pug
 
 block variables
 	- let  mainPage= 'thin-cont'
@@ -23,6 +24,7 @@ block title
 block pagecontent
 	+oldMobMenu()
 	+HeaderOld()
+	+sDescr()
 	//+sBaner()
 	+sGalery()
 	+sFamiliar()

@@ -22,6 +22,7 @@ include ../blocks/sType/_sType.pug
 include ../blocks/sOther/_sOther.pug
 include ../blocks/sTime/_sTime.pug
 include ../blocks/sConsistance/_sConsistance.pug
+include ../blocks/sKey/_sKey.pug
 
 block variables
 	- let  mainPage= null
@@ -36,10 +37,6 @@ block pagecontent
 	+sServices()
 	+sType()
 	+sOther()
-	//-missing!!
-	//-+sTime()
+	+sTime()
 	+sConsistance()
-	//+sInstall()
-	//+sTechnology()
-	//+sCalc()
 	+footerOld()

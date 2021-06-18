@@ -4,8 +4,43 @@ mixin sTime(data)
 		.container
 			+b.section-title--pushed
 				h2 Сроки ремонта под ключ:
-			+e.row.row.justify-lg-content-end.align-items-center
-				+e.amount-col.col-auto Выберите количество комнат в квартире: 1-комнатная
+			+e.top-row.row.justify-content-lg-end.align-items-center
+				+e.amount-col.col-auto Выберите количество комнат в квартире:
 				.col-auto
-
+					+customSelect('rooms-amount', ['1-комнатная','2-комнатная','3-комнатная'])
+			+e.table
+				+e.tr-cont--head.d-none.d-md-block
+					+e.tr.row
+						.col
+							+e.h-key Виды ремонта:
+						.col
+							+e.h-key Сроки выполнения работ:
+						.col
+							+e.h-key Цена за квадратный метр по полу:
+						+e.btn-col.col-auto
+				+sTimeTr('Базовый ремонт под ключ', 'до 30 дней', 'от 2500 р.')
+				+sTimeTr('Комплексный ремонт под ключ', 'до 45 дней', 'от 5000 р.')
+				+sTimeTr('Бизнес ремонт под ключ', 'до 55 дней', 'от 6500 р.')
+				+sTimeTr('Премиум ремонт под ключ', 'до 65 дней', 'от 8000 р.')
 	// end sTime
+
+mixin sTimeTr(val1,val2,val3)
+	+e.tr-cont
+		+e.tr.row.align-items-center
+			.col-sm-6.col-md
+				+e.key.d-md-none Виды ремонта:
+				+e.val=val1
+			.col-sm-6.col-md
+				+e.key.d-md-none Сроки выполнения работ:
+				+e.val=val2
+			.col-sm-6.col-md
+				+e.key.d-md-none Цена за квадратный метр по полу:
+				+e.val--price=val3
+			+e.btn-col.col-auto
+				+e.btn(href="#") Консультация
+
+mixin customSelect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], placeholder='', keyClass='custom-select-js')
+	+b.custom-select
+		select(name=selectName class=keyClass)
+			- for (let item of optionsArr)
+				option(value=item)=item

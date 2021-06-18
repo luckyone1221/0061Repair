@@ -9,6 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<link href="css/oldCss.css" rel="stylesheet"/><head>
 <style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
@@ -1249,6 +1250,144 @@
 					</div>
 				</section>
 				<!-- end sOther-->
+				<!-- start sTime-->
+				<section class="sTime section" id="sTime">
+					<div class="container">
+						<div class="section-title section-title--pushed">
+							<h2>Сроки ремонта под ключ:</h2>
+						</div>
+						<div class="sTime__top-row row justify-content-lg-end align-items-center">
+							<div class="sTime__amount-col col-auto">Выберите количество комнат в квартире:
+							</div>
+							<div class="col-auto">
+								<div class="custom-select">
+									<select class="custom-select-js" name="rooms-amount">
+										<option value="1-комнатная">1-комнатная</option>
+										<option value="2-комнатная">2-комнатная</option>
+										<option value="3-комнатная">3-комнатная</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="sTime__table">
+							<div class="sTime__tr-cont sTime__tr-cont--head d-none d-md-block">
+								<div class="sTime__tr row">
+									<div class="col">
+										<div class="sTime__h-key">Виды ремонта:
+										</div>
+									</div>
+									<div class="col">
+										<div class="sTime__h-key">Сроки выполнения работ:
+										</div>
+									</div>
+									<div class="col">
+										<div class="sTime__h-key">Цена за квадратный метр по полу:
+										</div>
+									</div>
+									<div class="sTime__btn-col col-auto">
+									</div>
+								</div>
+							</div>
+							<div class="sTime__tr-cont">
+								<div class="sTime__tr row align-items-center">
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Виды ремонта:
+										</div>
+										<div class="sTime__val">Базовый ремонт под ключ
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Сроки выполнения работ:
+										</div>
+										<div class="sTime__val">до 30 дней
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Цена за квадратный метр по полу:
+										</div>
+										<div class="sTime__val sTime__val--price">от 2500 р.
+										</div>
+									</div>
+									<div class="sTime__btn-col col-auto"><a class="sTime__btn" href="#">Консультация</a>
+									</div>
+								</div>
+							</div>
+							<div class="sTime__tr-cont">
+								<div class="sTime__tr row align-items-center">
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Виды ремонта:
+										</div>
+										<div class="sTime__val">Комплексный ремонт под ключ
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Сроки выполнения работ:
+										</div>
+										<div class="sTime__val">до 45 дней
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Цена за квадратный метр по полу:
+										</div>
+										<div class="sTime__val sTime__val--price">от 5000 р.
+										</div>
+									</div>
+									<div class="sTime__btn-col col-auto"><a class="sTime__btn" href="#">Консультация</a>
+									</div>
+								</div>
+							</div>
+							<div class="sTime__tr-cont">
+								<div class="sTime__tr row align-items-center">
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Виды ремонта:
+										</div>
+										<div class="sTime__val">Бизнес ремонт под ключ
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Сроки выполнения работ:
+										</div>
+										<div class="sTime__val">до 55 дней
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Цена за квадратный метр по полу:
+										</div>
+										<div class="sTime__val sTime__val--price">от 6500 р.
+										</div>
+									</div>
+									<div class="sTime__btn-col col-auto"><a class="sTime__btn" href="#">Консультация</a>
+									</div>
+								</div>
+							</div>
+							<div class="sTime__tr-cont">
+								<div class="sTime__tr row align-items-center">
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Виды ремонта:
+										</div>
+										<div class="sTime__val">Премиум ремонт под ключ
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Сроки выполнения работ:
+										</div>
+										<div class="sTime__val">до 65 дней
+										</div>
+									</div>
+									<div class="col-sm-6 col-md">
+										<div class="sTime__key d-md-none">Цена за квадратный метр по полу:
+										</div>
+										<div class="sTime__val sTime__val--price">от 8000 р.
+										</div>
+									</div>
+									<div class="sTime__btn-col col-auto"><a class="sTime__btn" href="#">Консультация</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sTime-->
 				<!-- start sConsistance-->
 				<section class="sConsistance section" id="sConsistance">
 					<div class="sConsistance__container container">
@@ -1372,10 +1511,7 @@
 						</div>
 					</div>
 				</section>
-				<!-- end sConsistance-->
-				<!--+sInstall()-->
-				<!--+sTechnology()-->
-				<!--+sCalc()--><div class="ui-page__footer">
+				<!-- end sConsistance--><div class="ui-page__footer">
 <footer class="ui-footer">
 <div class="ui-footer__container ui-container">
 <div class="g-flex g-flex-wrap g-flex-between ui-footer__content">
@@ -1508,6 +1644,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<!--range slider-->
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/libs.js"></script>

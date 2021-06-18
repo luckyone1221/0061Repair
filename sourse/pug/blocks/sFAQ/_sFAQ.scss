@@ -1,0 +1,79 @@
+// start .sFAQ
+.sFAQ {
+	&__items{
+
+	}
+	&__item{
+		margin-bottom: rem(30);
+		--item-px: #{rem(20)};
+
+		&.active{
+			--chevron-col: #{$white};
+			--head-bg: #{$primary};
+			--chevron-rotate: #{180deg};
+			--q-sign-col: #{$white};
+		}
+	}
+	&__head{
+		cursor: pointer;
+		padding: rem(10) var(--item-px);
+		border-radius: rem(5);
+		background-color: var(--head-bg, #{$gray-200});
+		box-shadow: 0 0 rem(15) 0px rgba($black, .1);
+
+		display: flex;
+		align-items: center;
+	}
+	&__q-sign{
+		flex-shrink: 0;
+		width: rem(21);
+		height: rem(21);
+		margin-right: rem(10);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			@include mt();
+			font-size: rem(18);
+			color: var(--q-sign-col, #{$primary});
+		}
+	}
+	&__h-txt{
+		font-weight: 700;
+		font-size: rem(21);
+		padding-right: rem(20);
+	}
+	&__chevron{
+		@include mt();
+		transform: rotateX(var(--chevron-rotate, 0deg));
+		content: '';
+		width: rem(28);
+		height: rem(28);
+		margin-left: auto;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon{
+			@include mt();
+			font-size: rem(28);
+			color: var(--chevron-col, #{$body-color});
+		}
+	}
+
+	&__content{
+		font-size: rem(20);
+		padding: rem(20) var(--item-px) rem(10) var(--item-px);
+
+		display: none;
+		&.active{
+			display: block;
+		}
+
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sFAQ

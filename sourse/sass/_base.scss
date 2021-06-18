@@ -336,6 +336,8 @@ ul {
 	}
 
 	.icon{
+		@include mt();
+
 		font-size: rem(24px);
 		@include media-breakpoint-up(xxl){
 			font-size: rem(32px);

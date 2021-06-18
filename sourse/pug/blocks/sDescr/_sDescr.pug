@@ -1,0 +1,51 @@
+mixin sDescr(data)
+	// start sDescr
+	+b.SECTION.sDescr.section#sDescr&attributes(attributes)
+		+e.container.container
+			+e.slider-wrap.sDescr-slider-wrap-js
+				.d-none.d-xxl-block
+					+arrow()
+				.swiper-container.sDescr-slider-js
+					.swiper-wrapper
+						+sDescrSlide()
+						+sDescrSlide()
+						+sDescrSlide()
+				.swiper-pagination(class="--corner --corner-top --black ui-price-download__button ui-button")
+	// end sDescr
+
+mixin sDescrSlide()
+	.swiper-slide
+		+e.row.row
+			.col-md.text-center.text-md-start
+				+e.thin Ремонт квартиры
+				+e.bold ЖК Достояние
+				+e.sub-row.row
+					+sDescrIconItem({
+						imgNum: 1,
+						bigTxt: 'Объект:',
+						smTxt: 'Ленинградский просп., 29, корп. 3',
+					})
+					|
+					+sDescrIconItem({
+						imgNum: 2,
+						bigTxt: 'Площадь:',
+						smTxt: '104 кв.м.',
+					})
+					+sDescrIconItem({
+						imgNum: 3,
+						bigTxt: 'Сроки:',
+						smTxt: '4 месяца',
+					})
+				+e.btn(href='#') Хочу такой же ремонт
+			.col-md-auto
+				+e.img
+					img(loading="lazy" src="img/@2x/sDescr-img.png" alt="")
+
+mixin sDescrIconItem(data)
+	.col
+		+e.item
+			+e.icon
+				img.img-svg-js(loading="lazy" src=`img/svg/sDescr-${data.imgNum}.svg` alt="")
+			+e.i-txt
+				+e.i-big=data.bigTxt
+				+e.i-sm=data.smTxt
