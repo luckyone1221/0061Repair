@@ -1,24 +1,24 @@
 mixin scrollmenu(data)
 	// start scrollmenu
-	+b.scrollmenu#scrollmenu&attributes(attributes)
+	+b.scrollmenu--js#scrollmenu&attributes(attributes)
 		.container
 			+e.row.row.align-items-center
 				.col
 					+e.logo(href="/")
 						img(loading="lazy" src="img/svg/logo-svg.svg" alt="")
-				.col-auto
+				.col-auto.d-none.d-md-block
 					+scrollmenuIconLink('calculator', 'КАЛЬКУЛЯТОР')
-				.col-auto
-					+scrollmenuIconLink('telephone', '+7 (495) 227-53-00')
-				.col-auto
-					+e.call-back(href='#') ЗАКАЗАТЬ ЗВОНОК
+				.col-auto.d-none.d-sm-block
+					+scrollmenuIconLink('telephone', '+7 (495) 227-53-00', 'tel:+74952275300')
+				.col-auto.d-none.d-sm-block
+					+e.call-back(data-modal="request") ЗАКАЗАТЬ ЗВОНОК
 				.col-auto
 					+e.burger.js-nav-show
 						span
 	// end scrollmenu
 
-mixin scrollmenuIconLink(imgName, txt)
-	+e.i-link(href='#')
+mixin scrollmenuIconLink(imgName, txt, href='#')
+	+e.i-link(href=href)
 		+e.icon
 			img.img-svg-js(loading="lazy" src=`img/svg/${imgName}.svg` alt="")
 		+e.i-txt=txt

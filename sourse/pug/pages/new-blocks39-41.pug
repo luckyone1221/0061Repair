@@ -1,6 +1,6 @@
 extends layout/main.pug
 
-
+include ../blocks/scrollmenu/_scrollmenu.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sWalls/_sWalls.pug
@@ -40,8 +40,10 @@ block title
 	- let  title= '39-41'
 	title= title
 block pagecontent
+	+scrollmenu()
 	+oldMobMenu()
-	+HeaderOld()
+	+HeaderOld2()
+
 	+sList()
 	+sHow()
 	+sArticals()

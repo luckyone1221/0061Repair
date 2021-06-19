@@ -32,16 +32,18 @@
 		<div class="main-wrapper ui-page__wrapper">
 			<div class="ui-page__main">
 				<!-- start scrollmenu-->
-				<div class="scrollmenu" id="scrollmenu">
+				<div class="scrollmenu scrollmenu--js" id="scrollmenu">
 					<div class="container">
 						<div class="scrollmenu__row row align-items-center">
 							<div class="col"><a class="scrollmenu__logo" href="/"><img loading="lazy" src="img/svg/logo-svg.svg" alt=""/></a>
 							</div>
-							<div class="col-auto"><a class="scrollmenu__i-link" href="#"><span class="scrollmenu__icon"><img class="img-svg-js" loading="lazy" src="img/svg/calculator.svg" alt=""/></span><span class="scrollmenu__i-txt">КАЛЬКУЛЯТОР</span></a>
+							<div class="col-auto d-none d-md-block"><a class="scrollmenu__i-link" href="#"><span class="scrollmenu__icon"><img class="img-svg-js" loading="lazy" src="img/svg/calculator.svg" alt=""/></span><span class="scrollmenu__i-txt">КАЛЬКУЛЯТОР</span></a>
 							</div>
-							<div class="col-auto"><a class="scrollmenu__i-link" href="#"><span class="scrollmenu__icon"><img class="img-svg-js" loading="lazy" src="img/svg/telephone.svg" alt=""/></span><span class="scrollmenu__i-txt">+7 (495) 227-53-00</span></a>
+							<div class="col-auto d-none d-sm-block"><a class="scrollmenu__i-link" href="tel:+74952275300"><span class="scrollmenu__icon"><img class="img-svg-js" loading="lazy" src="img/svg/telephone.svg" alt=""/></span><span class="scrollmenu__i-txt">+7 (495) 227-53-00</span></a>
 							</div>
-							<div class="col-auto"><a class="scrollmenu__call-back" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+							<div class="col-auto d-none d-sm-block">
+								<div class="scrollmenu__call-back" data-modal="request">ЗАКАЗАТЬ ЗВОНОК
+								</div>
 							</div>
 							<div class="col-auto">
 								<div class="scrollmenu__burger js-nav-show"><span></span>
@@ -185,7 +187,7 @@
 <div class="g-flex g-flex-middle g-flex-between g-flex-top@lg ui-header__main">
 <div class="ui-header__logo">
 <a href="//remontvau.voropaev.biz" class="ui-logo --header" title="СК «АРТ-ДЕКОР»">
-<img src="local/assets/images/logo.png" alt="СК «АРТ-ДЕКОР»">
+<img src="img/svg/logo-black.svg" alt="СК «АРТ-ДЕКОР»">
 </a>
 </div>
 <div class="ui-header__menu g-hidden@lg">

@@ -1,0 +1,35 @@
+mixin sDecorative(data)
+	// start sDecorative
+	+b.SECTION.sDecorative.section#sDecorative&attributes(attributes)
+		.container
+			+e.box
+				+e.row.row
+					.col-lg-6
+						+b.section-title
+							h2 Lorem ipsum dolor sit amet. lalala
+							+e.UL.list
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores.
+								li Lorem ipsum dolor sit amet.
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								li Lorem ipsum dolor sit. Lorem ipsum.
+						+form-wrap
+							+e.sub-row.row.gy-3.align-items-center
+								.col-xl-6
+									+input('Ваш телефон', 'tel')
+								.col-xl-6
+									+e.btn(type="submit") отправить заявку
+					.col-lg-6
+						+e.slider-wrap
+							.swiper-container.sDecorative-slider-js
+								.swiper-wrapper
+									-for (var i = 1; i < 9; i+=3)
+										+sDecorativeSlide(i)
+								.swiper-pagination
+	// end sDecorative
+
+mixin sDecorativeSlide(imgNum)
+	.swiper-slide
+		+e.grid
+			-for (var i = 0; i < 3; i++)
+				+e.img-link(href=`img/@2x/sWalls-${Number(imgNum) + i}.jpg` data-fancybox="sDecorative")
+					img(loading="lazy" src=`img/@2x/sWalls-${Number(imgNum) + i}.jpg` alt="")

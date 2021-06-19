@@ -9,6 +9,7 @@ include ../blocks/sHeaderBlOld/_sHeaderBlOld.pug
 include ../blocks/sPrice/_sPrice.pug
 include ../blocks/sDiscont/_sDiscont.pug
 include ../blocks/sProjects/_sProjects.pug
+include ../blocks/scrollmenu/_scrollmenu.pug
 
 block variables
 	- let  mainPage= null 
@@ -18,8 +19,10 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
+	+scrollmenu()
 	+oldMobMenu()
-	+HeaderOld()
+	+HeaderOld2()
+
 	+sWalls()
 	+sPrice()
 	+sDiscont()

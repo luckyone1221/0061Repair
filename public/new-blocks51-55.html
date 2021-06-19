@@ -30,7 +30,29 @@
 	</head>
 	<body class="ui-page --home js-page --load ">
 		<div class="main-wrapper ui-page__wrapper">
-			<div class="ui-page__main"><div class="ui-menu-adaptive ui-visible@lg js-nav">
+			<div class="ui-page__main">
+				<!-- start scrollmenu-->
+				<div class="scrollmenu scrollmenu--js" id="scrollmenu">
+					<div class="container">
+						<div class="scrollmenu__row row align-items-center">
+							<div class="col"><a class="scrollmenu__logo" href="/"><img loading="lazy" src="img/svg/logo-svg.svg" alt=""/></a>
+							</div>
+							<div class="col-auto d-none d-md-block"><a class="scrollmenu__i-link" href="#"><span class="scrollmenu__icon"><img class="img-svg-js" loading="lazy" src="img/svg/calculator.svg" alt=""/></span><span class="scrollmenu__i-txt">КАЛЬКУЛЯТОР</span></a>
+							</div>
+							<div class="col-auto d-none d-sm-block"><a class="scrollmenu__i-link" href="tel:+74952275300"><span class="scrollmenu__icon"><img class="img-svg-js" loading="lazy" src="img/svg/telephone.svg" alt=""/></span><span class="scrollmenu__i-txt">+7 (495) 227-53-00</span></a>
+							</div>
+							<div class="col-auto d-none d-sm-block">
+								<div class="scrollmenu__call-back" data-modal="request">ЗАКАЗАТЬ ЗВОНОК
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="scrollmenu__burger js-nav-show"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end scrollmenu--><div class="ui-menu-adaptive ui-visible@lg js-nav">
 <div class="ui-menu-adaptive__content">
 <div class="ui-menu-adaptive__item">
 <span class="ui-menu-adaptive__icon">
@@ -131,8 +153,7 @@
 <svg class="ui-icon ui-menu-adaptive__close-icon" viewBox="0 0 512 512">
 <path d="M256 0C114.51 0 0 114.497 0 256c0 141.49 114.497 256 256 256 141.49 0 256-114.497 256-256C512 114.51 397.503 0 256 0zm0 477.867c-122.337 0-221.867-99.529-221.867-221.867S133.663 34.133 256 34.133 477.867 133.663 477.867 256 378.337 477.867 256 477.867z"></path><path d="M280.136 256l79.986-79.987c6.665-6.664 6.665-17.471 0-24.136-6.664-6.664-17.471-6.664-24.136 0L256 231.864l-79.986-79.987c-6.664-6.665-17.469-6.665-24.136 0-6.665 6.664-6.665 17.471 0 24.136L231.864 256l-79.986 79.987c-6.665 6.664-6.665 17.471 0 24.136s17.471 6.665 24.136 0L256 280.136l79.986 79.987c6.663 6.664 17.469 6.666 24.136 0 6.665-6.664 6.665-17.471 0-24.136L280.136 256z"></path></svg>
 </div>
-</div>
-				<!-- start HeaderOld--><div class="ui-page__header">
+</div><div class="ui-page__header">
 <header class="ui-header">
 <div class="ui-header__top">
 <div class="g-flex g-flex-between ui-container">
@@ -166,7 +187,7 @@
 <div class="g-flex g-flex-middle g-flex-between g-flex-top@lg ui-header__main">
 <div class="ui-header__logo">
 <a href="//remontvau.voropaev.biz" class="ui-logo --header" title="СК «АРТ-ДЕКОР»">
-<img src="local/assets/images/logo.png" alt="СК «АРТ-ДЕКОР»">
+<img src="img/svg/logo-black.svg" alt="СК «АРТ-ДЕКОР»">
 </a>
 </div>
 <div class="ui-header__menu g-hidden@lg">
@@ -675,452 +696,8 @@
 </div>
 </div>
 </div>
-<div class="ui-header__scrolled">
-<div class="ui-header__scrolled-content">
-<div class="g-flex g-flex-middle g-flex-between ui-container">
-<div class="ui-header__logo">
-<a href="//remontvau.voropaev.biz" class="ui-logo --header" title="СК «АРТ-ДЕКОР»">
-<img src="local/assets/images/logo-light.png" alt="СК «АРТ-ДЕКОР»">
-</a>
-</div>
-<div class="g-flex g-flex-middle ui-header__right">
-<div class="ui-menu --services --scrolled g-hidden@lg">
-<ul class="g-flex g-flex-between ui-menu__list">
-<li class="ui-menu__item --level-submenu">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__link" target="_self" title="Ремонт квартир">
-<span class="ui-menu__text">Ремонт квартир</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-1">
-<div class="g-flex ui-menu__submenu-inner">
-<div class="ui-menu__submenu-column">
-<h3 class="ui-menu__submenu-header">
-<span>Тип ремонта</span>
-</h3>
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт под ключ">
-<span class="ui-menu__submenu-text">Ремонт под ключ</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Базовый ремонт">
-<span class="ui-menu__submenu-text">Базовый ремонт</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Комплексный ремонт">
-<span class="ui-menu__submenu-text">Комплексный ремонт</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт бизнес-класса">
-<span class="ui-menu__submenu-text">Ремонт бизнес-класса</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт премиум-класса">
-<span class="ui-menu__submenu-text">Ремонт премиум-класса</span>
-</a>
-</li>
-</ul>
-</div>
-<div class="ui-menu__submenu-column">
-<h3 class="ui-menu__submenu-header">
-<span>Тип квартиры</span>
-</h3>
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт 1-к квартиры">
-<span class="ui-menu__submenu-text">Ремонт 1-к квартиры</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт 2-к квартиры">
-<span class="ui-menu__submenu-text">Ремонт 2-к квартиры</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт 3-к квартиры">
-<span class="ui-menu__submenu-text">Ремонт 3-к квартиры</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт квартиры студии">
-<span class="ui-menu__submenu-text">Ремонт квартиры студии</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт новостройки">
-<span class="ui-menu__submenu-text">Ремонт новостройки</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт вторички">
-<span class="ui-menu__submenu-text">Ремонт вторички</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Хрущевка">
-<span class="ui-menu__submenu-text">Хрущевка</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Сталинка">
-<span class="ui-menu__submenu-text">Сталинка</span>
-</a>
-</li>
-</ul>
-</div>
-<div class="ui-menu__submenu-column">
-<h3 class="ui-menu__submenu-header">
-<span>Тип комнаты</span>
-</h3>
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт комнат">
-<span class="ui-menu__submenu-text">Ремонт комнат</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт кухни">
-<span class="ui-menu__submenu-text">Ремонт кухни</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт ванной">
-<span class="ui-menu__submenu-text">Ремонт ванной</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт санузла">
-<span class="ui-menu__submenu-text">Ремонт санузла</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт прихожей">
-<span class="ui-menu__submenu-text">Ремонт прихожей</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт детской">
-<span class="ui-menu__submenu-text">Ремонт детской</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт гостинной">
-<span class="ui-menu__submenu-text">Ремонт гостинной</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт спальни">
-<span class="ui-menu__submenu-text">Ремонт спальни</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт балкона">
-<span class="ui-menu__submenu-text">Ремонт балкона</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li class="ui-menu__item --level-submenu">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__link" target="_self" title="Ремонт помещений">
-<span class="ui-menu__text">Ремонт помещений</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-1">
-<div class="g-flex ui-menu__submenu-inner">
-<div class="ui-menu__submenu-column">
-<h3 class="ui-menu__submenu-header">
-<span>Нежилые помещения</span>
-</h3>
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Офисы">
-<span class="ui-menu__submenu-text">Офисы</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Магазины">
-<span class="ui-menu__submenu-text">Магазины</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Рестораны и кафе">
-<span class="ui-menu__submenu-text">Рестораны и кафе</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li class="ui-menu__item --level-submenu">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__link" target="_self" title="Ремонт домов">
-<span class="ui-menu__text">Ремонт домов</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-1">
-<div class="g-flex ui-menu__submenu-inner">
-<div class="ui-menu__submenu-column">
-<h3 class="ui-menu__submenu-header">
-<span>Загородная недвижимость</span>
-</h3>
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт загородного дома">
-<span class="ui-menu__submenu-text">Ремонт загородного дома</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт коттеджей">
-<span class="ui-menu__submenu-text">Ремонт коттеджей</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Ремонт таунхаусов">
-<span class="ui-menu__submenu-text">Ремонт таунхаусов</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li class="ui-menu__item --level-submenu">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__link" target="_self" title="Отделка квартир">
-<span class="ui-menu__text">Отделка квартир</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-1">
-<div class="g-flex ui-menu__submenu-inner">
-<div class="ui-menu__submenu-column">
-<h3 class="ui-menu__submenu-header">
-<span>По виду отделки</span>
-</h3>
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Черновая отделка">
-<span class="ui-menu__submenu-text">Черновая отделка</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Чистовая отделка">
-<span class="ui-menu__submenu-text">Чистовая отделка</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Декоративная отделка">
-<span class="ui-menu__submenu-text">Декоративная отделка</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li class="ui-menu__item --level-submenu">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__link" target="_self" title="Виды работ">
-<span class="ui-menu__text">Виды работ</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-1">
-<div class="g-flex ui-menu__submenu-inner">
-<div class="ui-menu__submenu-column">
-<h3 class="ui-menu__submenu-header">
-<span>По типу</span>
-</h3>
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Потолки">
-<span class="ui-menu__submenu-text">Потолки</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-2">
-<div class="ui-menu__submenu-inner">
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Натяжной потолок">
-<span class="ui-menu__submenu-text">Натяжной потолок</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Монтаж гипсокартона">
-<span class="ui-menu__submenu-text">Монтаж гипсокартона</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Реечный потолок">
-<span class="ui-menu__submenu-text">Реечный потолок</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Потолок армстронг">
-<span class="ui-menu__submenu-text">Потолок армстронг</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Потолок грильято">
-<span class="ui-menu__submenu-text">Потолок грильято</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Штукатурка потолка">
-<span class="ui-menu__submenu-text">Штукатурка потолка</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Шпатлевка потолка">
-<span class="ui-menu__submenu-text">Шпатлевка потолка</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Покраска потолка">
-<span class="ui-menu__submenu-text">Покраска потолка</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Стены">
-<span class="ui-menu__submenu-text">Стены</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-2">
-<div class="ui-menu__submenu-inner">
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Штукатурка стен">
-<span class="ui-menu__submenu-text">Штукатурка стен</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Отделка стен плиткой">
-<span class="ui-menu__submenu-text">Отделка стен плиткой</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Отделка стен обоями">
-<span class="ui-menu__submenu-text">Отделка стен обоями</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Отделка стен камнем">
-<span class="ui-menu__submenu-text">Отделка стен камнем</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Отделка стен кирпичом">
-<span class="ui-menu__submenu-text">Отделка стен кирпичом</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Отделка стен панелями">
-<span class="ui-menu__submenu-text">Отделка стен панелями</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Отделка стен фанерой">
-<span class="ui-menu__submenu-text">Отделка стен фанерой</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Покраска стен">
-<span class="ui-menu__submenu-text">Покраска стен</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Полы">
-<span class="ui-menu__submenu-text">Полы</span>
-</a>
-<div class="ui-menu__submenu --level-submenu-2">
-<div class="ui-menu__submenu-inner">
-<ul>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Стяжка пола">
-<span class="ui-menu__submenu-text">Стяжка пола</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Наливные полы">
-<span class="ui-menu__submenu-text">Наливные полы</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Укладка фанеры">
-<span class="ui-menu__submenu-text">Укладка фанеры</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Укладка паркета">
-<span class="ui-menu__submenu-text">Укладка паркета</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Укладка плитки">
-<span class="ui-menu__submenu-text">Укладка плитки</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Укладка ламината">
-<span class="ui-menu__submenu-text">Укладка ламината</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Укладка ковролина">
-<span class="ui-menu__submenu-text">Укладка ковролина</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Укладка линолиума">
-<span class="ui-menu__submenu-text">Укладка линолиума</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Сантехника">
-<span class="ui-menu__submenu-text">Сантехника</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Электрика">
-<span class="ui-menu__submenu-text">Электрика</span>
-</a>
-</li>
-<li class="ui-menu__submenu-item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__submenu-link" target="_self" title="Демонтаж">
-<span class="ui-menu__submenu-text">Демонтаж</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li class="ui-menu__item">
-<a href="//remontvau.voropaev.biz/content" class="ui-menu__link" target="_self" title="Дизайн интерьера">
-<span class="ui-menu__text">Дизайн интерьера</span>
-</a>
-</li>
-</ul>
-</div>
-<div class="ui-header__hamburger js-nav-show g-visible@lg">
-<svg class="ui-icon ui-header__hamburger-icon" viewBox="0 0 512 512">
-<path d="M416.666 0H95.332C42.766 0 0 42.767 0 95.334v321.332C0 469.233 42.766 512 95.332 512h321.334C469.233 512 512 469.233 512 416.666V95.334C512 42.767 469.233 0 416.666 0zM400.6 391.5H111.4c-8.285 0-15-6.716-15-15s6.715-15 15-15h289.2c8.283 0 15 6.716 15 15s-6.717 15-15 15zm0-120.5H111.4c-8.285 0-15-6.716-15-15s6.715-15 15-15h289.2c8.283 0 15 6.716 15 15s-6.717 15-15 15zm0-120.5H111.4c-8.285 0-15-6.716-15-15s6.715-15 15-15h289.2c8.283 0 15 6.716 15 15s-6.717 15-15 15z"></path></svg>
-</div>
-</div>
-</div>
-</div>
-</div>
 </header>
 </div>
-				<!-- end HeaderOld-->
 				<!-- start sBathRep-->
 				<section class="sBathRep section" id="sBathRep">
 					<div class="container">

@@ -1,4 +1,5 @@
 extends layout/main.pug
+include ../blocks/scrollmenu/_scrollmenu.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
@@ -44,6 +45,7 @@ include ../blocks/sDescr/_sDescr.pug
 include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sFeedBack/_sFeedBack.pug
 include ../blocks/sTabs/_sTabs.pug
+include ../blocks/sDecorative/_sDecorative.pug
 
 block variables
 	- let  mainPage= null
@@ -53,9 +55,11 @@ block title
 	- let  title= '56+'
 	title= title
 block pagecontent
+	+scrollmenu()
 	+oldMobMenu()
-	+HeaderOld()
+	+HeaderOld2()
 	+sFAQ()
 	+sFeedBack()
 	+sTabs()
+	+sDecorative()
 	+footerOld()

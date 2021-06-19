@@ -2,7 +2,7 @@
 .scrollmenu {
 	padding: rem(9) 0;
 	@include mt();
-	//transform: translateY(-110%);
+	transform: translateY(-110%);
 	&.active{
 		transform: translateY(0);
 	}

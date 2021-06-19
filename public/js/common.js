@@ -515,6 +515,31 @@ function eventHandler() {
 		$('.js-nav').addClass('--open-nav');
 		console.log(document.querySelectorAll('.js-nav'));
 		$('body').addClass('--page-open-nav');
+	}); //
+
+	let header = document.querySelector('.ui-page__header');
+	let scrollMenu = document.querySelector('.scrollmenu--js');
+
+	if (header) {
+		window.addEventListener('scroll', function () {
+			if (window.scrollY > header.offsetHeight) {
+				scrollMenu.classList.add('active');
+			} else {
+				scrollMenu.classList.remove('active');
+			}
+		});
+	} //
+
+
+	let sDescrSlider = new Swiper('.sDecorative-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: true,
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
 	}); //end luckyone js
 }
 
