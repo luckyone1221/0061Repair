@@ -126,10 +126,11 @@
 		}
 	}
 	&__name{
-		display: block;
+		display: inline-block;
 		font-size: rem(22);
-		text-decoration: underline;
-		padding: 0 rem(15);
+		line-height: 1.2;
+		margin: 0 rem(15);
+		border-bottom: 1px solid currentColor;
 	}
 	//
 	&__btn-cont{
