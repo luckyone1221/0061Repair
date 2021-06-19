@@ -506,6 +506,13 @@ function eventHandler() {
 			$(this).removeClass('active');
 		})
 	})
+	//--open-nav
+	$('.burger-js').click(function (){
+		//  .js-nav
+		$('.js-nav').addClass('--open-nav');
+		console.log(document.querySelectorAll('.js-nav'));
+		$('body').addClass('--page-open-nav');
+	})
 
 
 	//end luckyone js

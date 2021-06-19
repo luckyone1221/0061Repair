@@ -5885,18 +5885,28 @@
         }
       }, {
         key: "parseCalclulating", value: function (e) {
-          var t = this;
-          e.getAttribute("discount-range").split(",").forEach((function (e) {
-            e = e.split(":"), t.rangeBuffer[e[0]] = parseInt(e[1])
-          }))
+          try{
+            var t = this;
+            e.getAttribute("discount-range").split(",").forEach((function (e) {
+              e = e.split(":"), t.rangeBuffer[e[0]] = parseInt(e[1])
+            }))
+          }
+          catch{
+            console.log('got u bitch');
+          }
         }
       }, {
         key: "updateCalc", value: function () {
-          var e = this, t = this.rangeSlider.result.from, n = Object.keys(this.rangeBuffer), i = 0;
-          n.find((function (n) {
-            var o = n.split("-");
-            (t === Number(o[0]) || t <= Number(o[1]) && !i) && (e.discount = e.rangeBuffer[n], i = 1)
-          })), document.querySelector(this.nodes.result).innerHTML = "".concat(this.discount, " %")
+          try{
+            var e = this, t = this.rangeSlider.result.from, n = Object.keys(this.rangeBuffer), i = 0;
+            n.find((function (n) {
+              var o = n.split("-");
+              (t === Number(o[0]) || t <= Number(o[1]) && !i) && (e.discount = e.rangeBuffer[n], i = 1)
+            })), document.querySelector(this.nodes.result).innerHTML = "".concat(this.discount, " %")
+          }
+          catch{
+            console.log('');
+          }
         }
       }], (i = null) && fe(n.prototype, i), o && fe(n, o), e
     }();
@@ -8186,13 +8196,23 @@
         }
       }, {
         key: "render", value: function () {
-          var e = new (o());
-          document.documentElement.classList.add(m() ? "--mobile" : "--desktop", "--browser-" + e.getBrowser().name.toLowerCase().replace(/\s/gi, "-"), "--os-" + e.getOS().name.toLowerCase().replace(/\s/gi, "-")), F.init(), $.init(), V.init(), J.init(), pe.init(), he.init();
-          var t = document.querySelector(".ui-page__main");
-          window.addEventListener("scroll", (function () {
-            var e, n = t.offsetTop || 0;
-            e = document.documentElement, (window.pageYOffset || e.scrollTop) - (e.clientTop || 0) > n ? document.querySelector(".ui-header__scrolled").classList.add("--visible") : document.querySelector(".ui-header__scrolled").classList.remove("--visible")
-          })), Ot.init(), At.init(), Lt.init()
+          try{
+            var e = new (o());
+            document.documentElement.classList.add(m() ? "--mobile" : "--desktop", "--browser-" + e.getBrowser().name.toLowerCase().replace(/\s/gi, "-"), "--os-" + e.getOS().name.toLowerCase().replace(/\s/gi, "-")), F.init(), $.init(), V.init(), J.init(), pe.init(), he.init();
+            var t = document.querySelector(".ui-page__main");
+            window.addEventListener("scroll", (function () {
+              var e, n = t.offsetTop || 0;
+              try{
+                e = document.documentElement, (window.pageYOffset || e.scrollTop) - (e.clientTop || 0) > n ? document.querySelector(".ui-header__scrolled").classList.add("--visible") : document.querySelector(".ui-header__scrolled").classList.remove("--visible")
+              }
+              catch{
+
+              }
+            })), Ot.init(), At.init(), Lt.init()
+          }
+          catch {
+            console.log('la');
+          }
         }
       }]) && jt(t.prototype, n), i && jt(t, i), e
     }();

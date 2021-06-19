@@ -1,0 +1,96 @@
+// start .sTabs
+.sTabs {
+  .section-title{
+    h2{
+      margin-bottom: rem(25);
+    }
+    p{
+      margin-top: 0;
+      font-size: rem(21);
+      line-height: 1.2;
+      margin-bottom: rem(15);
+    }
+  }
+  &__container{
+    @include media-breakpoint-up(lg){
+      max-width: 1060px!important;
+    }
+  }
+  .tabs__caption{
+    position: relative;
+    &:before{
+      content: '';
+      @include media-breakpoint-up(lg){
+        content: none;
+      }
+
+      position: absolute;
+      top: 0;
+      left: calc(-1 * (100vw - 100%) / 2);
+      width: 100vw;
+      height: 100%;
+      background: $body-color;
+    }
+
+    margin-bottom: rem(50);
+    @include media-breakpoint-up(xl){
+      margin: 0 rem(-30) rem(50) rem(-30);
+    }
+    padding: rem(5) 0;
+
+    background: $body-color;
+    border-radius: rem(5);
+
+    .swiper-container{
+      overflow: visible;
+    }
+    .swiper-wrapper{
+      @include media-breakpoint-up(lg){
+        justify-content: space-between;
+      }
+    }
+    .swiper-slide{
+      width: auto;
+      @include media-breakpoint-up(xl){
+        width: auto;
+      }
+    }
+  }
+  &__tabs-btn{
+    padding: rem(16) rem(30);
+
+    color: $white;
+    font-size: rem(17);
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &.active{
+      text-decoration: underline;
+      &:after{
+        opacity: 1;
+      }
+    }
+    @extend .bot-triangle;
+  }
+  &__know-btn{
+    @extend .btn;
+    @extend .btn-primary;
+
+    color: $white!important;
+    padding: rem(12) rem(30);
+    font-size: rem(17);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin-right: rem(10);
+  }
+
+  &__table-cont{
+    max-height: rem(500);
+    overflow-y: auto;
+    @extend .custom-scroll2;
+  }
+  //
+  &__{}
+  &__{}
+} // end.sTabs

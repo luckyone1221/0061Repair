@@ -1,0 +1,24 @@
+mixin scrollmenu(data)
+	// start scrollmenu
+	+b.scrollmenu#scrollmenu&attributes(attributes)
+		.container
+			+e.row.row.align-items-center
+				.col
+					+e.logo(href="/")
+						img(loading="lazy" src="img/svg/logo-svg.svg" alt="")
+				.col-auto
+					+scrollmenuIconLink('calculator', 'КАЛЬКУЛЯТОР')
+				.col-auto
+					+scrollmenuIconLink('telephone', '+7 (495) 227-53-00')
+				.col-auto
+					+e.call-back(href='#') ЗАКАЗАТЬ ЗВОНОК
+				.col-auto
+					+e.burger.js-nav-show
+						span
+	// end scrollmenu
+
+mixin scrollmenuIconLink(imgName, txt)
+	+e.i-link(href='#')
+		+e.icon
+			img.img-svg-js(loading="lazy" src=`img/svg/${imgName}.svg` alt="")
+		+e.i-txt=txt

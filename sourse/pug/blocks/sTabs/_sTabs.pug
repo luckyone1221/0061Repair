@@ -1,0 +1,60 @@
+mixin sTabs(data)
+	// start sTabs
+	+b.SECTION.sTabs.section#sTabs&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Цены
+				p При заказе ремонта квартиры наших клиентов волнует не только качество работ, но и стоимость услуг. Рассмотрим из чего складывается цена ремонта квартиры под ключ и как можно сэкономить.
+				p Как заранее выяснить, насколько дорогим окажется ремонт? Примерную цену ремонта квартиры за квадратный метр можно узнать, позвонив по телефону. Окончательная же стоимость сообщается заказчику только после выезда замерщика на объект и составления сметы.
+			.tabs
+				.tabs__caption
+					.swiper-container.sProjects-slider-js
+						.swiper-wrapper
+							+sTabsTabsBtn('Потолки', 'active')
+							+sTabsTabsBtn('Стены')
+							+sTabsTabsBtn('Полы')
+							+sTabsTabsBtn('Двери')
+							+sTabsTabsBtn('Сантехника')
+							+sTabsTabsBtn('Электрика')
+							+sTabsTabsBtn('Прочие услуги')
+				.tabs__wrap
+					.tabs__content.active
+						+sTabsContent()
+					.tabs__content
+						+sTabsContent()
+					.tabs__content
+						+sTabsContent()
+					.tabs__content
+						+sTabsContent()
+					.tabs__content
+						+sTabsContent()
+					.tabs__content
+						+sTabsContent()
+					.tabs__content
+						+sTabsContent()
+	// end sTabs
+
+mixin sTabsTabsBtn(txt, addClasses)
+	.swiper-slide
+		+e.tabs-btn.tabs__btn(class=addClasses)=txt
+
+mixin sTabsContent()
+	+e.content
+		+e.table-cont
+			table.ui-table
+				thead
+					tr
+						th Наименование работ:
+						th Ед. изм.
+						th Цена, руб.
+				tbody
+					+sPriceTr('Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит', 'кв.м', '345')
+					+sPriceTr('Демонтаж кирпичных стен в 1/2 кирпича', 'кв.м', '431')
+					+sPriceTr('Демонтаж кирпичных стен в 1/4 кирпича', 'кв.м', '271')
+					+sPriceTr('Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм', 'кв.м', '801')
+					+sPriceTr('Демонтаж штукатурки толщиной до 3 см.', 'кв.м', '394')
+					+sPriceTr('Демонтаж штукатурки толщиной свыше 3 см.', 'кв.м', '493')
+					+sPriceTr('Демонтаж оконных, дверныхоткосов из штукатурки', 'м.п', '271')
+					+sPriceTr('Демонтаж подоконника', 'шт.', '308')
+					-for(var i=0; i < 20; i++)
+						+sPriceTr('Демонтаж оконного блока', 'шт.', '1071')

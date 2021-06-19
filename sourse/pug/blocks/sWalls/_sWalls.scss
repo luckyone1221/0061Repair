@@ -68,20 +68,26 @@
 		@include mt();
 		opacity: var(--det-o, 0);
 
+		&:hover{
+			--det-bg:#{$body-color};
+			--det-col:#{$white};
+			--det-bb:#{$white};
+		}
+
 		position: absolute;
 		bottom: 100%;
 		width: calc(100% - #{rem(76)});
 		left: #{rem(38)};
 		height: rem(38);
 		border-radius: rem(20) rem(20) 0 0;
-		background: $primary;
+		background: var(--det-bg,#{$primary});
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 3px 10px;
 
-		color: $body-color;
+		color: var(--det-col, #{$body-color});
 		font-size: rem(19);
 		font-weight: 700;
 		text-transform: uppercase;
@@ -89,12 +95,13 @@
 		span{
 			display: inline-block;
 			line-height: 1.2;
-			border-bottom: 1px dashed $body-color;
+			border-bottom: 1px dashed var(--det-bb,#{$body-color});
 		}
 
 		&:before,
 		&:after{
-			box-shadow: 0 0 0 16px $primary;
+			@include mt();
+			box-shadow: 0 0 0 16px var(--det-bg,#{$primary});
 			content: "";
 			position: absolute;
 			height: 38px;

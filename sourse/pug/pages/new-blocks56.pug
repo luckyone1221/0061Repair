@@ -43,6 +43,7 @@ include ../blocks/sNoMat/_sNoMat.pug
 include ../blocks/sDescr/_sDescr.pug
 include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sTabs/_sTabs.pug
 
 block variables
 	- let  mainPage= null
@@ -54,7 +55,7 @@ block title
 block pagecontent
 	+oldMobMenu()
 	+HeaderOld()
-	//-+sDescr()
 	+sFAQ()
 	+sFeedBack()
+	+sTabs()
 	+footerOld()
