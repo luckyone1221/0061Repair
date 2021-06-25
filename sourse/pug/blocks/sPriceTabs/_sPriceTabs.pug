@@ -4,7 +4,7 @@ mixin sPriceTabs(data)
 		.container
 			+b.section-title--pushed
 				h2 Стоимость демонтажных работ:
-			+e.box
+			+e.box.cTabs-js
 				+e.main-row.row
 					.col-lg-7
 						+e.caption-row.row
@@ -28,7 +28,7 @@ mixin sPriceTabs(data)
 	// end sPriceTabs
 
 mixin sPriceTabsAsideContent(title, addClasses='')
-	+e.aside-content.sPriceTabs-content-js(class=addClasses)
+	+e.aside-content.cTabs-content-js(class=addClasses)
 		+e.aside-bg
 			img(loading="lazy" src="img/@2x/sPrice-Tabs-bg.jpg" alt="")
 		+e.title=title
@@ -47,7 +47,7 @@ mixin charsItem(key, val)
 		+e.val-col.col-sm-6=val
 
 mixin sPriceTabsCationItem(imgNum, txt, addClasses='')
-	+e.caption-col.col-sm-6.col-sm-4.sPriceTabs-tab-btn-js(class=addClasses)
+	+e.caption-col.col-sm-6.col-md-4.cTabs-btn-js(class=addClasses)
 		+e.icon
 			img.img-svg-js(loading="lazy" src=`img/svg/sPriceTabs-icon-${imgNum}.svg` alt="")
 			//+icon(`sPriceTabs-icon-${imgNum}`)

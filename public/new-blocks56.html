@@ -10,6 +10,7 @@
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<link rel="stylesheet" href="libs/round-slider/roundslider.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<link href="css/oldCss.css" rel="stylesheet"/><head>
 <style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
@@ -698,1513 +699,390 @@
 </div>
 </header>
 </div>
-				<!-- start sFAQ-->
-				<section class="sFAQ section" id="sFAQ">
+				<!--+sFAQ()-->
+				<!--+sFeedBack()-->
+				<!--+sTabs()-->
+				<!--+sDecorative()-->
+				<!-- start sCalculator-->
+				<section class="sCalculator section" id="sCalculator">
 					<div class="container">
-						<div class="section-title">
-							<h2>Часто задаваемые вопросы</h2>
+						<div class="section-title section-title--pushed">
+							<h2>Калькулятор ремонта квартир онлайн:</h2>
 						</div>
-						<div class="sFAQ__items sFAQ-dd-group-js">
-							<div class="sFAQ__item active">
-								<div class="sFAQ__head dd-head-js">
-									<div class="sFAQ__q-sign">
-										<svg class="icon icon-question ">
-											<use xlink:href="img/svg/sprite.svg#question"></use>
-										</svg>
-									</div>
-									<div class="sFAQ__h-txt">С каких работ вы начинаете отделку квартиры ?
-									</div>
-									<div class="sFAQ__chevron">
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg>
+						<div class="sCalculator__box cTabs-js">
+							<div class="sCalculator__main-row row">
+								<div class="col-lg-7">
+									<div class="sCalculator__caption-row row">
+										<div class="sCalculator__caption-col col-4 cTabs-btn-js">
+											<div class="sCalculator__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sCalculator-1.svg" alt=""/>
+											</div>
+											<div class="sCalculator__txt">Новостройка
+											</div>
+										</div>
+										<div class="sCalculator__caption-col col-4 cTabs-btn-js">
+											<div class="sCalculator__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sCalculator-2.svg" alt=""/>
+											</div>
+											<div class="sCalculator__txt">Вторичное жильё
+											</div>
+										</div>
+										<div class="sCalculator__caption-col col-4 cTabs-btn-js active">
+											<div class="sCalculator__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sCalculator-3.svg" alt=""/>
+											</div>
+											<div class="sCalculator__txt">Помещение
+											</div>
+										</div>
+										<div class="sCalculator__radio-cont cTabs-content-group-js">
+											<div class="cTabs-content-js"></div>
+											<div class="cTabs-content-js"></div>
+											<div class="cTabs-content-js active">
+												<div class="sCalculator__radio-box">
+													<div class="sCalculator__r-row row">
+														<div class="col-auto">
+															<label class="custom-radio">
+																<input class="invisible" type="radio" name="radio-group" value="Комната"/>
+																<div class="cirlce"></div>
+																<div class="cr-txt">Комната</div>
+															</label>
+														</div>
+														<div class="col-auto">
+															<label class="custom-radio">
+																<input class="invisible" type="radio" name="radio-group" value="Кухня"/>
+																<div class="cirlce"></div>
+																<div class="cr-txt">Кухня</div>
+															</label>
+														</div>
+														<div class="col-auto">
+															<label class="custom-radio">
+																<input class="invisible" type="radio" name="radio-group" value="Ванная"/>
+																<div class="cirlce"></div>
+																<div class="cr-txt">Ванная</div>
+															</label>
+														</div>
+														<div class="col-auto">
+															<label class="custom-radio">
+																<input class="invisible" type="radio" name="radio-group" value="Санузел"/>
+																<div class="cirlce"></div>
+																<div class="cr-txt">Санузел</div>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCalculator__c-wrap">
+											<div class="sCalculator__c-title text-center">Выберите общую площадь помещения:
+											</div>
+											<div class="sCalculator__circle-cont">
+												<div class="round-slider-js"></div>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="sFAQ__content dd-content-js active">Отделка квартиры всегда начинается с проведения подготовительных работ (выезд на объект сметчика, дизайнера, составление сметы). После этого мы проводим ремонт коммуникаций, сатехники, отопления, электропроводки и приступаем к отделочным работам.
-								</div>
-							</div>
-							<div class="sFAQ__item">
-								<div class="sFAQ__head dd-head-js">
-									<div class="sFAQ__q-sign">
-										<svg class="icon icon-question ">
-											<use xlink:href="img/svg/sprite.svg#question"></use>
-										</svg>
-									</div>
-									<div class="sFAQ__h-txt">Может ли в ходе ремонта меняться стоимость работ ?
-									</div>
-									<div class="sFAQ__chevron">
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg>
-									</div>
-								</div>
-								<div class="sFAQ__content dd-content-js">Может, но только по Вашему требованию. То есть, проводя ремонт квартиры, вопросы увеличения или уменьшения его стоимости мы решаем исходя из Ваших дополнительных требований, возникающих в процессе. Вы можете отказаться от каких-либо работ или наоборот, заказать выполнение дополнительных объемов. В любом случае малейшее изменение стоимости предварительно согласовывается с Вами.
-								</div>
-							</div>
-							<div class="sFAQ__item">
-								<div class="sFAQ__head dd-head-js">
-									<div class="sFAQ__q-sign">
-										<svg class="icon icon-question ">
-											<use xlink:href="img/svg/sprite.svg#question"></use>
-										</svg>
-									</div>
-									<div class="sFAQ__h-txt">Как происходит оплата ваших услуг ?
-									</div>
-									<div class="sFAQ__chevron">
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg>
-									</div>
-								</div>
-								<div class="sFAQ__content dd-content-js">Работы по отделке квартиры производятся в три этапа, каждый этап оплачивается отдельно. Приблизительно можно сказать, что каждый раз вы оплачиваете треть от всей суммы. Последний платеж вносится только после полного завершения отделочных работ.
-								</div>
-							</div>
-							<div class="sFAQ__item">
-								<div class="sFAQ__head dd-head-js">
-									<div class="sFAQ__q-sign">
-										<svg class="icon icon-question ">
-											<use xlink:href="img/svg/sprite.svg#question"></use>
-										</svg>
-									</div>
-									<div class="sFAQ__h-txt">Кто контролирует выполнение работ ?
-									</div>
-									<div class="sFAQ__chevron">
-										<svg class="icon icon-chevron-down ">
-											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-										</svg>
-									</div>
-								</div>
-								<div class="sFAQ__content dd-content-js">К каждому объекту прикреплен прораб. Он отвечает за правильную организацию и качество выполнения работ, исполнение сроков, указанных в договоре, предоставления отчетов заказчику, как по выполненным работам, так и по деньгам, затраченным на материалы. Дополнительный технический надзор осуществляет инженер проекта.
-								</div>
+								<div class="col-lg-5"></div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- end sFAQ-->
-				<!-- start sFeedBack-->
-				<section class="sFeedBack section" id="sFeedBack">
+				<!-- end sCalculator-->
+				<!-- start sPriceTabs-->
+				<section class="sPriceTabs section" id="sPriceTabs">
 					<div class="container">
-						<div class="section-title">
-							<h2>Отзывы о компании "СК АРТ-ДЕКОР"</h2>
+						<div class="section-title section-title--pushed">
+							<h2>Стоимость демонтажных работ:</h2>
 						</div>
-						<div class="sFeedBack__items">
-							<div class="sFeedBack__item sFeedBack-item-js">
-								<h4 class="sFeedBack__title">Отзыв о ремонте квартиры от Изабеллы М.
-								</h4>
-								<div class="sFeedBack__row row">
-									<div class="col-md-6">
-										<div class="sFeedBack__sub-row row">
-											<div class="col-12"><a class="sFeedBack__img-link" href="img/@2x/sHow-6.jpg" data-fancybox="sFeedBack1"><img loading="lazy" src="img/@2x/sHow-6.jpg" alt=""/></a>
+						<div class="sPriceTabs__box cTabs-js">
+							<div class="sPriceTabs__main-row row">
+								<div class="col-lg-7">
+									<div class="sPriceTabs__caption-row row">
+										<div class="sPriceTabs__caption-col col-sm-6 col-md-4 cTabs-btn-js active">
+											<div class="sPriceTabs__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sPriceTabs-icon-1.svg" alt=""/>
+												<!--+icon(`sPriceTabs-icon-${imgNum}`)-->
 											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-1.jpg" data-fancybox="sFeedBack1"><img loading="lazy" src="img/@2x/sHow-1.jpg" alt=""/></a>
+											<div class="sPriceTabs__txt">Подготовка к ремонту
 											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-2.jpg" data-fancybox="sFeedBack1"><img loading="lazy" src="img/@2x/sHow-2.jpg" alt=""/></a>
+										</div>
+										<div class="sPriceTabs__caption-col col-sm-6 col-md-4 cTabs-btn-js">
+											<div class="sPriceTabs__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sPriceTabs-icon-2.svg" alt=""/>
+												<!--+icon(`sPriceTabs-icon-${imgNum}`)-->
 											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-3.jpg" data-fancybox="sFeedBack1"><img loading="lazy" src="img/@2x/sHow-3.jpg" alt=""/></a>
+											<div class="sPriceTabs__txt">Демонтаж перегородок
 											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-4.jpg" data-fancybox="sFeedBack1"><img loading="lazy" src="img/@2x/sHow-4.jpg" alt=""/></a>
+										</div>
+										<div class="sPriceTabs__caption-col col-sm-6 col-md-4 cTabs-btn-js">
+											<div class="sPriceTabs__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sPriceTabs-icon-3.svg" alt=""/>
+												<!--+icon(`sPriceTabs-icon-${imgNum}`)-->
 											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-5.jpg" data-fancybox="sFeedBack1"><img loading="lazy" src="img/@2x/sHow-5.jpg" alt=""/></a>
+											<div class="sPriceTabs__txt">Демонтаж пола
 											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-6.jpg" data-fancybox="sFeedBack1"><img loading="lazy" src="img/@2x/sHow-6.jpg" alt=""/></a>
+										</div>
+										<div class="sPriceTabs__caption-col col-sm-6 col-md-4 cTabs-btn-js">
+											<div class="sPriceTabs__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sPriceTabs-icon-4.svg" alt=""/>
+												<!--+icon(`sPriceTabs-icon-${imgNum}`)-->
+											</div>
+											<div class="sPriceTabs__txt">Демонтаж стяжки
+											</div>
+										</div>
+										<div class="sPriceTabs__caption-col col-sm-6 col-md-4 cTabs-btn-js">
+											<div class="sPriceTabs__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sPriceTabs-icon-5.svg" alt=""/>
+												<!--+icon(`sPriceTabs-icon-${imgNum}`)-->
+											</div>
+											<div class="sPriceTabs__txt">Демонтаж сантехкабины
+											</div>
+										</div>
+										<div class="sPriceTabs__caption-col col-sm-6 col-md-4 cTabs-btn-js">
+											<div class="sPriceTabs__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sPriceTabs-icon-6.svg" alt=""/>
+												<!--+icon(`sPriceTabs-icon-${imgNum}`)-->
+											</div>
+											<div class="sPriceTabs__txt">Вымоз мусора
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6">
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-1.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Объект:
-												</div>
-												<div class="sFeedBack__val">Ул. Островитянова, S - 76 кв.м.
-												</div>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-2.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Задача:
-												</div>
-												<ul class="sFeedBack__list">
-													<li>Создать дизайн в стиле современная классика.</li>
-													<li>Создание светлого и чистого интерьера.</li>
-													<li>Создание двух изолированных комнат</li>
-													<li>Придумывать вместительную систему хранения.</li>
-												</ul>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-3.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Сроки:
-												</div>
-												<div class="sFeedBack__val">3.5 месяца
-												</div>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-4.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__read-btn sFeedBack-open-js"><span>Прочитать отзыв клиента</span>
-												</div>
-											</div>
+									<div class="sPriceTabs__big-img-cont d-none d-lg-block">
+										<div class="sPriceTabs__big-img"><img loading="lazy" src="img/@2x/sPrice-Tabs-big.jpg" alt=""/>
 										</div>
 									</div>
 								</div>
-								<div class="sFeedBack__feedback sFeedBack-feedback-js">
-									<div class="sFeedBack__f-close-btn sFeedBack-close-js">
-										<svg class="icon icon-cross ">
-											<use xlink:href="img/svg/sprite.svg#cross"></use>
-										</svg>
-									</div>
-									<div class="sFeedBack__f-row row">
-										<div class="col-sm-auto text-center">
-											<div class="sFeedBack__portrait"><img loading="lazy" src="img/@2x/sFeedback-portrait.jpg" alt=""/>
+								<div class="col-lg-5">
+									<div class="sPriceTabs__aside">
+										<div class="sPriceTabs__aside-content cTabs-content-js active">
+											<div class="sPriceTabs__aside-bg"><img loading="lazy" src="img/@2x/sPrice-Tabs-bg.jpg" alt=""/>
 											</div>
-											<div class="sFeedBack__name">Изабелла М.
+											<div class="sPriceTabs__title">Подготовка к ремонту
 											</div>
-										</div>
-										<div class="col-sm-auto text-center">
-											<div class="sFeedBack__cert-txt">Анкета клиента:
-											</div><a class="sFeedBack__cert" href="img/@2x/sFeedback-cert.jpg" data-fancybox="cert1"><img loading="lazy" src="img/@2x/sFeedback-cert.jpg" alt=""/></a>
-										</div>
-										<div class="col-sm">
-											<div class="sFeedBack__f-txt">Искренне благодарна сотрудникам строительной фирмы "СК Арт Декор" за отлично выполненный ремонт моей новой квартиры. Особенно понравился дизайн детской комнаты, за что спасибо дизайнеру Оксане, мои мальчишки просто в восторге! Заказывала комплексный ремонт, так как квартиру купили с черновой отделкой, думала процесс растянется надолго. Все отделочные работы были выполнены аккуратно и в оговоренный в договоре срок. Новоселье мы отпраздновали вовремя!
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sFeedBack__item sFeedBack-item-js">
-								<h4 class="sFeedBack__title">Отзыв о ремонте квартиры от Изабеллы М.
-								</h4>
-								<div class="sFeedBack__row row">
-									<div class="col-md-6">
-										<div class="sFeedBack__sub-row row">
-											<div class="col-12"><a class="sFeedBack__img-link" href="img/@2x/sHow-6.jpg" data-fancybox="sFeedBack2"><img loading="lazy" src="img/@2x/sHow-6.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-1.jpg" data-fancybox="sFeedBack2"><img loading="lazy" src="img/@2x/sHow-1.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-2.jpg" data-fancybox="sFeedBack2"><img loading="lazy" src="img/@2x/sHow-2.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-3.jpg" data-fancybox="sFeedBack2"><img loading="lazy" src="img/@2x/sHow-3.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-4.jpg" data-fancybox="sFeedBack2"><img loading="lazy" src="img/@2x/sHow-4.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-5.jpg" data-fancybox="sFeedBack2"><img loading="lazy" src="img/@2x/sHow-5.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-6.jpg" data-fancybox="sFeedBack2"><img loading="lazy" src="img/@2x/sHow-6.jpg" alt=""/></a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-1.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Объект:
+											<div class="sPriceTabs__chars">
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Зачистка поверхностей
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 300 руб/м2 по полу
+													</div>
 												</div>
-												<div class="sFeedBack__val">Ул. Островитянова, S - 76 кв.м.
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Частичный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 500 руб/м2 по полу
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-2.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Задача:
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Полный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 1000 руб/м2 по полу
+													</div>
 												</div>
-												<ul class="sFeedBack__list">
-													<li>Создать дизайн в стиле современная классика.</li>
-													<li>Создание светлого и чистого интерьера.</li>
-													<li>Создание двух изолированных комнат</li>
-													<li>Придумывать вместительную систему хранения.</li>
-												</ul>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-3.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Сроки:
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж офисов
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 200 руб/м2 по полу
+													</div>
 												</div>
-												<div class="sFeedBack__val">3.5 месяца
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж нежилых помещений
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 400 руб/м2 по полу
+													</div>
 												</div>
+											</div><a class="sPriceTabs__a-btn" href="#">Оставить заявку на демонтаж</a>
+											<div class="sPriceTabs__connect-txt">Мы свяжемся с Вами в течение 5 минут
 											</div>
 										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-4.svg" alt=""/>
+										<div class="sPriceTabs__aside-content cTabs-content-js">
+											<div class="sPriceTabs__aside-bg"><img loading="lazy" src="img/@2x/sPrice-Tabs-bg.jpg" alt=""/>
 											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__read-btn sFeedBack-open-js"><span>Прочитать отзыв клиента</span>
+											<div class="sPriceTabs__title">Демонтаж перегородок
+											</div>
+											<div class="sPriceTabs__chars">
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Зачистка поверхностей
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 300 руб/м2 по полу
+													</div>
 												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sFeedBack__feedback sFeedBack-feedback-js">
-									<div class="sFeedBack__f-close-btn sFeedBack-close-js">
-										<svg class="icon icon-cross ">
-											<use xlink:href="img/svg/sprite.svg#cross"></use>
-										</svg>
-									</div>
-									<div class="sFeedBack__f-row row">
-										<div class="col-sm-auto text-center">
-											<div class="sFeedBack__portrait"><img loading="lazy" src="img/@2x/sFeedback-portrait.jpg" alt=""/>
-											</div>
-											<div class="sFeedBack__name">Изабелла М.
-											</div>
-										</div>
-										<div class="col-sm-auto text-center">
-											<div class="sFeedBack__cert-txt">Анкета клиента:
-											</div><a class="sFeedBack__cert" href="img/@2x/sFeedback-cert.jpg" data-fancybox="cert2"><img loading="lazy" src="img/@2x/sFeedback-cert.jpg" alt=""/></a>
-										</div>
-										<div class="col-sm">
-											<div class="sFeedBack__f-txt">Искренне благодарна сотрудникам строительной фирмы "СК Арт Декор" за отлично выполненный ремонт моей новой квартиры. Особенно понравился дизайн детской комнаты, за что спасибо дизайнеру Оксане, мои мальчишки просто в восторге! Заказывала комплексный ремонт, так как квартиру купили с черновой отделкой, думала процесс растянется надолго. Все отделочные работы были выполнены аккуратно и в оговоренный в договоре срок. Новоселье мы отпраздновали вовремя!
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sFeedBack__item sFeedBack-item-js">
-								<h4 class="sFeedBack__title">Отзыв о ремонте квартиры от Изабеллы М.
-								</h4>
-								<div class="sFeedBack__row row">
-									<div class="col-md-6">
-										<div class="sFeedBack__sub-row row">
-											<div class="col-12"><a class="sFeedBack__img-link" href="img/@2x/sHow-6.jpg" data-fancybox="sFeedBack3"><img loading="lazy" src="img/@2x/sHow-6.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-1.jpg" data-fancybox="sFeedBack3"><img loading="lazy" src="img/@2x/sHow-1.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-2.jpg" data-fancybox="sFeedBack3"><img loading="lazy" src="img/@2x/sHow-2.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-3.jpg" data-fancybox="sFeedBack3"><img loading="lazy" src="img/@2x/sHow-3.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-4.jpg" data-fancybox="sFeedBack3"><img loading="lazy" src="img/@2x/sHow-4.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-5.jpg" data-fancybox="sFeedBack3"><img loading="lazy" src="img/@2x/sHow-5.jpg" alt=""/></a>
-											</div>
-											<div class="col-4"><a class="sFeedBack__img-link" href="img/@2x/sHow-6.jpg" data-fancybox="sFeedBack3"><img loading="lazy" src="img/@2x/sHow-6.jpg" alt=""/></a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-1.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Объект:
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Частичный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 500 руб/м2 по полу
+													</div>
 												</div>
-												<div class="sFeedBack__val">Ул. Островитянова, S - 76 кв.м.
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Полный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 1000 руб/м2 по полу
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-2.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Задача:
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж офисов
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 200 руб/м2 по полу
+													</div>
 												</div>
-												<ul class="sFeedBack__list">
-													<li>Создать дизайн в стиле современная классика.</li>
-													<li>Создание светлого и чистого интерьера.</li>
-													<li>Создание двух изолированных комнат</li>
-													<li>Придумывать вместительную систему хранения.</li>
-												</ul>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-3.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__ic-title">Сроки:
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж нежилых помещений
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 400 руб/м2 по полу
+													</div>
 												</div>
-												<div class="sFeedBack__val">3.5 месяца
+											</div><a class="sPriceTabs__a-btn" href="#">Оставить заявку на демонтаж</a>
+											<div class="sPriceTabs__connect-txt">Мы свяжемся с Вами в течение 5 минут
+											</div>
+										</div>
+										<div class="sPriceTabs__aside-content cTabs-content-js">
+											<div class="sPriceTabs__aside-bg"><img loading="lazy" src="img/@2x/sPrice-Tabs-bg.jpg" alt=""/>
+											</div>
+											<div class="sPriceTabs__title">Демонтаж пола
+											</div>
+											<div class="sPriceTabs__chars">
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Зачистка поверхностей
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 300 руб/м2 по полу
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="sFeedBack__iconed">
-											<div class="sFeedBack__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sFeedBack-4.svg" alt=""/>
-											</div>
-											<div class="sFeedBack__content">
-												<div class="sFeedBack__read-btn sFeedBack-open-js"><span>Прочитать отзыв клиента</span>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Частичный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 500 руб/м2 по полу
+													</div>
 												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Полный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 1000 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж офисов
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 200 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж нежилых помещений
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 400 руб/м2 по полу
+													</div>
+												</div>
+											</div><a class="sPriceTabs__a-btn" href="#">Оставить заявку на демонтаж</a>
+											<div class="sPriceTabs__connect-txt">Мы свяжемся с Вами в течение 5 минут
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="sFeedBack__feedback sFeedBack-feedback-js">
-									<div class="sFeedBack__f-close-btn sFeedBack-close-js">
-										<svg class="icon icon-cross ">
-											<use xlink:href="img/svg/sprite.svg#cross"></use>
-										</svg>
-									</div>
-									<div class="sFeedBack__f-row row">
-										<div class="col-sm-auto text-center">
-											<div class="sFeedBack__portrait"><img loading="lazy" src="img/@2x/sFeedback-portrait.jpg" alt=""/>
+										<div class="sPriceTabs__aside-content cTabs-content-js">
+											<div class="sPriceTabs__aside-bg"><img loading="lazy" src="img/@2x/sPrice-Tabs-bg.jpg" alt=""/>
 											</div>
-											<div class="sFeedBack__name">Изабелла М.
+											<div class="sPriceTabs__title">Демонтаж стяжки
 											</div>
-										</div>
-										<div class="col-sm-auto text-center">
-											<div class="sFeedBack__cert-txt">Анкета клиента:
-											</div><a class="sFeedBack__cert" href="img/@2x/sFeedback-cert.jpg" data-fancybox="cert3"><img loading="lazy" src="img/@2x/sFeedback-cert.jpg" alt=""/></a>
-										</div>
-										<div class="col-sm">
-											<div class="sFeedBack__f-txt">Искренне благодарна сотрудникам строительной фирмы "СК Арт Декор" за отлично выполненный ремонт моей новой квартиры. Особенно понравился дизайн детской комнаты, за что спасибо дизайнеру Оксане, мои мальчишки просто в восторге! Заказывала комплексный ремонт, так как квартиру купили с черновой отделкой, думала процесс растянется надолго. Все отделочные работы были выполнены аккуратно и в оговоренный в договоре срок. Новоселье мы отпраздновали вовремя!
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sFeedBack-->
-				<!-- start sTabs-->
-				<section class="sTabs section" id="sTabs">
-					<div class="container">
-						<div class="section-title">
-							<h2>Цены</h2>
-							<p>При заказе ремонта квартиры наших клиентов волнует не только качество работ, но и стоимость услуг. Рассмотрим из чего складывается цена ремонта квартиры под ключ и как можно сэкономить.</p>
-							<p>Как заранее выяснить, насколько дорогим окажется ремонт? Примерную цену ремонта квартиры за квадратный метр можно узнать, позвонив по телефону. Окончательная же стоимость сообщается заказчику только после выезда замерщика на объект и составления сметы.</p>
-						</div>
-						<div class="tabs">
-							<div class="tabs__caption">
-								<div class="swiper-container sProjects-slider-js">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="sTabs__tabs-btn tabs__btn active">Потолки
+											<div class="sPriceTabs__chars">
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Зачистка поверхностей
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 300 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Частичный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 500 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Полный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 1000 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж офисов
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 200 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж нежилых помещений
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 400 руб/м2 по полу
+													</div>
+												</div>
+											</div><a class="sPriceTabs__a-btn" href="#">Оставить заявку на демонтаж</a>
+											<div class="sPriceTabs__connect-txt">Мы свяжемся с Вами в течение 5 минут
 											</div>
 										</div>
-										<div class="swiper-slide">
-											<div class="sTabs__tabs-btn tabs__btn">Стены
+										<div class="sPriceTabs__aside-content cTabs-content-js">
+											<div class="sPriceTabs__aside-bg"><img loading="lazy" src="img/@2x/sPrice-Tabs-bg.jpg" alt=""/>
+											</div>
+											<div class="sPriceTabs__title">Демонтаж сантехкабины
+											</div>
+											<div class="sPriceTabs__chars">
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Зачистка поверхностей
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 300 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Частичный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 500 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Полный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 1000 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж офисов
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 200 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж нежилых помещений
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 400 руб/м2 по полу
+													</div>
+												</div>
+											</div><a class="sPriceTabs__a-btn" href="#">Оставить заявку на демонтаж</a>
+											<div class="sPriceTabs__connect-txt">Мы свяжемся с Вами в течение 5 минут
 											</div>
 										</div>
-										<div class="swiper-slide">
-											<div class="sTabs__tabs-btn tabs__btn">Полы
+										<div class="sPriceTabs__aside-content cTabs-content-js">
+											<div class="sPriceTabs__aside-bg"><img loading="lazy" src="img/@2x/sPrice-Tabs-bg.jpg" alt=""/>
 											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="sTabs__tabs-btn tabs__btn">Двери
+											<div class="sPriceTabs__title">Вымоз мусора
 											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="sTabs__tabs-btn tabs__btn">Сантехника
+											<div class="sPriceTabs__chars">
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Зачистка поверхностей
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 300 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Частичный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 500 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Полный демонтаж
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 1000 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж офисов
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 200 руб/м2 по полу
+													</div>
+												</div>
+												<div class="sPriceTabs__chars-item row">
+													<div class="sPriceTabs__key-col col-sm-6">Демонтаж нежилых помещений
+													</div>
+													<div class="sPriceTabs__val-col col-sm-6">от 400 руб/м2 по полу
+													</div>
+												</div>
+											</div><a class="sPriceTabs__a-btn" href="#">Оставить заявку на демонтаж</a>
+											<div class="sPriceTabs__connect-txt">Мы свяжемся с Вами в течение 5 минут
 											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="sTabs__tabs-btn tabs__btn">Электрика
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="sTabs__tabs-btn tabs__btn">Прочие услуги
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tabs__wrap">
-								<div class="tabs__content active">
-									<div class="sTabs__content">
-										<div class="sTabs__table-cont">
-											<table class="ui-table">
-												<thead>
-													<tr>
-														<th>Наименование работ:</th>
-														<th>Ед. изм.</th>
-														<th>Цена, руб.</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит</td>
-														<td>кв.м</td>
-														<td>345</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/2 кирпича</td>
-														<td>кв.м</td>
-														<td>431</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/4 кирпича</td>
-														<td>кв.м</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм</td>
-														<td>кв.м</td>
-														<td>801</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной до 3 см.</td>
-														<td>кв.м</td>
-														<td>394</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной свыше 3 см.</td>
-														<td>кв.м</td>
-														<td>493</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконных, дверныхоткосов из штукатурки</td>
-														<td>м.п</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж подоконника</td>
-														<td>шт.</td>
-														<td>308</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sTabs__content">
-										<div class="sTabs__table-cont">
-											<table class="ui-table">
-												<thead>
-													<tr>
-														<th>Наименование работ:</th>
-														<th>Ед. изм.</th>
-														<th>Цена, руб.</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит</td>
-														<td>кв.м</td>
-														<td>345</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/2 кирпича</td>
-														<td>кв.м</td>
-														<td>431</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/4 кирпича</td>
-														<td>кв.м</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм</td>
-														<td>кв.м</td>
-														<td>801</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной до 3 см.</td>
-														<td>кв.м</td>
-														<td>394</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной свыше 3 см.</td>
-														<td>кв.м</td>
-														<td>493</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконных, дверныхоткосов из штукатурки</td>
-														<td>м.п</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж подоконника</td>
-														<td>шт.</td>
-														<td>308</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sTabs__content">
-										<div class="sTabs__table-cont">
-											<table class="ui-table">
-												<thead>
-													<tr>
-														<th>Наименование работ:</th>
-														<th>Ед. изм.</th>
-														<th>Цена, руб.</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит</td>
-														<td>кв.м</td>
-														<td>345</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/2 кирпича</td>
-														<td>кв.м</td>
-														<td>431</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/4 кирпича</td>
-														<td>кв.м</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм</td>
-														<td>кв.м</td>
-														<td>801</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной до 3 см.</td>
-														<td>кв.м</td>
-														<td>394</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной свыше 3 см.</td>
-														<td>кв.м</td>
-														<td>493</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконных, дверныхоткосов из штукатурки</td>
-														<td>м.п</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж подоконника</td>
-														<td>шт.</td>
-														<td>308</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sTabs__content">
-										<div class="sTabs__table-cont">
-											<table class="ui-table">
-												<thead>
-													<tr>
-														<th>Наименование работ:</th>
-														<th>Ед. изм.</th>
-														<th>Цена, руб.</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит</td>
-														<td>кв.м</td>
-														<td>345</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/2 кирпича</td>
-														<td>кв.м</td>
-														<td>431</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/4 кирпича</td>
-														<td>кв.м</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм</td>
-														<td>кв.м</td>
-														<td>801</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной до 3 см.</td>
-														<td>кв.м</td>
-														<td>394</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной свыше 3 см.</td>
-														<td>кв.м</td>
-														<td>493</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконных, дверныхоткосов из штукатурки</td>
-														<td>м.п</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж подоконника</td>
-														<td>шт.</td>
-														<td>308</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sTabs__content">
-										<div class="sTabs__table-cont">
-											<table class="ui-table">
-												<thead>
-													<tr>
-														<th>Наименование работ:</th>
-														<th>Ед. изм.</th>
-														<th>Цена, руб.</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит</td>
-														<td>кв.м</td>
-														<td>345</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/2 кирпича</td>
-														<td>кв.м</td>
-														<td>431</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/4 кирпича</td>
-														<td>кв.м</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм</td>
-														<td>кв.м</td>
-														<td>801</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной до 3 см.</td>
-														<td>кв.м</td>
-														<td>394</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной свыше 3 см.</td>
-														<td>кв.м</td>
-														<td>493</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконных, дверныхоткосов из штукатурки</td>
-														<td>м.п</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж подоконника</td>
-														<td>шт.</td>
-														<td>308</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sTabs__content">
-										<div class="sTabs__table-cont">
-											<table class="ui-table">
-												<thead>
-													<tr>
-														<th>Наименование работ:</th>
-														<th>Ед. изм.</th>
-														<th>Цена, руб.</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит</td>
-														<td>кв.м</td>
-														<td>345</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/2 кирпича</td>
-														<td>кв.м</td>
-														<td>431</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/4 кирпича</td>
-														<td>кв.м</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм</td>
-														<td>кв.м</td>
-														<td>801</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной до 3 см.</td>
-														<td>кв.м</td>
-														<td>394</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной свыше 3 см.</td>
-														<td>кв.м</td>
-														<td>493</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконных, дверныхоткосов из штукатурки</td>
-														<td>м.п</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж подоконника</td>
-														<td>шт.</td>
-														<td>308</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sTabs__content">
-										<div class="sTabs__table-cont">
-											<table class="ui-table">
-												<thead>
-													<tr>
-														<th>Наименование работ:</th>
-														<th>Ед. изм.</th>
-														<th>Цена, руб.</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит</td>
-														<td>кв.м</td>
-														<td>345</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/2 кирпича</td>
-														<td>кв.м</td>
-														<td>431</td>
-													</tr>
-													<tr>
-														<td>Демонтаж кирпичных стен в 1/4 кирпича</td>
-														<td>кв.м</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм</td>
-														<td>кв.м</td>
-														<td>801</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной до 3 см.</td>
-														<td>кв.м</td>
-														<td>394</td>
-													</tr>
-													<tr>
-														<td>Демонтаж штукатурки толщиной свыше 3 см.</td>
-														<td>кв.м</td>
-														<td>493</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконных, дверныхоткосов из штукатурки</td>
-														<td>м.п</td>
-														<td>271</td>
-													</tr>
-													<tr>
-														<td>Демонтаж подоконника</td>
-														<td>шт.</td>
-														<td>308</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-													<tr>
-														<td>Демонтаж оконного блока</td>
-														<td>шт.</td>
-														<td>1071</td>
-													</tr>
-												</tbody>
-											</table>
 										</div>
 									</div>
 								</div>
@@ -2212,64 +1090,7 @@
 						</div>
 					</div>
 				</section>
-				<!-- end sTabs-->
-				<!-- start sDecorative-->
-				<section class="sDecorative section" id="sDecorative">
-					<div class="container">
-						<div class="sDecorative__box">
-							<div class="sDecorative__row row">
-								<div class="col-lg-6">
-									<div class="section-title">
-										<h2>Lorem ipsum dolor sit amet. lalala</h2>
-										<ul class="section-title__list">
-											<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores.</li>
-											<li>Lorem ipsum dolor sit amet.</li>
-											<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-											<li>Lorem ipsum dolor sit. Lorem ipsum.</li>
-										</ul>
-									</div>
-									<div class="form-wrap">
-										<form>
-											<div class="form-wrap__sub-row row gy-3 align-items-center">
-												<div class="col-xl-6">
-													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<div class="col-xl-6">
-													<button class="form-wrap__btn" type="submit">отправить заявку
-													</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="sDecorative__slider-wrap">
-										<div class="swiper-container sDecorative-slider-js">
-											<div class="swiper-wrapper">
-												<div class="swiper-slide">
-													<div class="sDecorative__grid"><a class="sDecorative__img-link" href="img/@2x/sWalls-1.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-1.jpg" alt=""/></a><a class="sDecorative__img-link" href="img/@2x/sWalls-2.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-2.jpg" alt=""/></a><a class="sDecorative__img-link" href="img/@2x/sWalls-3.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-3.jpg" alt=""/></a>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="sDecorative__grid"><a class="sDecorative__img-link" href="img/@2x/sWalls-4.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-4.jpg" alt=""/></a><a class="sDecorative__img-link" href="img/@2x/sWalls-5.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-5.jpg" alt=""/></a><a class="sDecorative__img-link" href="img/@2x/sWalls-6.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-6.jpg" alt=""/></a>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="sDecorative__grid"><a class="sDecorative__img-link" href="img/@2x/sWalls-7.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-7.jpg" alt=""/></a><a class="sDecorative__img-link" href="img/@2x/sWalls-8.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-8.jpg" alt=""/></a><a class="sDecorative__img-link" href="img/@2x/sWalls-9.jpg" data-fancybox="sDecorative"><img loading="lazy" src="img/@2x/sWalls-9.jpg" alt=""/></a>
-													</div>
-												</div>
-											</div>
-											<div class="swiper-pagination"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sDecorative--><div class="ui-page__footer">
+				<!-- end sPriceTabs--><div class="ui-page__footer">
 <footer class="ui-footer">
 <div class="ui-footer__container ui-container">
 <div class="g-flex g-flex-wrap g-flex-between ui-footer__content">
@@ -2405,6 +1226,7 @@
 		<script src="libs/select2/js/select2.full.min.js"></script>
 		<!--range slider-->
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/round-slider/roundslider.min.js"></script>
 		<script src="js/libs.js"></script>
 		<script src="js/common.js"></script>
 	</body>

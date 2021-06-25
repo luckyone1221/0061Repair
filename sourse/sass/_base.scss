@@ -749,3 +749,11 @@ iframe {
 	font-size: rem(21);
 	line-height: rem(25);
 }
+
+//
+.cTabs-content-js{
+	display: none;
+	&.active{
+		display: block;
+	}
+}

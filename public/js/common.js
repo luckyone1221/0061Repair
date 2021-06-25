@@ -336,17 +336,25 @@ function eventHandler() {
 			},
 			loop: true
 		});
-	} //.sPriceTabs-tab-btn-js
-	//.sPriceTabs-content-js
+	} //.cTabs-js(=== .tabs)
+	//.cTabs-btn-js(=== .tabs__btn)
+	//.cTabs-content-group-js(=== .tabs__wrap)
+	//.cTabs-content-js(=== .tabs__content)
 
 
-	$('.sPriceTabs-tab-btn-js').click(function () {
-		$('.sPriceTabs-tab-btn-js').removeClass('active');
-		$(this).addClass('active');
-		let index = $(this).index();
-		let contentItems = document.querySelectorAll('.sPriceTabs-content-js');
-		$(contentItems).removeClass('active');
-		contentItems[index].classList.add('active');
+	$('.cTabs-js').each(function () {
+		let Btns = this.querySelectorAll('.cTabs-btn-js');
+		let contentGroups = this.querySelectorAll('.cTabs-content-group-js');
+		$(Btns).click(function () {
+			$(Btns).removeClass('active');
+			$(this).addClass('active');
+			let index = $(this).index();
+			$(contentGroups).each(function () {
+				let contentItems = this.querySelectorAll('.cTabs-content-js');
+				$(contentItems).removeClass('active');
+				contentItems[index].classList.add('active');
+			});
+		});
 	}); //img svg
 
 	$('img.img-svg-js').each(function () {
@@ -540,6 +548,19 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
+	}); //round slider
+
+	$('.round-slider-js').roundSlider({
+		min: 0,
+		max: 360,
+		radius: 118,
+		width: 6,
+		handleSize: "+24",
+		handleShape: "dot",
+		sliderType: "min-range",
+		value: 65
+	}).on("change", function (e) {
+		console.log(e.value);
 	}); //end luckyone js
 }
 

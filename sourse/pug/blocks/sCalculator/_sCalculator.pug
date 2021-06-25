@@ -1,0 +1,41 @@
+mixin sCalculator(data)
+	// start sCalculator
+	+b.SECTION.sCalculator.section#sCalculator&attributes(attributes)
+		.container
+			+b.section-title--pushed
+				h2 Калькулятор ремонта квартир онлайн:
+			+e.box.cTabs-js
+				+e.main-row.row
+					.col-lg-7
+						+e.caption-row.row
+							+sCalculatorTabsBtn(1, 'Новостройка')
+							+sCalculatorTabsBtn(2, 'Вторичное жильё')
+							+sCalculatorTabsBtn(3, 'Помещение', 'active')
+							+e.radio-cont.cTabs-content-group-js
+								.cTabs-content-js
+								.cTabs-content-js
+								.cTabs-content-js.active
+									+e.radio-box
+										+e.r-row.row
+											+sCalculatorRadio('Комната')
+											+sCalculatorRadio('Кухня')
+											+sCalculatorRadio('Ванная')
+											+sCalculatorRadio('Санузел')
+							+e.c-wrap
+								+e.c-title.text-center Выберите общую площадь помещения:
+								+e.circle-cont
+									.round-slider-js
+					.col-lg-5
+	// end sCalculator
+mixin sCalculatorRadio(txt, name='radio-group')
+	.col-auto
+		+b.LABEL.custom-radio
+			input(type="radio" name=name value=txt class='invisible')
+			.cirlce
+			.cr-txt=txt
+
+mixin sCalculatorTabsBtn(imgNum, txt, addClasses)
+	+e.caption-col.col-4.cTabs-btn-js(class=addClasses)
+		+e.icon
+			img.img-svg-js(loading="lazy" src=`img/svg/sCalculator-${imgNum}.svg` alt="")
+		+e.txt=txt

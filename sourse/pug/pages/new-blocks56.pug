@@ -46,6 +46,7 @@ include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sFeedBack/_sFeedBack.pug
 include ../blocks/sTabs/_sTabs.pug
 include ../blocks/sDecorative/_sDecorative.pug
+include ../blocks/sCalculator/_sCalculator.pug
 
 block variables
 	- let  mainPage= null
@@ -58,8 +59,11 @@ block pagecontent
 	+scrollmenu()
 	+oldMobMenu()
 	+HeaderOld2()
-	+sFAQ()
-	+sFeedBack()
-	+sTabs()
-	+sDecorative()
+	//+sFAQ()
+	//+sFeedBack()
+	//+sTabs()
+	//+sDecorative()
+	+sCalculator()
+	//-remove
+	+sPriceTabs()
 	+footerOld()
