@@ -25,7 +25,73 @@ mixin sCalculator(data)
 								+e.c-title.text-center Выберите общую площадь помещения:
 								+e.circle-cont
 									.round-slider-js
+							+e.b-cont
+								+e.black-box
+									+e.b-man.d-none.d-sm-flex
+										img(loading="lazy" src="img/@2x/sCalculator-man.png" alt="")
+									+e.b-row.row.align-items-center.gy-2
+										.col-sm-auto
+											+e.b-big Акция!
+										.col-sm
+											+e.b-txt
+												| Закажи ремонт из калькулятора
+												br
+												| и
+												|
+												span.text-primary
+													| получи скидку
+													|
+												b.text-primary до 20%
 					.col-lg-5
+						+e.o-box-cont
+							+e.o-bg
+								img(loading="lazy" src="img/@2x/sCalculator-bg.jpg" alt="")
+							+sCalculatorOrangeBox({
+								boxId: 1,
+							})
+							//-+e.price-tabs.cTabs-content-group-js
+								.cTabs-content-js
+									+sCalculatorOrangeBox({
+										boxId: 1,
+									})
+								.cTabs-content-js
+									+sCalculatorOrangeBox({
+										boxId: 2,
+									})
+								.cTabs-content-js.active
+									+sCalculatorOrangeBox({
+										boxId: 3,
+									})
+
+mixin sCalculatorOrangeBox(data)
+	+b.orange-box
+		+e.result-row.row.align-items-center.gy-3
+			+e.r-txt.col-sm Итого стоимость:
+			+e.r-val.col-sm-auto=`540 000 руб ${data.boxId}`
+		+e.type-box
+			+sCalculatorTypeRadio('Базовый ремонт', '162 000 руб', data.boxId)(checked)
+			+sCalculatorTypeRadio('Комплексный ремонт', '540 000 руб', data.boxId)
+			+sCalculatorTypeRadio('Бизнес-ремонт', '900 000 руб', data.boxId)
+			+sCalculatorTypeRadio('Премиум-ремонт', '900 000 руб', data.boxId)
+		+e.material-title С учётом черновых материалов?
+		+e.LABEL.black-chb
+			input(type="checkbox" name="black-mat" checked class="invisible")
+			.black-chb-btn Да
+			.black-chb-btn Нет
+		+e.btn-cont.text-center
+			+e.white-btn(href="#") Оставить заявку на консультацию
+			+e.connect-txt Мы свяжемся с Вами в течение 5 минут
+
+mixin sCalculatorTypeRadio(txt,price,boxId)
+	+e.LABEL.type-radio
+		input(type="radio" name=`type-${boxId}` class="invisible" value=txt)&attributes(attributes)
+		.black
+		+e.rad-row.row
+			.col
+				+e.type-txt=txt
+			.col-auto
+				+e.price=price
+
 	// end sCalculator
 mixin sCalculatorRadio(txt, name='radio-group')
 	.col-auto
@@ -35,7 +101,7 @@ mixin sCalculatorRadio(txt, name='radio-group')
 			.cr-txt=txt
 
 mixin sCalculatorTabsBtn(imgNum, txt, addClasses)
-	+e.caption-col.col-4.cTabs-btn-js(class=addClasses)
+	+e.caption-col.col-sm-4.cTabs-btn-js(class=addClasses)
 		+e.icon
 			img.img-svg-js(loading="lazy" src=`img/svg/sCalculator-${imgNum}.svg` alt="")
 		+e.txt=txt

@@ -28,20 +28,17 @@
 			padding: rem(20) rem(30);
 		}
 
-
+		border-bottom: var(--caption-border);
 		@include media-breakpoint-up(sm){
+			border-bottom: none;
 			border-right: var(--caption-border);
 			&:nth-child(3n + 3){
 				border-right: none;
 			}
 		}
 
-		@media (min-width: 420px) and (max-width: 576px){
-			border-right: var(--caption-border);
-			&:nth-child(even){
-				border-right: none;
-			}
-		}
+		display: flex;
+		align-items: center;
 	}
 	//
 	&__icon{
@@ -55,7 +52,11 @@
 			width: rem(48);
 			height: rem(48);
 		}
-		margin: 0 auto rem(18) auto;
+
+		margin-right: rem(20);
+		@include media-breakpoint-up(sm){
+			margin: 0 auto rem(18) auto;
+		}
 		flex-shrink: 0;
 
 		svg{
@@ -83,7 +84,7 @@
 	}
 	&__radio-box{
 		background-color: $gray-300;
-		padding: rem(10);
+		padding: rem(10) rem(30);
 	}
 	&__r-row{
 		--bs-gutter-x: #{rem(20px)};
@@ -126,11 +127,13 @@
 			background-color: $primary;
 		}
 		.rs-path-color  {
-			//background-color: $white;
+			background-color: $white;
+			//background-color: $red;
 			//box-shadow: 0 0 0 3px $white;
 		}
 		.rs-border  {
-			border-color: transparent;
+			//border-color: $gray-100;
+			border-color: $white;
 		}
 
 		.rs-tooltip{
@@ -148,13 +151,238 @@
 			}
 		}
 	}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
+	//
+	&__b-cont{
+		padding: rem(10);
+	}
+	&__black-box{
+		padding: rem(20) rem(25);
+		border-radius: 5px;
+		background-color: $body-color;
+
+		position: relative;
+		z-index: 1;
+	}
+	&__b-man{
+		position: absolute;
+		z-index: -1;
+		right: rem(49);
+		bottom: 0;
+
+		width: rem(118);
+		height: rem(158);
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__b-row{
+		--bs-gutter-x: #{rem(20)};
+	}
+	&__b-big{
+		color: $white;
+		font-size: rem(54);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__b-txt{
+		color: $white;
+		font-size: rem(25);
+	}
+	&__o-box-cont{
+		background: $primary;
+		position: relative;
+		z-index: 1;
+		min-height: 100%;
+	}
+	&__o-bg{
+		position: absolute;
+		opacity: .12;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			mix-blend-mode: color-burn;
+		}
+	}
+	//
 	&__{}
 	&__{}
 } // end.sCalculator
+
+.orange-box{
+	--box-px: #{rem(20)};
+	@include media-breakpoint-up(sm){
+		--box-px: #{rem(35)};
+	}
+
+	padding: rem(50) var(--box-px) rem(30) var(--box-px);
+	&__result-row{
+		--bs-gutter-x: #{rem(18)};
+		padding-bottom: rem(30);
+	}
+	&__r-txt{
+		@extend .orange-box-iconed;
+
+		&:before{
+			background-image: url(../img/svg/sCalculator-helmet.svg);
+		}
+
+		color: $body-color;
+		font-size: rem(25);
+		font-weight: 700;
+	}
+	&__r-val{
+		color: $white;
+		font-size: rem(25);
+		font-weight: 700;
+	}
+	&__type-box{
+		margin: 0 calc(var(--box-px) * -1);
+		padding-bottom: rem(40);
+	}
+	&__type-radio{
+		cursor: pointer;
+		display: block;
+		padding: rem(10) var(--box-px);
+
+		margin-bottom: rem(5);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		input:checked + .black{
+			opacity: 1;
+		}
+
+		position: relative;
+		z-index: 1;
+		.black{
+			opacity: 0;
+			@include mt();
+			position: absolute;
+			z-index: -1;
+			top: 0;
+
+			left: 0px;
+			width: calc(100% + 0px);
+			@include media-breakpoint-up(xl){
+				left: -10px;
+				width: calc(100% + 20px);
+				border-radius: rem(5);
+			}
+
+			height: 100%;
+			background-color: $body-color;
+		}
+	}
+	&__rad-row{
+		color: $white;
+
+		font-size: rem(18);
+		@include media-breakpoint-up(sm){
+			font-size: rem(21);
+		}
+		font-weight: 700;
+	}
+	&__type-txt{
+		@extend .orange-box-iconed;
+
+		&:before{
+			content: '';
+			width: rem(18);
+			height: rem(18);
+			margin-right: rem(18);
+
+			background-image: url(../img/svg/sCalculator-info.svg);
+		}
+	}
+	&__price{
+
+	}
+	&__material-title{
+		@extend .orange-box-iconed;
+		margin-bottom: rem(20);
+
+		&:before{
+			content: '';
+			width: rem(20);
+			height: rem(20);
+			margin-right: rem(16);
+
+			background-image: url(../img/svg/sCalculator-trovel.svg);
+		}
+
+		font-size: rem(25);
+		font-weight: 700;
+	}
+	&__black-chb{
+		display: inline-flex;
+		border-radius: rem(5);
+		cursor: pointer;
+		background-color: $white;
+		margin-bottom: rem(30);
+
+		.black-chb-btn{
+			@include mt();
+			width: rem(84);
+			padding: rem(10);
+			background-color: $white;
+			color: $body-color;
+			border-radius: inherit;
+			text-align: center;
+
+			font-size: rem(21);
+			font-weight: 700;
+		}
+
+		input:checked + .black-chb-btn{
+			background-color: $body-color;
+			color: $white;
+		}
+		input:not(:checked) + .black-chb-btn + .black-chb-btn{
+			background-color: $body-color;
+			color: $white;
+		}
+	}
+	&__white-btn{
+		@extend .btn;
+		@extend .btn-outline-white;
+		text-transform: uppercase;
+
+		width: 100%;
+		margin-bottom: rem(25);
+
+		font-size: rem(18);
+		@include media-breakpoint-up(sm){
+			font-size: rem(23);
+		}
+		font-weight: 700;
+		color: $body-color;
+	}
+	&__connect-txt{
+		font-size: rem(17);
+		@include media-breakpoint-up(sm){
+			font-size: rem(21);
+		}
+	}
+	//
+	&__{}
+	&__{}
+}
 
 .custom-radio{
 	display: flex;

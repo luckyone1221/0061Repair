@@ -757,3 +757,19 @@ iframe {
 		display: block;
 	}
 }
+//
+.orange-box-iconed{
+	display: flex;
+	align-items: center;
+
+	&:before{
+		content: '';
+		width: rem(24);
+		height: rem(24);
+		margin-right: rem(12);
+
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+}

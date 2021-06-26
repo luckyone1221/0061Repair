@@ -564,6 +564,8 @@ function eventHandler() {
 	})
 	.on("change", function (e) {
 		console.log(e.value);
+		//let smth = document.querySelectorAll('');
+		//console.log(smth);
 	});
 
 	//end luckyone js
