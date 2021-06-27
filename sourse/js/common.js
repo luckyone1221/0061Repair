@@ -330,6 +330,7 @@ function eventHandler() {
 	//.cTabs-btn-js(=== .tabs__btn)
 	//.cTabs-content-group-js(=== .tabs__wrap)
 	//.cTabs-content-js(=== .tabs__content)
+
 	$('.cTabs-js').each(function (){
 		let Btns = this.querySelectorAll('.cTabs-btn-js')
 		let contentGroups = this.querySelectorAll('.cTabs-content-group-js');

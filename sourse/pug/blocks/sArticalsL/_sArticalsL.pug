@@ -1,0 +1,31 @@
+mixin sArticalsL(data)
+	// start sArticalsL
+	+b.SECTION.sArticalsL.section#sArticalsL&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Статьи:
+			+e.items
+				+sArticalsLItem(1,'Жидкие обои в интерьере квартиры - как выбрать?')
+				+sArticalsLItem(2,'Керамическая плитка для кухни, ванной комнаты, стен и пола.')
+			+e.btn(href="#")
+				| Показать еще
+				span +
+	// end sArticalsL
+
+mixin sArticalsLItem(imgNum, title)
+	+e.item
+		+e.row.row
+			.col-auto.d-xl-block.d-none
+				+e.icon
+					img.img-svg-js(loading="lazy" src="img/svg/info.svg" alt="")
+			.col-md-6.col-lg
+				+e.title
+					+e.icon.d-xl-none.me-3
+						img.img-svg-js(loading="lazy" src="img/svg/info.svg" alt="")
+					span=title
+				+e.content
+					p Название жидкие обои не следует воспринимать буквально. Этот отделочный материал представляет собой композиционный конгломерат из связующих, красящих веществ, целлюлозных волокон, нитей из шелка, хлопка, перламутра, что позволяет создать многообразие фактур, расцветок или узоров. Применить сухие порошки для декорирования стен можно для украшения помещений любого типа. С их помощью создается удивительная фактура, которая украшает жилые дома, офисы, административные здания.
+				+e.link(href='#') Читать полностью
+			+e.img-col.col-lg-auto.col-md-6
+				+e.img(href="#")
+					img(loading="lazy" src=`img/@2x/sAny-${imgNum}.jpg` alt="")

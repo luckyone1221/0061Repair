@@ -1,0 +1,132 @@
+// start .sSearch
+.sSearch {
+	&__container{
+		@include media-breakpoint-up(lg){
+			max-width: 1060px!important;
+		}
+	}
+	&__b-strip{
+		background-color: $body-color;
+		border-radius: rem(5);
+		padding: rem(5) rem(18);
+
+		margin-bottom: rem(40);
+	}
+	&__row{
+		--bs-gutter-x: #{rem(20)};
+	}
+	&__input-wrap{}
+	&__input{
+		background: transparent!important;
+		border: none!important;
+		box-shadow: none!important;
+
+		color: $primary!important;
+		@include placeholder(){
+			color: $primary!important;
+		}
+
+		font-size: 17px;
+		font-weight: 400;
+	}
+	&__b-btn{
+		@extend .btn;
+		width: rem(43);
+		height: rem(43);
+		padding: rem(10);
+		//background: red;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg{
+			path,rect,circle{
+				fill: $primary!important;
+			}
+		}
+
+		@include mt();
+		&:hover{
+			transform: scale(1.2);
+		}
+	}
+	&__items{
+		padding-bottom: rem(30);
+	}
+	&__item{
+		//@extend .dot-item-frame;
+		border-bottom: 1px dashed $gray-590;
+		&:last-child{
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+
+		padding-bottom: rem(30);
+		margin-bottom: rem(30);
+	}
+	&__top-row{
+		--bs-gutter-x: #{rem(17)};
+		--bs-gutter-y: #{rem(20)};
+
+		padding-bottom: rem(25);
+	}
+	&__icon{
+		width: rem(32);
+		height: rem(32);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg{
+			path,rect,circle{
+				fill: $primary!important;
+			}
+		}
+	}
+	&__title{
+		display: block;
+		color: $body-color;
+		&:hover{
+			color: $primary;
+			text-decoration: underline;
+		}
+
+		font-size: rem(23);
+		font-weight: 700;
+		margin-bottom: rem(15);
+	}
+	&__trail{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__t-item{
+		display: inline-flex;
+		align-items: center;
+		&:after{
+			content: '—';
+			color: $body-color;
+			margin: 0 rem(5);
+		}
+
+		color: $body-color;
+		font-size: rem(19);
+
+		&:last-child:after{
+			content: none;
+		}
+	}
+
+	&__i-txt{
+		font-size: rem(21);
+		font-weight: 400;
+	}
+	&__btn-more{
+		@extend .btn-default;
+	}
+	&__{}
+	&__{}
+} // end.sSearch

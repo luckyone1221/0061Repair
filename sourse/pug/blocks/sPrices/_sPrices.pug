@@ -1,0 +1,78 @@
+mixin sPrices(data)
+	// start sPrices
+	+b.SECTION.sPrices.section#sPrices&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сметы ремонта квартир с ценами за квадратный метр
+			+e.row.row
+				+sPricesItem(1,'ОДНОКОМНАТНАЯ','Новостройка')
+				+sPricesItem(2,'ДВУХКОМНАТНАЯ','Старый фонд')
+				+sPricesItem(3,'ТРЕХКОМНАТНАЯ','Новостройка')
+				+sPricesItem(4,'СТУДИЯ','Новостройка')
+			+e.txt-box
+				h3 Цены на ремонт
+				p При заказе ремонта квартиры наших клиентов волнует не только качество работ, но и стоимость услуг. Рассмотрим из чего складывается цена ремонта квартиры под ключ и как можно сэкономить. Как заранее выяснить, насколько дорогим окажется ремонт? Примерную цену ремонта квартиры за квадратный метр можно узнать, позвонив по телефону. Окончательная же стоимость сообщается заказчику только после выезда замерщика на объект и составления сметы.
+				+e.orange
+					+e.o-row.row.align-items-center.gy-4
+						.col-sm
+							+e.o-bold Скачать прайс-лист в формате .pdf
+						.col-sm-auto
+							+e.o-btn(href='#') Скачать
+			.tabs
+				+e.caption.tabs__caption
+					.swiper-container.sProjects-slider-js
+						.swiper-wrapper
+							+sPricesTabsBtn('Потолки')
+							+sPricesTabsBtn('Стены')
+							+sPricesTabsBtn('Полы')
+							+sPricesTabsBtn('Плитка')
+							+sPricesTabsBtn('Сантехника')
+							+sPricesTabsBtn('Электрика')
+							+sPricesTabsBtn('Отопление', 'active')
+				.tabs__wrap
+					.tabs__content.active
+						+sPricesTabsContent()
+					-for(let i = 0; i < 6; i++)
+						.tabs__content
+							+sPricesTabsContent(i)
+	// end sPrices
+
+mixin sPricesItem(imgNum, title, bold)
+	+e.i-col.col-sm-6.col-lg-3
+		+e.item
+			+e.box.text-center
+				+e.img
+					img(loading="lazy" src=`img/@2x/sPrices-${imgNum}.png` alt="")
+					img(loading="lazy" src=`img/@2x/sPrices-o-${imgNum}.png` alt="")
+				+e.title=title
+				+e.bold=bold
+			+e.btn-cont
+				.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button")
+					span Скачать
+
+
+mixin sPricesTabsBtn(txt, addClasses)
+	.swiper-slide
+		+e.tabs-btn.tabs__btn(class=addClasses)=txt
+
+mixin sPricesTabsContent(id='')
+	+e.TABLE.table.ui-table
+		thead
+			tr
+				th=`Наименование работ: ${id}`
+				th Ед. изм.
+				th Цена, руб.
+		tbody
+			+sPriceTr('Демонтаж стен из ГКЛ, ДСП, Асбестоцементных плит', 'кв.м', '345')
+			+sPriceTr('Демонтаж кирпичных стен в 1/2 кирпича', 'кв.м', '431')
+			+sPriceTr('Демонтаж кирпичных стен в 1/4 кирпича', 'кв.м', '271')
+			+sPriceTr('Демонтаж перегородок из керамзитобетонных, шлакобетонных блоков до 100 мм', 'кв.м', '801')
+			+sPriceTr('Демонтаж штукатурки толщиной до 3 см.', 'кв.м', '394')
+			+sPriceTr('Демонтаж штукатурки толщиной свыше 3 см.', 'кв.м', '493')
+			+sPriceTr('Демонтаж оконных, дверныхоткосов из штукатурки', 'м.п', '271')
+			+sPriceTr('Демонтаж подоконника', 'шт.', '308')
+			+sPriceTr('Демонтаж оконного блока', 'шт.', '1071')
+	+e.t-btn-cont
+		+e.t-btn(href="#")
+			| Показать еще
+			span +

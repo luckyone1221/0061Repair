@@ -1,0 +1,228 @@
+// start .sPrices
+.sPrices {
+	.section-title{
+		h2{
+
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(20)};
+
+		padding-bottom: rem(70);
+	}
+	&__i-col{
+
+	}
+	&__item{
+		margin: 0 auto;
+
+		max-width: 240px;
+		@include media-breakpoint-up(sm){
+			max-width: 320px;
+		}
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		&:hover{
+			--box-b-col: #{$primary};
+			--img-o-1: 0;
+			--img-o-2: 1;
+			--box-bc: #{$primary};
+			--bot-btn-bg: #{$primary};
+		}
+	}
+	&__box{
+		padding: rem(30) rem(20) rem(50);
+		flex-grow: 1;
+
+		border-radius: rem(5);
+		border: 2px solid var(--box-b-col,#{$body-color});
+	}
+	&__img{
+		display: block;
+		width: rem(120);
+		height: rem(130);
+		margin: 0 auto rem(25) auto;
+
+		position: relative;
+		z-index: 1;
+
+		img{
+			@include mt();
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		img:first-child{
+			opacity: var(--img-o-1, 1);
+		}
+		img:last-child{
+			opacity: var(--img-o-2, 0);
+		}
+	}
+	&__title{
+		font-size: rem(25);
+		font-weight: 400;
+		margin-bottom: rem(5);
+	}
+	&__bold{
+		font-size: rem(25);
+		font-weight: 700;
+	}
+	&__btn-cont{
+		width: 100%;
+		text-align: center;
+
+		.ui-button{
+			min-width: calc(100% - 80px) !important;
+			@include media-breakpoint-between(md,lg){
+				padding: 4px 5px 9px;
+				min-width: 150px;
+			}
+
+			display: inline-block!important;
+			background: var(--bot-btn-bg, #{$body-color})!important;
+			border-color: var(--bot-btn-bg, #{$body-color})!important;
+
+			&:before,
+			&:after{
+				box-shadow: 0 0 0 16px var(--bot-btn-bg, #{$body-color})!important;
+			}
+
+			&:hover{
+				background: $body-color!important;
+				border-color: $body-color!important;
+
+				&:before,
+				&:after{
+					box-shadow: 0 0 0 16px $body-color!important;
+				}
+			}
+		}
+	}
+
+	//
+	&__txt-box{
+		padding-bottom: rem(40);
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+		h3{
+			font-size: rem(23);
+			font-weight: 700;
+			margin-bottom: rem(25);
+		}
+		p{
+			font-size: rem(21);
+			margin-bottom: rem(20);
+		}
+	}
+	&__orange{
+		border-radius: rem(5);
+		background-color: $primary;
+		margin-bottom: rem(50);
+		padding: rem(15) rem(40);
+	}
+	&__o-row{
+		text-align: center;
+		@include media-breakpoint-up(sm){
+			text-align: left;
+		}
+	}
+	&__o-bold{
+		font-size: rem(33);
+		font-weight: 700;
+	}
+	&__o-btn{
+		@extend .btn;
+		@extend .btn-outline-light;
+
+		padding: rem(15) rem(25);
+		font-size: rem(23);
+		font-weight: 700;
+		text-transform: uppercase;
+
+		border: 2px solid $white!important;
+		background: transparent!important;
+		color: $body-color!important;
+		&:hover{
+			border: 2px solid $white!important;
+			background: $white!important;
+			color: $body-color!important;
+		}
+
+	}
+
+	&__caption{
+		position: relative;
+		z-index: 1;
+		&:before{
+			content: '';
+			@include media-breakpoint-up(md){
+				content: none;
+			}
+
+			position: absolute!important;
+			z-index: -1;
+			top: 0;
+			@include tear(100vw);
+			height: 100%;
+			background-color: inherit;
+		}
+
+		margin-bottom: rem(35);
+		@include media-breakpoint-up(xl){
+			margin: 0 rem(-20) rem(35) rem(-20);
+			padding: 0 rem(20);
+		}
+
+		border-radius: rem(5);
+		background-color: $gray-300;
+
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+			@include media-breakpoint-up(md){
+				justify-content: space-between;
+			}
+		}
+		.swiper-slide{
+			width: auto;
+		}
+	}
+	&__tabs-btn{
+		font-size: rem(17);
+		line-height: 1;
+		padding: rem(20);
+		text-transform: uppercase;
+
+		@extend .bot-triangle;
+		color: $body-color;
+		text-decoration: none;
+		&.active{
+			color: $primary;
+			text-decoration: underline;
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+	//
+	&__table{
+		margin-bottom: rem(30);
+	}
+	&__t-btn{
+		@extend .btn-default;
+	}
+	&__{}
+	&__{}
+} // end.sPrices

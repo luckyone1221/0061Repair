@@ -1,0 +1,36 @@
+mixin sSliderB(data)
+	// start sSliderB
+	+b.SECTION.sSliderB.section#sSliderB&attributes(attributes)
+		.container
+			+e.row.row.gy-4
+				.col-lg-6
+					+b.section-title
+						h2 Поклейка декоративных обоев на стену
+						p
+							| Обои подходят для любого типа помещения, достаточно просты в применении, позволяют создать неповторимый индивидуальный дизайн.
+							|
+							br.d-none.d-xl-block
+							| Отлично сочетаются с любимы вариантами отделки помещения, мебелью.
+							|
+							br.d-none.d-xl-block
+							| Современные виды обоев позволяют их применение в помещениях с повышенной влажностью, в детских комнатах, в помещениях с высокой проходимостью, так как устойчивы к механическим повреждениям и легко моются.
+							|
+							br.d-none.d-xl-block
+							| Являются экологически безопасными.
+					+form-wrap
+						.row.gy-3
+							.col-sm-auto
+								+input('+7 ___-___-__-__ ', 'tel')
+							.col-sm-auto
+								+e.btn(type="submit") Оставить заявку
+				.col-lg-6
+					+e.slider-wrap
+						.swiper-container.sDecorative-slider-js
+							.swiper-wrapper
+								-for (var i = 1; i < 9; i += 3)
+									+sDecorativeSlide(i)
+							.swiper-pagination
+	// end sSliderB
+
+mixin sSliderBSlide()
+	.swiper-slide

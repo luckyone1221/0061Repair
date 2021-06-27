@@ -1,0 +1,37 @@
+mixin sSearch(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Результат поиска по запросу: ремонт квартир
+			+e.b-strip
+				+e.row.row.align-items-center
+					.col
+						+input('Поиск по сайту', 'text')
+					.col-auto
+						+e.b-btn(type="button")
+							img.img-svg-js(loading="lazy" src="img/svg/zoom.svg" alt="")
+			+e.items
+				+sSearchItem('Жидкие обои в интерьере квартиры - как выбрать?')
+				+sSearchItem('Мы поможем найти оптимальное решение и сделать ваш дизайн уникальным!')
+				+sSearchItem('Популярные разновидности чистовой отделки')
+			+e.btn-more(href="#")
+				| Показать все услуги
+				span +
+
+
+	// end sSearch
+
+mixin sSearchItem(title)
+	+e.item
+		+e.top-row.row
+			.col-auto
+				+e.icon
+					img.img-svg-js(loading="lazy" src="img/svg/info.svg" alt="")
+			.col
+				+e.title(href='#')=title
+				+e.trail
+					+e.t-item(href="#") Главная
+					+e.t-item(href="#") Ремонт квартир
+					+e.t-item(href="#") Капитальный ремонт
+		+e.i-txt Когда требуется лишь обновить внутреннюю отделку комнат, люди чаще всего выбирают экономичный косметический ремонт. С его помощью можно изменить дизайн помещения и сделать квартиру комфортной для проживания. Капитальный ремонт необходим, когда требуется сменить сантехнику, проводку, сделать перепланировку, вскрыть пол. Этот тип занимает больше времени и требует значительных финансовых затрат, но зато о следующем ремонте можно забыть на несколько лет. Элитный дизайнерский ремонт самый дорогой, его цена индивидуальна.
