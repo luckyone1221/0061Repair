@@ -138,6 +138,12 @@
 		line-height: 1;
 		color: $white!important;
 		font-weight: 700;
+
+		border: none!important;
+		background: $primary!important;
+		&:hover{
+			background: $body-color!important;
+		}
 	}
 	&__{}
 } // end.sFamiliar

@@ -136,10 +136,16 @@
 		@extend .btn-primary;
 
 		color: $white!important;
+		border: none!important;
 		font-size: rem(19);
 		line-height: 1;
 		font-weight: 700;
 		text-transform: uppercase;
+
+		background: $primary!important;
+		&:hover{
+			background: $body-color!important;
+		}
 	}
 	//
 	&__btn{

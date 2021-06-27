@@ -72,6 +72,17 @@
 				//background: $primary!important;
 				box-shadow: 0 0 0 16px $primary!important;
 			}
+			
+			&:hover{
+				background: $body-color!important;
+				border-color: $body-color!important;
+
+				&:before,
+				&:after{
+					//background: $body-color!important;
+					box-shadow: 0 0 0 16px $body-color!important;
+				}	
+			}
 		}
 	}
 	&__{}

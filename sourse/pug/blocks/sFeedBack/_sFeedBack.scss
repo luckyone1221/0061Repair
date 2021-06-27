@@ -141,6 +141,7 @@
 	&__feedback{
 		margin-top: rem(15);
 
+		display: none;
 		&.active{
 			display: block;
 		}

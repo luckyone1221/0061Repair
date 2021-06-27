@@ -18,7 +18,7 @@ mixin sPriceTabs(data)
 							+e.big-img
 								img(loading="lazy" src="img/@2x/sPrice-Tabs-big.jpg" alt="")
 					.col-lg-5
-						+e.aside
+						+e.aside.cTabs-content-group-js
 							+sPriceTabsAsideContent('Подготовка к ремонту', 'active')
 							+sPriceTabsAsideContent('Демонтаж перегородок')
 							+sPriceTabsAsideContent('Демонтаж пола')
@@ -38,7 +38,7 @@ mixin sPriceTabsAsideContent(title, addClasses='')
 			+charsItem('Полный демонтаж', 'от 1000 руб/м2 по полу')
 			+charsItem('Демонтаж офисов', 'от 200 руб/м2 по полу')
 			+charsItem('Демонтаж нежилых помещений', 'от 400 руб/м2 по полу')
-		+e.a-btn(href="#") Оставить заявку на демонтаж
+		+e.a-btn(data-modal="request") Оставить заявку на демонтаж
 		+e.connect-txt Мы свяжемся с Вами в течение 5 минут
 
 mixin charsItem(key, val)

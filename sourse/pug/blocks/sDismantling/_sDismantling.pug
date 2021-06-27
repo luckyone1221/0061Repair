@@ -60,7 +60,7 @@ mixin sDismantlingItem(data)
 				+e.img-col.col-lg-auto
 					+e.img
 						img(loading="lazy" src=`img/@2x/sDismantling-${data.imgNum}.png` alt="")
-					+e.btn(href="#") Заявка на демонтаж
+					+e.btn(data-modal="request") Заявка на демонтаж
 				+e.txt-col.col-md
 					+e.title=data.title
 					block
