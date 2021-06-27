@@ -481,7 +481,7 @@ function eventHandler() {
 		}
 	}
 
-	makeDDGroup(['.sBathRep-dd-group-js', '.sFAQ-dd-group-js']); //
+	makeDDGroup(['.sBathRep-dd-group-js', '.sFAQ-dd-group-js', '.sFAQN-dd-group-js']); //
 
 	let sDescrWrap = document.querySelector('.sDescr-slider-wrap-js');
 
@@ -505,8 +505,25 @@ function eventHandler() {
 
 	$('.custom-select-js').select2({
 		minimumResultsForSearch: Infinity
-	}); //
+	}); //sFeedBack
 
+	let sFeedBackSlider = new Swiper('.sFeedBack-slider-js', {
+		slidesPerView: 'auto',
+		breakpoints: {
+			0: {
+				spaceBetween: 30
+			},
+			768: {
+				spaceBetween: 0
+			}
+		},
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
 	$('.sFeedBack-open-js').click(function () {
 		$(this).closest('.sFeedBack-item-js').find('.sFeedBack-feedback-js').slideDown(function () {
 			$(this).addClass('active');

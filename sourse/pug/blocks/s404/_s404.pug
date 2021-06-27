@@ -1,0 +1,22 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		.container
+			+e.row.row.align-items-center
+				.col
+					+b.section-title.text-center.text-md-start
+						h1 404
+						p
+							| Похоже этой страницы не существует.
+							|
+							br.d-none.d-xl-block
+							| Но не отчаивайтесь, у нас есть множество
+							|
+							br.d-none.d-xl-block
+							| других замечательных страниц на которые можно перейти, например на
+							|
+							a(href='#') главную
+				.col-md-auto.d-none.d-md-block
+					+e.img
+						img(loading="lazy" src='img/svg/s404-img.svg' alt="")
+	// end s404

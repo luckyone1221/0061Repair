@@ -1,0 +1,98 @@
+// start .sFAQN
+.sFAQN {
+	&__container{
+		@include media-breakpoint-up(lg){
+			max-width: 1060px!important;
+		}
+	}
+	&__items{
+		margin-bottom: rem(37);
+	}
+	&__item{
+		margin-bottom: rem(12);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(30);
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		--item-px: #{rem(12)};
+		@include media-breakpoint-up(sm){
+			--item-px: #{rem(30)};
+		}
+
+		&.active{
+			--plus-col: #{$primary};
+			//--head-bg: #{$primary};
+			--head-txt-col: #{$primary};
+			--plus-rotate: #{0deg};
+			--q-sign-col: #{$white};
+		}
+	}
+	&__head{
+		cursor: pointer;
+		padding: rem(12) var(--item-px);
+		@include media-breakpoint-up(sm){
+			padding: rem(15) var(--item-px);
+		}
+		border-radius: rem(5);
+		background-color: var(--head-bg, #{$gray-200});
+		box-shadow: 0 0 rem(15) 0px rgba($black, .1);
+
+		display: flex;
+		align-items: center;
+
+	}
+	&__h-txt{
+		font-weight: 700;
+		font-size: 21px;
+		@include media-breakpoint-up(sm){
+			font-size: rem(25);
+		}
+		padding-right: var(--item-px);
+		text-transform: uppercase;
+		color: var(--head-txt-col, #{$body-color});
+	}
+	&__plus{
+		flex-shrink: 0;
+		@include mt();
+		transform: rotate(var(--plus-rotate, -45deg));
+		content: '';
+		width: 25px;
+		height: 25px;
+		margin-left: auto;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon{
+			@include mt();
+			font-size: 25px;
+			color: var(--plus-col, #{$body-color});
+		}
+	}
+
+	&__content{
+		font-size: 21px;
+
+		padding: rem(20) 0 rem(10) 0;
+		@include media-breakpoint-up(sm){
+			padding: rem(20) var(--item-px) rem(10) var(--item-px);
+		}
+
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+
+	&__btn{
+		@extend .btn-default;
+	}
+} // end.sFAQN

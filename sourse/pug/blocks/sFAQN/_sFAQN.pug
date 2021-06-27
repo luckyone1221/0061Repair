@@ -1,0 +1,23 @@
+mixin sFAQN(data)
+	// start sFAQN
+	+b.SECTION.sFAQN.section#sFAQN&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Вопрос - ответ
+			+e.items.sFAQN-dd-group-js
+				+sFAQNItem('С каких работ вы начинаете отделку квартиры ? ', 'active')
+				+sFAQNItem('Может ли в ходе ремонта меняться стоимость работ ?')
+				+sFAQNItem('Как происходит оплата ваших услуг ?')
+				+sFAQNItem('Кто контролирует выполнение работ ?')
+			+e.btn(href="#")
+				| Показать все услуги
+				span +
+	// end sFAQN
+
+mixin sFAQNItem(title, activeClasses='')
+	+e.item(class=activeClasses)
+		+e.head.dd-head-js
+			+e.h-txt=title
+			+e.plus
+				+icon('circle-cross')
+		+e.content.dd-content-js(class=activeClasses) Название жидкие обои не следует воспринимать буквально. Этот отделочный материал представляет собой композиционный конгломерат из связующих, красящих веществ, целлюлозных волокон, нитей из шелка, хлопка, перламутра, что позволяет создать многообразие фактур, расцветок или узоров. Применить сухие порошки для декорирования стен можно для украшения помещений любого типа. С их помощью создается удивительная фактура, которая украшает жилые дома, офисы, административные здания.

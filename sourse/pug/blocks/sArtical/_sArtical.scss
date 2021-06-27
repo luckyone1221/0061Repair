@@ -1,0 +1,141 @@
+// start .sArtical
+.sArtical {
+
+	&__container{
+		@include media-breakpoint-up(lg){
+			max-width: 1060px!important;
+		}
+	}
+	&__content{
+		padding-bottom: rem(50);
+
+		& > *{
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(30);
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		h1{
+			font-size: rem(42);
+
+			text-align: center;
+			@include media-breakpoint-up(sm){
+				text-align: left;
+			}
+		}
+		p{
+			font-size: rem(21);
+		}
+		ul{
+			padding: 0;
+			margin: 0 0 rem(50);
+			li{
+				@extend .check-list-li;
+			}
+		}
+		h2{
+			font-size: rem(23);
+			font-weight: 700;
+		}
+		p{
+
+		}
+		ol{
+			padding: 0;
+			margin: 0 0 rem(50);
+
+			counter-reset: list 0;
+			li{
+				font-size: rem(19);
+				list-style-type: none;
+				margin-bottom: rem(16);
+				&:last-child{
+					margin-bottom: 0;
+				}
+
+				&:before{
+					color: $primary;
+					counter-increment: list;
+					content: counter(list);
+
+					width: rem(19);
+					margin-right: rem(15);
+				}
+			}
+		}
+		blockquote{
+			margin-top: rem(45);
+			border: 2px solid $primary;
+			position: relative;
+
+			&:before{
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 0;
+				transform: translateY(-50%) translateX(-50%);
+
+				width: rem(64);
+				height: rem(64);
+				border-radius: 50%;
+				background-color: $primary;
+
+				background-image: url(../img/svg/quote.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: rem(24);
+			}
+
+			padding: rem(50) rem(15) rem(30);
+			@include media-breakpoint-up(sm){
+				padding: rem(50) rem(45) rem(40);
+			}
+		}
+		h3,h4,h5{
+			font-size: rem(23);
+			font-weight: 700;
+		}
+		a{
+			color: $primary;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	&__link{
+		display: inline-flex;
+		align-items: center;
+
+		&:before,
+		&:after{
+			width: rem(12);
+			height: rem(12);
+
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&--back{
+			&:before{
+				content: '';
+				margin-right: rem(6);
+				background-image: url(../img/svg/arrow-l-short.svg);
+			}
+		}
+		&--forward{
+			&:after{
+				content: '';
+				margin-left: rem(6);
+				background-image: url(../img/svg/arrow-r-short.svg);
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sArtical

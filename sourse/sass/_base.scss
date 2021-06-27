@@ -136,7 +136,7 @@ body {
 
 
 .mono {
-	font-family: $font-family-monospace;
+	font-family: $mono;
 }
 
 .small {
@@ -771,5 +771,55 @@ iframe {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+	}
+}
+//
+
+.ui-page__main{
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	min-height: 100vh;
+}
+
+.ui-page__footer{
+	margin-top: auto;
+}
+//
+.breadcrumb{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 0;
+	margin: 0 0 rem(16);
+
+	&-item{
+		a{
+			display: inline-flex;
+			align-items: center;
+			&:after{
+				content: '';
+				display: inline-block;
+				width: rem(12);
+				height: rem(12);
+				margin: 0 6px;
+				color: $primary;
+				font-family: $mono;
+
+				background-image: url(../img/svg/arrow-r-short.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+		}
+
+		&:last-child{
+			a{
+				&:after{
+					content: none;
+				}
+			}
+		}
 	}
 }

@@ -13,52 +13,54 @@ mixin sFeedBackItem(fancyId)
 	+e.item.sFeedBack-item-js
 		+e.H4.title Отзыв о ремонте квартиры от Изабеллы М.
 		+e.row.row
-			.col-md-6
-				+e.sub-row.row
-					.col-12
-						+sFeedBackImgLink(6, fancyId)
-					-for(var i=1; i<=6; i++)
-						.col-4
-							+sFeedBackImgLink(i, fancyId)
+			+e.galery-col.col-md-6
+				.swiper-container.sFeedBack-slider-js
+					.swiper-wrapper
+						.swiper-slide
+							+sFeedBackImgLink(6, fancyId)
+						-for(var i=1; i<=6; i++)
+							.swiper-slide.sm-slide
+								+sFeedBackImgLink(i, fancyId)
+					.swiper-pagination.d-md-none
 			.col-md-6
 				+sFeedBackIconed(1,'Объект:','Ул. Островитянова, S - 76 кв.м.')
-				+sFeedBackIconed(2)
-					+e.ic-title Задача:
-					+e.UL.list
-						li Создать дизайн в стиле современная классика.
-						li Создание светлого и чистого интерьера.
-						li Создание двух изолированных комнат
-						li Придумывать вместительную систему хранения.
+				+sFeedBackIconed(2,'Задача:','Создать дизайн в стиле современная классика. Создание светлого и чистого интерьера. Создание двух изолированных комнат. Придумывать вместительную систему хранения.')
 				+sFeedBackIconed(3,'Сроки:','3.5 месяца')
-				+sFeedBackIconed(4)
-					+e.read-btn.sFeedBack-open-js
+				+e.iconed.align-items-center.sFeedBack-open-js
+					+e.icon
+						img.img-svg-js(loading="lazy" src=`img/svg/sFeedBack-4.svg` alt="")
+					+e.read-txt
 						span Прочитать отзыв клиента
-		+e.feedback.sFeedBack-feedback-js
-			+e.f-close-btn.sFeedBack-close-js
-				+icon('cross')
-			+e.f-row.row
-				.col-sm-auto.text-center
-					+e.portrait
-						img(loading="lazy" src="img/@2x/sFeedback-portrait.jpg" alt="")
-					+e.name Изабелла М.
-				.col-sm-auto.text-center
-					+e.cert-txt Анкета клиента:
-					+e.cert(href="img/@2x/sFeedback-cert.jpg" data-fancybox=`cert${fancyId}`)
-						img(loading="lazy" src="img/@2x/sFeedback-cert.jpg" alt="")
-				.col-sm
-					+e.f-txt Искренне благодарна сотрудникам строительной фирмы "СК Арт Декор" за отлично выполненный ремонт моей новой квартиры. Особенно понравился дизайн детской комнаты, за что спасибо дизайнеру Оксане, мои мальчишки просто в восторге! Заказывала комплексный ремонт, так как квартиру купили с черновой отделкой, думала процесс растянется надолго. Все отделочные работы были выполнены аккуратно и в оговоренный в договоре срок. Новоселье мы отпраздновали вовремя!
+				+e.feedback.sFeedBack-feedback-js
+					+e.btn-cont.text-end
+						+e.f-close-btn.sFeedBack-close-js
+							+icon('circle-cross')
+							span Скрыть
+					+e.f-box
+						+e.portrait
+							img(loading="lazy" src="img/@2x/sFeedback-portrait.jpg" alt="")
+						+e.f-row.row.align-items-center
+							.col.col-md-12.col-lg.d-sm-block.d-none
+								+e.name Изабелла М.
+							.col-sm-auto.col-md-12.col-lg-auto.text-end
+								+e.cert-txt(href="img/@2x/sFeedback-cert.jpg" data-fancybox=`cert${fancyId}`) Анкета клиента:
+						+e.name.d-sm-none.pb-4 Изабелла М.
+						+e.f-txt Искренне благодарна сотрудникам строительной фирмы "СК Арт Декор" за отлично выполненный ремонт моей новой квартиры. Особенно понравился дизайн детской комнаты, за что спасибо дизайнеру Оксане, мои мальчишки просто в восторге! Заказывала комплексный ремонт, так как квартиру купили с черновой отделкой, думала процесс растянется надолго. Все отделочные работы были выполнены аккуратно и в оговоренный в договоре срок. Новоселье мы отпраздновали вовремя!
+
 
 mixin sFeedBackImgLink(imgNum,fancyId)
 	+e.img-link(href=`img/@2x/sHow-${imgNum}.jpg` data-fancybox=`sFeedBack${fancyId}`)
 		img(loading="lazy" src=`img/@2x/sHow-${imgNum}.jpg` alt="")
 
 mixin sFeedBackIconed(imgNum,title, val)
-	+e.iconed
+	+e.iconed&attributes(attributes)
 		+e.icon
 			img.img-svg-js(loading="lazy" src=`img/svg/sFeedBack-${imgNum}.svg` alt="")
 		+e.content
 			if block
 				block
 			else
-				+e.ic-title=title
-				+e.val=val
+				+e.ic-title
+					b=title
+					span=val
+				//+e.val=val
