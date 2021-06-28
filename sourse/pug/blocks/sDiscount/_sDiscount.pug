@@ -1,0 +1,47 @@
+mixin sDiscount(data)
+	// start sDiscount
+	+b.SECTION.sDiscount.section#sDiscount&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Cкидки на все виды ремонта:
+			+e.row.row.align-items-center
+				.col-lg-4
+					+e.title Выберите Необходимый тип ремонта:
+				.col-lg
+					//-+range("10", "150", '₽')(class='with-symbol')
+					+sDiscountChecks()
+			+e.row--range.row.align-items-center
+				.col-lg-4
+					+e.title Площадь квартиры (по полу):
+				.col-lg
+					+range("10", "150", '₽')(class='with-symbol')
+			+form-wrap
+				+e.bot-row.row.align-items-center
+					.col-lg-6
+						+e.discount
+							span.me-2
+								| Ваша скидка на все работы:
+								|
+							b 7%
+					.col-lg-6
+						+e.sub-row.row
+							.col-sm-6
+								+input('+7   ( * * * ) * * * - * * - * *','tel')
+							.col-sm-6
+								+e.btn(type="submit") Забронировать скидку
+						+e.gray Скидка закрепляется за номером телефона и действует 30 дней
+	// end sDiscount
+
+mixin sDiscountChecks()
+	+e.chb-box
+		+e.chb-row.row
+			+sDiscountRadio('Базовый')(checked)
+			+sDiscountRadio('Комплексный')
+			+sDiscountRadio('Бизнес')
+			+sDiscountRadio('Премиум')
+
+mixin sDiscountRadio(txt)
+	+e.d-col.col-sm-auto
+		+e.LABEL.r-label
+			input(type="radio" name="sDiscount" value=txt class="invisible")
+			span.r-btn=txt

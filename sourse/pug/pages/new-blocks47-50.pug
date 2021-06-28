@@ -36,6 +36,7 @@ include ../blocks/sBath/_sBath.pug
 include ../blocks/sTypes/_sTypes.pug
 include ../blocks/sBlack/_sBlack.pug
 include ../blocks/sComplex/_sComplex.pug
+include ../blocks/sDiscount/_sDiscount.pug
 
 block variables
 	- let  mainPage= null
@@ -48,9 +49,9 @@ block pagecontent
 	+scrollmenu()
 	+oldMobMenu()
 	+HeaderOld2()
-
 	+sTypes()
 	+sBlack()
 	+sComplex()
-	+sDiscountOld()
+	//+sDiscountOld()
+	+sDiscount()
 	+footerOld()
