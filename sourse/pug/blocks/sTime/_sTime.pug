@@ -37,7 +37,7 @@ mixin sTimeTr(val1,val2,val3)
 				+e.key.d-md-none Цена за квадратный метр по полу:
 				+e.val--price=val3
 			+e.btn-col.col-auto
-				+e.btn(href="#") Консультация
+				+e.btn(data-modal="request") Консультация
 
 mixin customSelect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], placeholder='', keyClass='custom-select-js')
 	+b.custom-select

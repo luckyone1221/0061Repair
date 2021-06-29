@@ -68,6 +68,7 @@
 
   //
 	&__tabs-btn{
+    text-transform: uppercase;
     display: inline-flex;
     align-items: center;
 
@@ -76,7 +77,7 @@
       width: auto;
     }
 
-    padding: rem(10) rem(20);
+    padding: rem(13) rem(20);
 
     &:before{
       @include mt();
@@ -103,8 +104,15 @@
     font-size: rem(21);
 
     background-color: transparent;
+    span{
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      line-height: 1;
+    }
     &.active{
-      text-decoration: underline;
+      span{
+        border-bottom: 2px solid currentColor;
+      }
       background-color: $primary;
 
       &:before{

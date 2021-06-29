@@ -12,6 +12,13 @@
 			--bs-gutter-y: #{rem(38)};
 			--bs-gutter-x: #{rem(60)};
 		}
+		padding-bottom: var(--bs-gutter-y);
+
+		&:not(.active){
+			& > *:nth-child(n + 3){
+				display: none!important;
+			}
+		}
 	}
 	&__row{
 		--bs-gutter-x: #{rem(17)};

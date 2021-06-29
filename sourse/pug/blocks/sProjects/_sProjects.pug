@@ -50,7 +50,7 @@ mixin sProjectsProject(galeryId)
 						+sProjectsDoneItem('Срок:', '5 месяцев')
 						+sProjectsDoneItem('Вид ремонта:', 'Капитальный')
 						+sProjectsDoneItem('Стоимость:', '843 000 Руб.')
-				+e.detail-btn(href='#') Подробнее
+				+e.detail-btn(data-modal="request") Подробнее
 		//
 mixin sProjectsDoneItem(key, val)
 	+e.done-item

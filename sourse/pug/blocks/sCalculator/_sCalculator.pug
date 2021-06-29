@@ -17,7 +17,7 @@ mixin sCalculator(data)
 								.cTabs-content-js.active
 									+e.radio-box
 										+e.r-row.row
-											+sCalculatorRadio('Комната')
+											+sCalculatorRadio('Комната')(checked)
 											+sCalculatorRadio('Кухня')
 											+sCalculatorRadio('Ванная')
 											+sCalculatorRadio('Санузел')
@@ -46,10 +46,10 @@ mixin sCalculator(data)
 						+e.o-box-cont
 							+e.o-bg
 								img(loading="lazy" src="img/@2x/sCalculator-bg.jpg" alt="")
-							//+sCalculatorOrangeBox({
-							//	boxId: 1,
-							//})
-							+e.price-tabs.cTabs-content-group-js
+							+sCalculatorOrangeBox({
+								boxId: 1,
+							})
+							//-+e.price-tabs.cTabs-content-group-js
 								.cTabs-content-js
 									+sCalculatorOrangeBox({
 										boxId: 1,
@@ -67,41 +67,46 @@ mixin sCalculatorOrangeBox(data)
 	+b.orange-box
 		+e.result-row.row.align-items-center.gy-3
 			+e.r-txt.col-sm Итого стоимость:
-			+e.r-val.col-sm-auto=`540 000 руб ${data.boxId}`
+			+e.r-val.col-sm-auto
+				span.result-price-js 540 000
+				span.ms-1 руб
 		+e.type-box
-			+sCalculatorTypeRadio('Базовый ремонт', '162 000 руб', data.boxId)(checked)
-			+sCalculatorTypeRadio('Комплексный ремонт', '540 000 руб', data.boxId)
-			+sCalculatorTypeRadio('Бизнес-ремонт', '900 000 руб', data.boxId)
-			+sCalculatorTypeRadio('Премиум-ремонт', '900 000 руб', data.boxId)
+			+sCalculatorTypeRadio('Базовый ремонт', '162 000', data.boxId, 100)
+			+sCalculatorTypeRadio('Комплексный ремонт', '540 000', data.boxId, 200)(checked)
+			+sCalculatorTypeRadio('Бизнес-ремонт', '900 000', data.boxId, 300)
+			+sCalculatorTypeRadio('Премиум-ремонт', '900 000', data.boxId, 400)
 		+e.material-title С учётом черновых материалов?
 		+e.LABEL.black-chb
-			input(type="checkbox" name="black-mat" checked class="invisible")
+			input.black-mat-chb-js(type="checkbox" name="black-mat" checked class="invisible" data-coefficient-yes='1' data-coefficient-no='0.8')
 			.black-chb-btn Да
 			.black-chb-btn Нет
 		+e.btn-cont.text-center
-			+e.white-btn(href="#") Оставить заявку на консультацию
+			+e.white-btn(data-modal="request") Оставить заявку на консультацию
 			+e.connect-txt Мы свяжемся с Вами в течение 5 минут
 
-mixin sCalculatorTypeRadio(txt,price,boxId)
-	+e.LABEL.type-radio
+mixin sCalculatorTypeRadio(txt,price,boxId,dataPrice)
+	+e.LABEL.type-radio.repair-type-js(data-price-per-metter=dataPrice)
 		input(type="radio" name=`type-${boxId}` class="invisible" value=txt)&attributes(attributes)
 		.black
 		+e.rad-row.row
 			.col
 				+e.type-txt=txt
 			.col-auto
-				+e.price=price
+				+e.price
+					span.repair-type-price-js=price
+					span.ms-1 руб
+
 
 	// end sCalculator
 mixin sCalculatorRadio(txt, name='radio-group')
 	.col-auto
 		+b.LABEL.custom-radio
-			input(type="radio" name=name value=txt class='invisible')
+			input(type="radio" name=name value=txt class='invisible')&attributes(attributes)
 			.cirlce
 			.cr-txt=txt
 
 mixin sCalculatorTabsBtn(imgNum, txt, addClasses)
-	+e.caption-col.col-sm-4.cTabs-btn-js(class=addClasses)
+	+e.caption-col.col-sm-4.cTabs-btn-js.house-type-js(class=addClasses)
 		+e.icon
 			img.img-svg-js(loading="lazy" src=`img/svg/sCalculator-${imgNum}.svg` alt="")
 		+e.txt=txt

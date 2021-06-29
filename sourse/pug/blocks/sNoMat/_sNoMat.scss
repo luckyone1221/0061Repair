@@ -105,6 +105,16 @@
 			&:after{
 				box-shadow: 0 0 0 16px var(--bot-btn-bg, #{$body-color})!important;
 			}
+
+			&:hover{
+				background: $body-color!important;
+				border-color: $body-color!important;
+
+				&:before,
+				&:after{
+					box-shadow: 0 0 0 16px $body-color!important;
+				}
+			}
 		}
 	}
 	//

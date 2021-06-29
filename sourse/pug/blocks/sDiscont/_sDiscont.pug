@@ -17,25 +17,27 @@ mixin sDiscont(data)
 								p Вы только что получили ключи от своей новенькой квартиры в новостройке?
 								p Вы хотите красивый ремонт, но не знаете как его воплотить в жизнь?
 								p Эта скидка тогда для Вас! Мы поможем принять квартиру у застройщика, профессиональный дизайнер сделает Ваше жильё уютным, а наши мастера воплотят это в жизнь.
-							+sDiscountPlate('СКИДКА ДЛЯ молодых СЕМЕЙ', '7%')
+					.tabs__content
+						+e.row.row
+							+sDiscountPlate('СКИДКА ДЛЯ молодых СЕМЕЙ', '7%', 'offset-md-4')
 								p Мы рады будем обустроить уют в Вашем жилище, что бы каждый Ваш малыш чувствовал себя там комфортно.
 								p Оптимальное решение со скидкой на все работы и на материалы.
-							+sDiscountPlate('СКИДКА ДЛЯ ПЕНСИОНЕРОВ', '6%')
+					.tabs__content
+						+e.row.row
+							+sDiscountPlate('СКИДКА ДЛЯ ПЕНСИОНЕРОВ', '6%', 'offset-md-8')
 								p Скидка предоставляется при предоставлении подтверждающих документов.
 								p Скидка является одноразовой и не может использоваться при повторных обращениях за ремонтно-отделочными работами.
-					.tabs__content 2
-					.tabs__content 3
 	// end sDiscont
 
-mixin sDiscountPlate(titleTxt, discountTxt)
-	.col-md-4
+mixin sDiscountPlate(titleTxt, discountTxt, bootClasses='')
+	.col-md-4(class=bootClasses)
 		+e.item
 			+e.title=titleTxt
 			+e.txt-content
 				block
 			+e.discount=discountTxt
 			+e.btn-cont
-				a.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button" href="#")
+				a.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button" data-modal="request")
 					span Оставить заявку
 
 mixin sDiscountTabsBtn(imgNum, txt, bootClasses, addClasses)

@@ -140,6 +140,7 @@
 		@extend .btn-outline-dark;
 		padding: rem(20) rem(30);
 		min-width: rem(315);
+		box-shadow: none!important;
 
 		color: $body-color!important;
 		border: 2px solid $body-color!important;

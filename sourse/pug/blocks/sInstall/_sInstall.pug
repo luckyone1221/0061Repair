@@ -7,7 +7,7 @@ mixin sInstall(data)
 			.tabs
 				+e.title-row.row.align-items-center
 					+e.l-col.col-lg-4.col-xl-auto
-						+e.title Выберите Нтип квартиры:
+						+e.title Выберите тип квартиры:
 					.col-lg-8.col-xxl
 						.tabs__caption
 							+e.cap-row.row
@@ -76,7 +76,7 @@ mixin sInstall(data)
 											+e.rt-row--foot.row
 												+e.rt-key-col.col.text-primary ОБЩАЯ СТОИМОСТЬ:
 												+e.rt-val-col.col-auto 49 950 РУБ.
-										+e.order-btn(href="#") Оставить заявку на монтаж!
+										+e.order-btn(data-modal="request") Оставить заявку на монтаж!
 					.tabs__content 2
 					.tabs__content 3
 	// end sInstall
@@ -99,4 +99,5 @@ mixin sInstallDcItem(key,val)
 
 mixin sInstallTabsBtn(txt, addClasses)
 	.col-sm-auto
-		+e.tabs-btn.tabs__btn(class=addClasses)=txt
+		+e.tabs-btn.tabs__btn(class=addClasses)
+			span=txt

@@ -13,6 +13,12 @@
 		}
 
 		padding-bottom: rem(38);
+
+		&:not(.active){
+			& > *:nth-child(n + 9){
+				display: none!important;
+			}
+		}
 	}
 	&__img-link{
 		@extend .galery-link;

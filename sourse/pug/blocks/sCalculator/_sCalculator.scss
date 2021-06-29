@@ -1,6 +1,5 @@
 // start .sCalculator
 .sCalculator {
-
 	&__box{
 		border-radius: rem(5);
 		overflow: hidden;
@@ -53,9 +52,9 @@
 			height: rem(48);
 		}
 
-		margin-right: rem(20);
+		margin: 0 auto rem(15) auto;
 		@include media-breakpoint-up(sm){
-			margin: 0 auto rem(18) auto;
+			margin: 0 rem(15) 0 0;
 		}
 		flex-shrink: 0;
 
@@ -389,7 +388,9 @@
 	align-items: center;
 
 	input:checked + .cirlce{
-
+		&:before{
+			opacity: 1;
+		}
 	}
 	.cirlce{
 		flex-shrink: 0;
@@ -401,6 +402,8 @@
 
 		position: relative;
 		&:before{
+			@include mt();
+			opacity: 0;
 			content: '';
 			position: absolute;
 			top: 50%;

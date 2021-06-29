@@ -706,7 +706,7 @@
 							<h2>Услуги по возведению и отделке стен:</h2>
 							<p>Сделаем отделку стен любой сложности под ключ. Работаем в Москве и Московской области.</p>
 						</div>
-						<div class="sWalls__row row">
+						<div class="sWalls__row row sWalls-row-js">
 							<div class="sWalls__col col-lg-3 col-sm-6 col-md-4"><a class="sWalls__item" href="#"><span class="sWalls__box"><span class="sWalls__img">
 								<!--img(loading="lazy" src=`img/@2x/sWalls-${data.imgNum}.jpg` alt="")--><img loading="lazy" src="img/@2x/sWalls-regular.jpg" alt=""/></span><span class="sWalls__detail"><span>Подробнее</span></span></span><span class="sWalls__name">Отделка стен панелями</span></a>
 							</div>
@@ -732,8 +732,23 @@
 							<div class="sWalls__col col-lg-3 col-sm-6 col-md-4"><a class="sWalls__item" href="#"><span class="sWalls__box"><span class="sWalls__img">
 								<!--img(loading="lazy" src=`img/@2x/sWalls-${data.imgNum}.jpg` alt="")--><img loading="lazy" src="img/@2x/sWalls-regular.jpg" alt=""/></span><span class="sWalls__detail"><span>Подробнее</span></span></span><span class="sWalls__name">Отделка стен камнем</span></a>
 							</div>
+							<!---->
+							<div class="sWalls__col col-lg-3 col-sm-6 col-md-4"><a class="sWalls__item" href="#"><span class="sWalls__box"><span class="sWalls__img">
+								<!--img(loading="lazy" src=`img/@2x/sWalls-${data.imgNum}.jpg` alt="")--><img loading="lazy" src="img/@2x/sWalls-regular.jpg" alt=""/></span><span class="sWalls__detail"><span>Подробнее</span></span></span><span class="sWalls__name">Грунтовка стен</span></a>
+							</div>
+							<div class="sWalls__col col-lg-3 col-sm-6 col-md-4"><a class="sWalls__item" href="#"><span class="sWalls__box"><span class="sWalls__img">
+								<!--img(loading="lazy" src=`img/@2x/sWalls-${data.imgNum}.jpg` alt="")--><img loading="lazy" src="img/@2x/sWalls-regular.jpg" alt=""/></span><span class="sWalls__detail"><span>Подробнее</span></span></span><span class="sWalls__name">Возведение стен</span></a>
+							</div>
+							<div class="sWalls__col col-lg-3 col-sm-6 col-md-4"><a class="sWalls__item" href="#"><span class="sWalls__box"><span class="sWalls__img">
+								<!--img(loading="lazy" src=`img/@2x/sWalls-${data.imgNum}.jpg` alt="")--><img loading="lazy" src="img/@2x/sWalls-regular.jpg" alt=""/></span><span class="sWalls__detail"><span>Подробнее</span></span></span><span class="sWalls__name">Снос стен</span></a>
+							</div>
+							<div class="sWalls__col col-lg-3 col-sm-6 col-md-4"><a class="sWalls__item" href="#"><span class="sWalls__box"><span class="sWalls__img">
+								<!--img(loading="lazy" src=`img/@2x/sWalls-${data.imgNum}.jpg` alt="")--><img loading="lazy" src="img/@2x/sWalls-regular.jpg" alt=""/></span><span class="sWalls__detail"><span>Подробнее</span></span></span><span class="sWalls__name">Отделка стен камнем</span></a>
+							</div>
 						</div>
-						<div class="sWalls__btn-cont text-center"><a class="sWalls__btn" href="#">Показать все услуги<span>+</span></a>
+						<div class="sWalls__btn-cont text-center">
+							<div class="sWalls__btn sWalls-btn-js">Показать все услуги<span>+</span>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -860,11 +875,15 @@
 												</div>
 												<div class="sDiscont__discount">5%
 												</div>
-												<div class="sDiscont__btn-cont"><a class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" href="#"><span>Оставить заявку</span></a>
+												<div class="sDiscont__btn-cont"><a class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" data-modal="request"><span>Оставить заявку</span></a>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div class="sDiscont__row row">
+										<div class="col-md-4 offset-md-4">
 											<div class="sDiscont__item">
 												<div class="sDiscont__title">СКИДКА ДЛЯ молодых СЕМЕЙ
 												</div>
@@ -874,11 +893,15 @@
 												</div>
 												<div class="sDiscont__discount">7%
 												</div>
-												<div class="sDiscont__btn-cont"><a class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" href="#"><span>Оставить заявку</span></a>
+												<div class="sDiscont__btn-cont"><a class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" data-modal="request"><span>Оставить заявку</span></a>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div class="sDiscont__row row">
+										<div class="col-md-4 offset-md-8">
 											<div class="sDiscont__item">
 												<div class="sDiscont__title">СКИДКА ДЛЯ ПЕНСИОНЕРОВ
 												</div>
@@ -888,14 +911,12 @@
 												</div>
 												<div class="sDiscont__discount">6%
 												</div>
-												<div class="sDiscont__btn-cont"><a class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" href="#"><span>Оставить заявку</span></a>
+												<div class="sDiscont__btn-cont"><a class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" data-modal="request"><span>Оставить заявку</span></a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="tabs__content">2</div>
-								<div class="tabs__content">3</div>
 							</div>
 						</div>
 					</div>
@@ -985,7 +1006,9 @@
 															<div class="sProjects__done-item"><strong>Стоимость:</strong><span>843 000 Руб.</span>
 															</div>
 														</div>
-													</div><a class="sProjects__detail-btn" href="#">Подробнее</a>
+													</div>
+													<div class="sProjects__detail-btn" data-modal="request">Подробнее
+													</div>
 												</div>
 											</div>
 											<!---->
@@ -1030,7 +1053,9 @@
 															<div class="sProjects__done-item"><strong>Стоимость:</strong><span>843 000 Руб.</span>
 															</div>
 														</div>
-													</div><a class="sProjects__detail-btn" href="#">Подробнее</a>
+													</div>
+													<div class="sProjects__detail-btn" data-modal="request">Подробнее
+													</div>
 												</div>
 											</div>
 											<!---->
@@ -1075,7 +1100,9 @@
 															<div class="sProjects__done-item"><strong>Стоимость:</strong><span>843 000 Руб.</span>
 															</div>
 														</div>
-													</div><a class="sProjects__detail-btn" href="#">Подробнее</a>
+													</div>
+													<div class="sProjects__detail-btn" data-modal="request">Подробнее
+													</div>
 												</div>
 											</div>
 											<!---->

@@ -7,13 +7,13 @@ mixin sDescr(data)
 					+arrow()
 				.swiper-container.sDescr-slider-js
 					.swiper-wrapper
-						+sDescrSlide()
-						+sDescrSlide()
-						+sDescrSlide()
+						+sDescrSlide(1)
+						+sDescrSlide(2)
+						+sDescrSlide(3)
 				.swiper-pagination(class="--corner --corner-top --black ui-price-download__button ui-button")
 	// end sDescr
 
-mixin sDescrSlide()
+mixin sDescrSlide(imgNum)
 	.swiper-slide
 		+e.row.row
 			.col-md.text-center.text-md-start
@@ -36,10 +36,10 @@ mixin sDescrSlide()
 						bigTxt: 'Сроки:',
 						smTxt: '4 месяца',
 					})
-				+e.btn(href='#') Хочу такой же ремонт
+				+e.btn(data-modal="request") Хочу такой же ремонт
 			.col-md-auto
 				+e.img
-					img(loading="lazy" src="img/@2x/sDescr-img.png" alt="")
+					img(loading="lazy" src=`img/@2x/sAny-${imgNum}.jpg` alt="")
 
 mixin sDescrIconItem(data)
 	.col

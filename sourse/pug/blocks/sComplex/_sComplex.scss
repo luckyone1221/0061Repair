@@ -114,13 +114,18 @@
 	&__item{
 		display: flex;
 		flex-direction: column;
+
+		&:hover{
+			--box-bord-col: #{$primary};
+		}
 	}
 	&__box{
+		@include mt();
 		flex-grow: 1;
 		padding: rem(30) rem(18);
 
 		border-radius: rem(5);
-		border: 2px solid $body-color;
+		border: 2px solid var(--box-bord-col, #{$body-color});
 	}
 	&__title{
 		font-size: rem(33);

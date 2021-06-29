@@ -15,13 +15,17 @@ mixin sCalc(data)
 							+e.c-title Площадь квартиры (по полу):
 							+e.resut-row.row.d-none.d-lg-flex
 								+e.r-key.col-auto ИТОГО:
-								+e.r-val.col.text-end 93 600 Руб.
+								+e.r-val.col.text-end
+									span.sCalc-result-js(data-price-per-metter="100") 93 600
+									span.ms-1 Руб.
 						.col-lg
 							+e.range-inp
-								+range("10", "150", '₽')(class='with-symbol')
+								+range("0", "360", '₽', 'sCalc__range-slider')(class='with-symbol')
 					+e.resut-row.row.d-lg-none.pb-4
 						+e.r-key.col-auto ИТОГО:
-						+e.r-val.col.text-end 93 600 Руб.
+						+e.r-val.col.text-end
+							span.sCalc-result-js(data-price-per-metter="100") 93 600
+							span.ms-1 Руб.
 					+e.pills-row.row
 						+sCalcPill(1,'Срок от 1 недели')
 						+sCalcPill(2,'Без учета материалов')

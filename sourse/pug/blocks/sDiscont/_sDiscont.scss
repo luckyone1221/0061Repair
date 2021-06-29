@@ -107,7 +107,9 @@
 			border-width: 17px 8px 0 8px;
 			border-color: $primary transparent transparent transparent;
 
-			left: (100/270) * 100%;
+			//left: (100/270) * 100%;
+			left: 50%;
+			transform: translateX(-50%);
 			top: calc(100% - 1px);
 
 		}

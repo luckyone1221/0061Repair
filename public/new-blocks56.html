@@ -712,19 +712,19 @@
 							<div class="sCalculator__main-row row">
 								<div class="col-lg-7">
 									<div class="sCalculator__caption-row row">
-										<div class="sCalculator__caption-col col-sm-4 cTabs-btn-js">
+										<div class="sCalculator__caption-col col-sm-4 cTabs-btn-js house-type-js">
 											<div class="sCalculator__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sCalculator-1.svg" alt=""/>
 											</div>
 											<div class="sCalculator__txt">Новостройка
 											</div>
 										</div>
-										<div class="sCalculator__caption-col col-sm-4 cTabs-btn-js">
+										<div class="sCalculator__caption-col col-sm-4 cTabs-btn-js house-type-js">
 											<div class="sCalculator__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sCalculator-2.svg" alt=""/>
 											</div>
 											<div class="sCalculator__txt">Вторичное жильё
 											</div>
 										</div>
-										<div class="sCalculator__caption-col col-sm-4 cTabs-btn-js active">
+										<div class="sCalculator__caption-col col-sm-4 cTabs-btn-js house-type-js active">
 											<div class="sCalculator__icon"><img class="img-svg-js" loading="lazy" src="img/svg/sCalculator-3.svg" alt=""/>
 											</div>
 											<div class="sCalculator__txt">Помещение
@@ -738,7 +738,7 @@
 													<div class="sCalculator__r-row row">
 														<div class="col-auto">
 															<label class="custom-radio">
-																<input class="invisible" type="radio" name="radio-group" value="Комната"/>
+																<input class="invisible" type="radio" name="radio-group" value="Комната" checked="checked"/>
 																<div class="cirlce"></div>
 																<div class="cr-txt">Комната</div>
 															</label>
@@ -800,185 +800,62 @@
 									<div class="sCalculator__o-box-cont">
 										<div class="sCalculator__o-bg"><img loading="lazy" src="img/@2x/sCalculator-bg.jpg" alt=""/>
 										</div>
-										<!--+sCalculatorOrangeBox({-->
-										<!--	boxId: 1,-->
-										<!--})-->
-										<div class="sCalculator__price-tabs cTabs-content-group-js">
-											<div class="cTabs-content-js">
-												<div class="orange-box">
-													<div class="orange-box__result-row row align-items-center gy-3">
-														<div class="orange-box__r-txt col-sm">Итого стоимость:
-														</div>
-														<div class="orange-box__r-val col-sm-auto">540 000 руб 1
-														</div>
-													</div>
-													<div class="orange-box__type-box">
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-1" value="Базовый ремонт" checked="checked"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Базовый ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">162 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-1" value="Комплексный ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Комплексный ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">540 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-1" value="Бизнес-ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Бизнес-ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">900 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-1" value="Премиум-ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Премиум-ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">900 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-													</div>
-													<div class="orange-box__material-title">С учётом черновых материалов?
-													</div>
-													<label class="orange-box__black-chb">
-														<input class="invisible" type="checkbox" name="black-mat" checked="checked"/>
-														<div class="black-chb-btn">Да</div>
-														<div class="black-chb-btn">Нет</div>
-													</label>
-													<div class="orange-box__btn-cont text-center"><a class="orange-box__white-btn" href="#">Оставить заявку на консультацию</a>
-														<div class="orange-box__connect-txt">Мы свяжемся с Вами в течение 5 минут
-														</div>
-													</div>
+										<div class="orange-box">
+											<div class="orange-box__result-row row align-items-center gy-3">
+												<div class="orange-box__r-txt col-sm">Итого стоимость:
+												</div>
+												<div class="orange-box__r-val col-sm-auto"><span class="result-price-js">540 000</span><span class="ms-1">руб</span>
 												</div>
 											</div>
-											<div class="cTabs-content-js">
-												<div class="orange-box">
-													<div class="orange-box__result-row row align-items-center gy-3">
-														<div class="orange-box__r-txt col-sm">Итого стоимость:
-														</div>
-														<div class="orange-box__r-val col-sm-auto">540 000 руб 2
-														</div>
+											<div class="orange-box__type-box">
+												<label class="orange-box__type-radio repair-type-js" data-price-per-metter="100">
+													<input class="invisible" type="radio" name="type-1" value="Базовый ремонт"/>
+													<div class="black"></div><span class="orange-box__rad-row row">
+													<div class="col"><span class="orange-box__type-txt">Базовый ремонт</span>
 													</div>
-													<div class="orange-box__type-box">
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-2" value="Базовый ремонт" checked="checked"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Базовый ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">162 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-2" value="Комплексный ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Комплексный ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">540 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-2" value="Бизнес-ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Бизнес-ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">900 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-2" value="Премиум-ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Премиум-ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">900 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
+													<div class="col-auto"><span class="orange-box__price"><span class="repair-type-price-js">162 000</span><span class="ms-1">руб</span></span>
+													</div></span>
+												</label>
+												<!-- end sCalculator-->
+												<label class="orange-box__type-radio repair-type-js" data-price-per-metter="200">
+													<input class="invisible" type="radio" name="type-1" value="Комплексный ремонт" checked="checked"/>
+													<div class="black"></div><span class="orange-box__rad-row row">
+													<div class="col"><span class="orange-box__type-txt">Комплексный ремонт</span>
 													</div>
-													<div class="orange-box__material-title">С учётом черновых материалов?
+													<div class="col-auto"><span class="orange-box__price"><span class="repair-type-price-js">540 000</span><span class="ms-1">руб</span></span>
+													</div></span>
+												</label>
+												<!-- end sCalculator-->
+												<label class="orange-box__type-radio repair-type-js" data-price-per-metter="300">
+													<input class="invisible" type="radio" name="type-1" value="Бизнес-ремонт"/>
+													<div class="black"></div><span class="orange-box__rad-row row">
+													<div class="col"><span class="orange-box__type-txt">Бизнес-ремонт</span>
 													</div>
-													<label class="orange-box__black-chb">
-														<input class="invisible" type="checkbox" name="black-mat" checked="checked"/>
-														<div class="black-chb-btn">Да</div>
-														<div class="black-chb-btn">Нет</div>
-													</label>
-													<div class="orange-box__btn-cont text-center"><a class="orange-box__white-btn" href="#">Оставить заявку на консультацию</a>
-														<div class="orange-box__connect-txt">Мы свяжемся с Вами в течение 5 минут
-														</div>
+													<div class="col-auto"><span class="orange-box__price"><span class="repair-type-price-js">900 000</span><span class="ms-1">руб</span></span>
+													</div></span>
+												</label>
+												<!-- end sCalculator-->
+												<label class="orange-box__type-radio repair-type-js" data-price-per-metter="400">
+													<input class="invisible" type="radio" name="type-1" value="Премиум-ремонт"/>
+													<div class="black"></div><span class="orange-box__rad-row row">
+													<div class="col"><span class="orange-box__type-txt">Премиум-ремонт</span>
 													</div>
-												</div>
+													<div class="col-auto"><span class="orange-box__price"><span class="repair-type-price-js">900 000</span><span class="ms-1">руб</span></span>
+													</div></span>
+												</label>
+												<!-- end sCalculator-->
 											</div>
-											<div class="cTabs-content-js active">
-												<div class="orange-box">
-													<div class="orange-box__result-row row align-items-center gy-3">
-														<div class="orange-box__r-txt col-sm">Итого стоимость:
-														</div>
-														<div class="orange-box__r-val col-sm-auto">540 000 руб 3
-														</div>
-													</div>
-													<div class="orange-box__type-box">
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-3" value="Базовый ремонт" checked="checked"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Базовый ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">162 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-3" value="Комплексный ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Комплексный ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">540 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-3" value="Бизнес-ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Бизнес-ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">900 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-														<label class="orange-box__type-radio">
-															<input class="invisible" type="radio" name="type-3" value="Премиум-ремонт"/>
-															<div class="black"></div><span class="orange-box__rad-row row">
-															<div class="col"><span class="orange-box__type-txt">Премиум-ремонт</span>
-															</div>
-															<div class="col-auto"><span class="orange-box__price">900 000 руб</span>
-															</div></span>
-														</label>
-														<!-- end sCalculator-->
-													</div>
-													<div class="orange-box__material-title">С учётом черновых материалов?
-													</div>
-													<label class="orange-box__black-chb">
-														<input class="invisible" type="checkbox" name="black-mat" checked="checked"/>
-														<div class="black-chb-btn">Да</div>
-														<div class="black-chb-btn">Нет</div>
-													</label>
-													<div class="orange-box__btn-cont text-center"><a class="orange-box__white-btn" href="#">Оставить заявку на консультацию</a>
-														<div class="orange-box__connect-txt">Мы свяжемся с Вами в течение 5 минут
-														</div>
-													</div>
+											<div class="orange-box__material-title">С учётом черновых материалов?
+											</div>
+											<label class="orange-box__black-chb">
+												<input class="black-mat-chb-js invisible" type="checkbox" name="black-mat" checked="checked" data-coefficient-yes="1" data-coefficient-no="0.8"/>
+												<div class="black-chb-btn">Да</div>
+												<div class="black-chb-btn">Нет</div>
+											</label>
+											<div class="orange-box__btn-cont text-center">
+												<div class="orange-box__white-btn" data-modal="request">Оставить заявку на консультацию
+												</div>
+												<div class="orange-box__connect-txt">Мы свяжемся с Вами в течение 5 минут
 												</div>
 											</div>
 										</div>

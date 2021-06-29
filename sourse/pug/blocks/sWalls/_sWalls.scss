@@ -22,6 +22,24 @@
 		}
 
 		padding-bottom: rem(38);
+
+		&:not(.active){
+			@include media-breakpoint-up(lg){
+				& > *:nth-child(n + 9){
+					display: none!important;
+				}
+			}
+			@include media-breakpoint-down(md){
+				& > *:nth-child(n + 9){
+					display: none!important;
+				}
+			}
+			@include media-breakpoint-between(md, lg){
+				& > *:nth-child(n + 10){
+					display: none!important;
+				}
+			}
+		}
 	}
 	&__col{
 		@media (min-width: 500px) {

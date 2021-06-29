@@ -1314,7 +1314,7 @@
 						<div class="section-title">
 							<h2>Галерея работ:</h2>
 						</div>
-						<div class="sImages__row row">
+						<div class="sImages__row row sWalls-row-js">
 							<div class="col-6 col-md-3"><a class="sImages__img-link" href="img/@2x/sImages-1.jpg" data-fancybox="sImages"><img loading="lazy" src="img/@2x/sImages-1.jpg" alt=""/></a>
 							</div>
 							<div class="col-6 col-md-3"><a class="sImages__img-link" href="img/@2x/sImages-2.jpg" data-fancybox="sImages"><img loading="lazy" src="img/@2x/sImages-2.jpg" alt=""/></a>
@@ -1331,8 +1331,18 @@
 							</div>
 							<div class="col-6 col-md-3"><a class="sImages__img-link" href="img/@2x/sImages-8.jpg" data-fancybox="sImages"><img loading="lazy" src="img/@2x/sImages-8.jpg" alt=""/></a>
 							</div>
+							<div class="col-6 col-md-3"><a class="sImages__img-link" href="img/@2x/sImages-1.jpg" data-fancybox="sImages"><img loading="lazy" src="img/@2x/sImages-1.jpg" alt=""/></a>
+							</div>
+							<div class="col-6 col-md-3"><a class="sImages__img-link" href="img/@2x/sImages-2.jpg" data-fancybox="sImages"><img loading="lazy" src="img/@2x/sImages-2.jpg" alt=""/></a>
+							</div>
+							<div class="col-6 col-md-3"><a class="sImages__img-link" href="img/@2x/sImages-3.jpg" data-fancybox="sImages"><img loading="lazy" src="img/@2x/sImages-3.jpg" alt=""/></a>
+							</div>
+							<div class="col-6 col-md-3"><a class="sImages__img-link" href="img/@2x/sImages-4.jpg" data-fancybox="sImages"><img loading="lazy" src="img/@2x/sImages-4.jpg" alt=""/></a>
+							</div>
 						</div>
-						<div class="text-center"><a class="sImages__btn-more" href="#">Показать еще работы<span>+</span></a>
+						<div class="text-center">
+							<div class="sImages__btn-more sWalls-btn-js">Показать еще работы<span>+</span>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -1344,23 +1354,89 @@
 							<h2>Цены на черновой ремонт<br/>без материалов:</h2>
 						</div>
 						<div class="sNoMat__row row">
-							<div class="col-md-4"><a class="sNoMat__item" href="#"><span class="sNoMat__box"><span class="sNoMat__img"><img loading="lazy" src="img/@2x/sNoMat-1.png" alt=""/></span><span class="sNoMat__title">1-комнатная квартира</span><span class="sNoMat__square">S=37.2 м.кв</span><span class="sNoMat__time">Сроки: 3-4 недели</span><span class="sNoMat__price-row row">
-								<div class="col-auto">Стоимость: от </div>
-								<div class="col-auto"><span class="sNoMat__price sNoMat__price--old">148 000 руб</span><span class="sNoMat__price sNoMat__price--new">186 000 руб</span>
-								</div></span><span class="sNoMat__discount">ЭКОНОМИЯ 42 000 руб!</span></span><span class="sNoMat__btn-cont">
-								<div class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button"><span>Оставить заявку</span></div></span></a>
+							<div class="col-md-4">
+								<div class="sNoMat__item">
+									<div class="sNoMat__box">
+										<div class="sNoMat__img"><img loading="lazy" src="img/@2x/sNoMat-1.png" alt=""/>
+										</div>
+										<div class="sNoMat__title">1-комнатная квартира
+										</div>
+										<div class="sNoMat__square">S=37.2 м.кв
+										</div>
+										<div class="sNoMat__time">Сроки: 3-4 недели
+										</div>
+										<div class="sNoMat__price-row row">
+											<div class="col-auto">Стоимость: от </div>
+											<div class="col-auto">
+												<div class="sNoMat__price sNoMat__price--old">148 000 руб
+												</div>
+												<div class="sNoMat__price sNoMat__price--new">186 000 руб
+												</div>
+											</div>
+										</div>
+										<div class="sNoMat__discount">ЭКОНОМИЯ 42 000 руб!
+										</div>
+									</div>
+									<div class="sNoMat__btn-cont">
+										<div class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" data-modal="request"><span>Оставить заявку</span></div>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-4"><a class="sNoMat__item" href="#"><span class="sNoMat__box"><span class="sNoMat__img"><img loading="lazy" src="img/@2x/sNoMat-2.png" alt=""/></span><span class="sNoMat__title">2-комнатная квартира</span><span class="sNoMat__square">S=48.5 м.кв</span><span class="sNoMat__time">Сроки: 4-5 недель</span><span class="sNoMat__price-row row">
-								<div class="col-auto">Стоимость: от </div>
-								<div class="col-auto"><span class="sNoMat__price sNoMat__price--old">193 000 руб</span><span class="sNoMat__price sNoMat__price--new">240 000 руб</span>
-								</div></span><span class="sNoMat__discount">ЭКОНОМИЯ 47 000 руб!</span></span><span class="sNoMat__btn-cont">
-								<div class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button"><span>Оставить заявку</span></div></span></a>
+							<div class="col-md-4">
+								<div class="sNoMat__item">
+									<div class="sNoMat__box">
+										<div class="sNoMat__img"><img loading="lazy" src="img/@2x/sNoMat-2.png" alt=""/>
+										</div>
+										<div class="sNoMat__title">2-комнатная квартира
+										</div>
+										<div class="sNoMat__square">S=48.5 м.кв
+										</div>
+										<div class="sNoMat__time">Сроки: 4-5 недель
+										</div>
+										<div class="sNoMat__price-row row">
+											<div class="col-auto">Стоимость: от </div>
+											<div class="col-auto">
+												<div class="sNoMat__price sNoMat__price--old">193 000 руб
+												</div>
+												<div class="sNoMat__price sNoMat__price--new">240 000 руб
+												</div>
+											</div>
+										</div>
+										<div class="sNoMat__discount">ЭКОНОМИЯ 47 000 руб!
+										</div>
+									</div>
+									<div class="sNoMat__btn-cont">
+										<div class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" data-modal="request"><span>Оставить заявку</span></div>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-4"><a class="sNoMat__item" href="#"><span class="sNoMat__box"><span class="sNoMat__img"><img loading="lazy" src="img/@2x/sNoMat-3.png" alt=""/></span><span class="sNoMat__title">3-комнатная квартира</span><span class="sNoMat__square">S=84.1 м.кв</span><span class="sNoMat__time">Сроки: 5-6 недель</span><span class="sNoMat__price-row row">
-								<div class="col-auto">Стоимость: от </div>
-								<div class="col-auto"><span class="sNoMat__price sNoMat__price--old">248 000 руб</span><span class="sNoMat__price sNoMat__price--new">307 000 руб</span>
-								</div></span><span class="sNoMat__discount">ЭКОНОМИЯ 59 000 руб!</span></span><span class="sNoMat__btn-cont">
-								<div class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button"><span>Оставить заявку</span></div></span></a>
+							<div class="col-md-4">
+								<div class="sNoMat__item">
+									<div class="sNoMat__box">
+										<div class="sNoMat__img"><img loading="lazy" src="img/@2x/sNoMat-3.png" alt=""/>
+										</div>
+										<div class="sNoMat__title">3-комнатная квартира
+										</div>
+										<div class="sNoMat__square">S=84.1 м.кв
+										</div>
+										<div class="sNoMat__time">Сроки: 5-6 недель
+										</div>
+										<div class="sNoMat__price-row row">
+											<div class="col-auto">Стоимость: от </div>
+											<div class="col-auto">
+												<div class="sNoMat__price sNoMat__price--old">248 000 руб
+												</div>
+												<div class="sNoMat__price sNoMat__price--new">307 000 руб
+												</div>
+											</div>
+										</div>
+										<div class="sNoMat__discount">ЭКОНОМИЯ 59 000 руб!
+										</div>
+									</div>
+									<div class="sNoMat__btn-cont">
+										<div class="ui-button sDiscont__btn --corner --corner-top --black ui-price-download__button" data-modal="request"><span>Оставить заявку</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<h3 class="sNoMat__q-title">Быстрый расчет стоимости чернового ремонта:

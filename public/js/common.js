@@ -186,10 +186,11 @@ function eventHandler() {
 
 	let sProjectsSlider = new Swiper('.sProjects-slider-js', {
 		slidesPerView: 'auto',
+		slideToClickedSlide: false,
 		freeMode: true,
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.2,
-		slideToClickedSlide: true,
+		//slideToClickedSlide: true,
 		freeModeMomentum: true
 	}); // sFamiliar
 
@@ -421,7 +422,7 @@ function eventHandler() {
 	let header = document.querySelector('.ui-page__header');
 	let scrollMenu = document.querySelector('.scrollmenu--js');
 
-	if (header) {
+	if (header && scrollMenu) {
 		window.addEventListener('scroll', function () {
 			if (window.scrollY > header.offsetHeight) {
 				scrollMenu.classList.add('active');
@@ -443,6 +444,11 @@ function eventHandler() {
 		}
 	}); //round slider
 
+	let roundSliderVal = 65;
+	let RadioItems = document.querySelectorAll('.repair-type-js');
+	let blackMatChb = document.querySelector('.black-mat-chb-js');
+	$(RadioItems).find('input').change(putResultPrice);
+	$(blackMatChb).change(calcPrice);
 	$('.round-slider-js').roundSlider({
 		min: 0,
 		max: 360,
@@ -451,10 +457,69 @@ function eventHandler() {
 		handleSize: "+24",
 		handleShape: "dot",
 		sliderType: "min-range",
-		value: 65
-	}).on("change", function (e) {
-		console.log(e.value); //let smth = document.querySelectorAll('');
-		//console.log(smth);
+		value: roundSliderVal
+	}).on("valueChange", function (e) {
+		roundSliderVal = e.value;
+
+		if (roundSliderVal) {
+			roundSliderVal = e.value;
+		} else {
+			roundSliderVal = 0;
+		}
+
+		calcPrice();
+	});
+	calcPrice();
+	putResultPrice();
+
+	function calcPrice() {
+		if (RadioItems.length === 0) return;
+		let blackCoef;
+
+		if (blackMatChb.checked) {
+			blackCoef = Number(blackMatChb.getAttribute('data-coefficient-yes'));
+		} else {
+			blackCoef = Number(blackMatChb.getAttribute('data-coefficient-no'));
+		}
+
+		for (let item of RadioItems) {
+			let priceTxt = item.querySelector('.repair-type-price-js');
+			priceTxt.innerHTML = roundSliderVal * Number(item.getAttribute('data-price-per-metter')) * blackCoef;
+		}
+
+		putResultPrice();
+	}
+
+	function putResultPrice() {
+		if (RadioItems.length === 0) return;
+		let current = document.querySelector('.repair-type-js input:checked').closest('.repair-type-js');
+		let resultPrice = document.querySelector('.result-price-js');
+		resultPrice.innerHTML = current.querySelector('.repair-type-price-js').innerHTML;
+	} //sCalc
+
+
+	let sCalcResult = document.querySelectorAll('.sCalc-result-js');
+	let sCalcPricePerMeter;
+
+	if (sCalcResult.length !== 0) {
+		sCalcPricePerMeter = Number(sCalcResult[0].getAttribute('data-price-per-metter'));
+	}
+
+	$(".sCalc__range-slider").ionRangeSlider({
+		from: 0,
+		step: 1,
+		onChange: function (data) {
+			for (let result of sCalcResult) {
+				result.innerHTML = data.from * sCalcPricePerMeter;
+			}
+		} //postfix: " ❤",
+		//prefix: "+",
+
+	}); //.sWalls-row-js
+
+	$('.sWalls-btn-js').click(function () {
+		$('.sWalls-row-js').addClass('active');
+		$(this).fadeOut();
 	}); //end luckyone js
 }
 
