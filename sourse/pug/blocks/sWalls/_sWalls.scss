@@ -93,7 +93,7 @@
 		}
 
 		position: absolute;
-		bottom: 100%;
+		bottom: calc(100% + 2px);
 		width: calc(100% - #{rem(76)});
 		left: #{rem(38)};
 		height: rem(38);
@@ -113,7 +113,10 @@
 		span{
 			display: inline-block;
 			line-height: 1.2;
-			border-bottom: 1px dashed var(--det-bb,#{$body-color});
+			border-bottom: 2px dotted var(--det-bb,#{$body-color});
+			&:after{
+
+			}
 		}
 
 		&:before,
@@ -157,5 +160,27 @@
 	&__btn{
 		@extend .btn-default;
 	}
+
+	//
+	//&__order-cont{
+	//	position: absolute;
+	//	bottom: 100%;
+	//	left: 0;
+	//	width: 100%;
+	//	transform: rotate(180deg);
+	//	span{
+	//		transform: rotate(180deg);
+	//	}
+	//
+	//	.ui-button{
+	//		background: var(--bot-btn-bg, #{$body-color})!important;
+	//		border-color: var(--bot-btn-bg, #{$body-color})!important;
+	//
+	//		&:before,
+	//		&:after{
+	//			box-shadow: 0 0 0 16px var(--bot-btn-bg, #{$body-color})!important;
+	//		}
+	//	}
+	//}
 	&__{}
 } // end.sWalls

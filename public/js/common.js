@@ -520,6 +520,24 @@ function eventHandler() {
 	$('.sWalls-btn-js').click(function () {
 		$('.sWalls-row-js').addClass('active');
 		$(this).fadeOut();
+	}); //readmore js
+
+	$('.read-more-js').readmore({
+		speed: 75,
+		collapsedHeight: 110,
+		moreLink: '<a class="read-more-link" href="#">Развернуть</a>',
+		lessLink: '<a class="read-more-link" href="#">Свернуть</a>'
+	});
+	$('.read-more-js2').readmore({
+		speed: 75,
+		collapsedHeight: 240,
+		moreLink: '<a class="read-more-link" href="#">Развернуть</a>',
+		lessLink: '<a class="read-more-link" href="#">Свернуть</a>'
+	}); //
+
+	$('.sDiscount-tabs-btn-js').click(function () {
+		let index = $(this).index();
+		console.log(index);
 	}); //end luckyone js
 }
 

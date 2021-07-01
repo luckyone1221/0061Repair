@@ -52,7 +52,11 @@
 		&__input{
 			border-radius: rem(5);
 			background-color: $white;
-			text-align: center;
+			//-text-align: center;
+
+			&[type="date"]{
+				text-align: left;
+			}
 		}
 		&__send-btn{
 			@extend .btn;

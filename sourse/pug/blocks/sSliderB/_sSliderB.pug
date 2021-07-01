@@ -2,11 +2,11 @@ mixin sSliderB(data)
 	// start sSliderB
 	+b.SECTION.sSliderB.section#sSliderB&attributes(attributes)
 		.container
-			+e.row.row.gy-4
+			+e.row.row.gy-4(class=data.addClasses)
 				.col-lg-6
 					+b.section-title
 						h2 Поклейка декоративных обоев на стену
-						p
+						p.read-more.read-more-js
 							| Обои подходят для любого типа помещения, достаточно просты в применении, позволяют создать неповторимый индивидуальный дизайн.
 							|
 							br.d-none.d-xl-block
@@ -17,6 +17,7 @@ mixin sSliderB(data)
 							|
 							br.d-none.d-xl-block
 							| Являются экологически безопасными.
+
 					+form-wrap
 						.row.gy-3
 							.col-sm-auto

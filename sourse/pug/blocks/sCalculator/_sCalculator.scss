@@ -9,8 +9,19 @@
 	&__main-row{
 		--bs-gutter-x: 0;
 	}
+	&__cap-col{
+		@include media-breakpoint-up(xl){
+
+		}
+	}
+	&__cont-col{
+		@include media-breakpoint-up(xl){
+			width: 456px!important;
+		}
+	}
 	&__caption-row{
 		--bs-gutter-x: 0;
+		border-bottom: 1px solid $gray-300!important;
 	}
 	&__caption-col{
 		cursor: pointer;
@@ -20,6 +31,23 @@
 		background-color: $gray-300;
 		&.active{
 			background-color: $white;
+		}
+
+		position: relative;
+		z-index: 1;
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 14px 14px 14px;
+			border-color: transparent transparent $gray-300 transparent;
 		}
 
 		padding: rem(15) rem(20);
@@ -52,10 +80,7 @@
 			height: rem(48);
 		}
 
-		margin: 0 auto rem(15) auto;
-		@include media-breakpoint-up(sm){
-			margin: 0 rem(15) 0 0;
-		}
+		margin: 0 rem(15) 0 0;
 		flex-shrink: 0;
 
 		svg{
@@ -228,7 +253,7 @@
 		--box-px: #{rem(35)};
 	}
 
-	padding: rem(50) var(--box-px) rem(30) var(--box-px);
+	padding: rem(40) var(--box-px) rem(25) var(--box-px);
 	&__result-row{
 		--bs-gutter-x: #{rem(18)};
 		padding-bottom: rem(30);
@@ -251,17 +276,17 @@
 	}
 	&__type-box{
 		margin: 0 calc(var(--box-px) * -1);
-		padding-bottom: rem(40);
+		padding-bottom: rem(25);
 	}
 	&__type-radio{
 		cursor: pointer;
 		display: block;
 		padding: rem(10) var(--box-px);
 
-		margin-bottom: rem(5);
-		&:last-child{
-			margin-bottom: 0;
-		}
+		//margin-bottom: rem(5);
+		//&:last-child{
+		//	margin-bottom: 0;
+		//}
 
 		input:checked + .black{
 			opacity: 1;

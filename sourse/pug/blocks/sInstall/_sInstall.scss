@@ -225,9 +225,13 @@
   }
 	&__c-offer{
     font-size: rem(21);
-    text-decoration: underline;
+    //text-decoration: underline;
     text-transform: uppercase;
     margin-bottom: rem(25);
+
+    display: inline-block;
+    border-bottom: 1px solid currentColor;
+    line-height: 1;
   }
   //
 	&__dot-chars{

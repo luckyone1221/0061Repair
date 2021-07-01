@@ -3,11 +3,11 @@ mixin sProject(data)
 	+b.SECTION.sProject.section#sProject&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Цены, сроки и фото выполненных проектов:
-				p Мы гарантируем что, заказывая дизайн проект в компании СК «АРТ-ДЕКОР» наши Заказчики получат бонусом бесплатные консультации технических специалистов. Также мы гарантируем, что выполненные проекты не содержат нарушений правил перепланировки и при необходимости мы согласуем наш проект в надлежащих инстанциях.
+				h2 Цены, сроки и примеры дизайн-проектов
+				//-p Мы гарантируем что, заказывая дизайн проект в компании СК «АРТ-ДЕКОР» наши Заказчики получат бонусом бесплатные консультации технических специалистов. Также мы гарантируем, что выполненные проекты не содержат нарушений правил перепланировки и при необходимости мы согласуем наш проект в надлежащих инстанциях.
 			.tabs
 				.tabs__caption
-					+e.caption-row.row
+					+e.caption-row.row.justify-content-center
 						+sProjectCaptionItem('планировка', 'active')
 						+sProjectCaptionItem('полный проект')
 						+sProjectCaptionItem('VR-дизайн')
@@ -18,6 +18,16 @@ mixin sProject(data)
 							+sProjectContent(2)
 						.tabs__content
 							+sProjectContent(3)
+					+e.sl-title ПРИМЕРЫ ПРОЕКТОВ:
+						+e.slider-wrap.sProject-sliderBox-js
+							+arrow()
+							.swiper-container.sProject-slider-js
+								.swiper-wrapper
+									+sProjectSlide(1, 1)
+									+sProjectSlide(1, 1)
+									+sProjectSlide(1, 1)
+									+sProjectSlide(1, 1)
+									+sProjectSlide(1, 1)
 
 	// end sProject
 mixin sProjectContent(fancyId)
@@ -34,16 +44,6 @@ mixin sProjectContent(fancyId)
 				+e.chars
 					+sProjectIconItem(1, 'Цена за проект:', 'от 349 р/м2')
 					+sProjectIconItem(2, 'Время работы:', 'от 3 дней')
-		+e.sl-title ПРИМЕРЫ ПРОЕКТОВ:
-		+e.slider-wrap.sProject-sliderBox-js
-			+arrow()
-			.swiper-container.sProject-slider-js
-				.swiper-wrapper
-					+sProjectSlide(1, fancyId)
-					+sProjectSlide(1, fancyId)
-					+sProjectSlide(1, fancyId)
-					+sProjectSlide(1, fancyId)
-					+sProjectSlide(1, fancyId)
 
 mixin sProjectSlide(imgNum, fancyId)
 	.swiper-slide

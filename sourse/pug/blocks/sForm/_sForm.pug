@@ -19,7 +19,10 @@ mixin sForm()
 							.col-sm-6
 								+input('+7   ( * * * ) * * * - * * - * *', 'tel')
 							.col-sm-6
-								+input('Удобное время для звонка', 'text')
+								//+input('Удобное время для звонка', 'date')
+								label
+									+e.input-wrap
+										+e.INPUT.input.form-control(type="date")
 							.col-sm-6
 								+e.send-btn(type="submit") Отправить
 					.col-lg-auto

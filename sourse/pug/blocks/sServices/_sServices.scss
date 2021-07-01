@@ -59,7 +59,7 @@
 		opacity: var(--bot-link-o, 0);
 
 		left: 0;
-		top: 100%;
+		top: calc(100% + 2px);
 		width: 100%;
 		text-align: center;
 

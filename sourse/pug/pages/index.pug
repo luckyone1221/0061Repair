@@ -7,6 +7,7 @@ include ../blocks/sWalls/_sWalls.pug
 include ../blocks/headerOld/_headerOld.pug
 include ../blocks/sHeaderBlOld/_sHeaderBlOld.pug
 include ../blocks/sDiscont/_sDiscont.pug
+include ../blocks/sDiscount/_sDiscount.pug
 include ../blocks/scrollmenu/_scrollmenu.pug
 
 block variables
@@ -27,7 +28,8 @@ block pagecontent
 	+sPriceOld()
 	+sStepsOld()
 	+sPriceListOld()
-	+sDiscountOld()
+	//-+sDiscountOld()
+	+sDiscount()
 	+sFeedBackOld()
 	+sUsefullOld()
 	+sMapOld()

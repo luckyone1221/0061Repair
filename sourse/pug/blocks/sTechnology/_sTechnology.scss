@@ -31,6 +31,7 @@
 		@extend .accept-ratio-frame-nh;
 		padding-top: (285/501) * 100%;
 		border-radius: rem(5);
+		//min-height: 200px;
 	}
 	&__txt-box{
 		@include media-breakpoint-up(xl){
