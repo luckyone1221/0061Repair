@@ -54,6 +54,7 @@ include ../blocks/sSearch/_sSearch.pug
 include ../blocks/sSliderB/_sSliderB.pug
 include ../blocks/sArticalsL/_sArticalsL.pug
 include ../blocks/sPrices/_sPrices.pug
+include ../blocks/sPlate/_sPlate.pug
 
 block variables
 	- let  mainPage= null
@@ -71,18 +72,24 @@ block pagecontent
 	//+sDecorative()
 
 	//-new blocks
-	+sCalculator()
-	+s404()
-	+sFAQ()
-	+sFAQN()
-	+sArtical()
-	+sFeedBack()
-	+sSearch()
-	+sSliderB({})
-	.mb-5
-	+sSliderB({
+	+sPlate({
+		addClasses: '',
+	})
+	+sPlate({
 		addClasses: 'flex-row-reverse',
 	})
-	+sArticalsL()
-	+sPrices()
+	//+sCalculator()
+	//+s404()
+	//+sFAQ()
+	//+sFAQN()
+	//+sArtical()
+	//+sFeedBack()
+	//+sSearch()
+	//+sSliderB({})
+	//.mb-5
+	//+sSliderB({
+	//	addClasses: 'flex-row-reverse',
+	//})
+	//+sArticalsL()
+	//+sPrices()
 	+footerOld()

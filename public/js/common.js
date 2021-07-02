@@ -538,6 +538,17 @@ function eventHandler() {
 	$('.sDiscount-tabs-btn-js').click(function () {
 		let index = $(this).index();
 		console.log(index);
+	}); //cusrom read more
+
+	$('.crm-js').each(function () {
+		//.crm-visiable-js
+		let self = this;
+		$(this).find('.crm-btn-js').click(function () {
+			$(this).toggleClass('active');
+			$(self).find('.crm-hidden-js').slideToggle(function () {
+				$(this).toggleClass('active');
+			});
+		});
 	}); //end luckyone js
 }
 

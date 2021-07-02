@@ -19,8 +19,14 @@ mixin sForm()
 							.col-sm-6
 								+input('+7   ( * * * ) * * * - * * - * *', 'tel')
 							.col-sm-6
-								//+input('Удобное время для звонка', 'date')
-								label
+								//-<input type='text' class="datepicker-here" data-position="right top" />
+								//-input(type='text' class="datepicker-here")
+								input.form-control(type="text" class="datepicker-here" data-timepicker="true" data-time-format='hh:ii aa' placeholder="Удобное время для звонка")
+								//#my-element
+								//-+e.input-wrap
+									+e.INPUT.input.form-control(type="text" id="datetimepicker")
+								//-+input('Удобное время для звонка', 'date')
+								//-label
 									+e.input-wrap
 										+e.INPUT.input.form-control(type="date")
 							.col-sm-6
