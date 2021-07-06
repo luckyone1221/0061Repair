@@ -102,8 +102,8 @@ mixin sCalculatorRadio(txt, name='radio-group')
 	.col-auto
 		+b.LABEL.custom-radio
 			input(type="radio" name=name value=txt class='invisible')&attributes(attributes)
-			.cirlce
-			.cr-txt=txt
+			span.cirlce
+			span.cr-txt=txt
 
 mixin sCalculatorTabsBtn(imgNum, txt, addClasses)
 	+e.caption-col.col-sm-4.cTabs-btn-js.house-type-js(class=addClasses)

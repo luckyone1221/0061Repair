@@ -27,9 +27,8 @@ mixin sBathRep(data)
 					time: '4-6 дней',
 				})
 				+sBathRepItem({
-					title: 'Вывоз мусора и уборка помещения',
-					time: '',
-				})
+					title: 'Вывоз мусора и уборка помещения'
+				}).disabled
 				+sBathRepItem({
 					title: 'Приемка работ / рассчет',
 					time: '50% стоимости',
@@ -38,27 +37,30 @@ mixin sBathRep(data)
 
 mixin sBathRepItem(data)
 	+e.item(class=data.activeClasses)
-		+e.head.dd-head-js
+		+e.head.dd-head-js&attributes(attributes)
 			+e.h-row.row
 				.col-md-auto
 					+e.title=data.title
-				.col-md-auto
-					+e.time=data.time
-			+e.chevron
-				+icon('chevron-down')
-		+e.content.dd-content-js(class=data.activeClasses)
-			+e.c-title В этап входят следующие работы:
-			+e.c-row.row.align-items-center
-				.col-lg-auto
-					+e.img
-						img(loading="lazy" src="img/@2x/sBathRep-img.png" alt="")
-				.col-sm
-					+e.UL.list
-						li Выезд инженера на замер
-						li Составление сметы
-						li Проработка черновых и чистовых материалов
-				.col-sm
-					+e.UL.list
-						li Выезд прораба на объект
-						li Заключение договора без Авансовых платежей
-						li Составление дизайн проекта
+				if data.time
+					.col-md-auto
+						+e.time=data.time
+			if data.time
+				+e.chevron
+					+icon('chevron-down')
+		if data.time
+			+e.content.dd-content-js(class=data.activeClasses)
+				+e.c-title В этап входят следующие работы:
+				+e.c-row.row.align-items-center
+					.col-lg-auto
+						+e.img
+							img(loading="lazy" src="img/@2x/sBathRep-img.png" alt="")
+					.col-sm
+						+e.UL.list
+							li Выезд инженера на замер
+							li Составление сметы
+							li Проработка черновых и чистовых материалов
+					.col-sm
+						+e.UL.list
+							li Выезд прораба на объект
+							li Заключение договора без Авансовых платежей
+							li Составление дизайн проекта

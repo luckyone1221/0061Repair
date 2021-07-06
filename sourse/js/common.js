@@ -339,7 +339,7 @@ function eventHandler() {
 			let parent = document.querySelector(parentSelect);
 			if (parent){
 				// childHeads, kind of funny))
-				let ChildHeads = parent.querySelectorAll('.dd-head-js');
+				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
 				$(ChildHeads).click(function (){
 					let clickedHead = this;
 

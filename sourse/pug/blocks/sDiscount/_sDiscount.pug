@@ -43,5 +43,5 @@ mixin sDiscountChecks()
 mixin sDiscountRadio(txt)
 	+e.d-col.col-sm-auto
 		+e.LABEL.r-label
-			input(type="radio" name="sDiscount" value=txt class="invisible")
+			input(type="radio" name="sDiscount" value=txt class="invisible")&attributes(attributes)
 			span.r-btn=txt

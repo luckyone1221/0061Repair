@@ -24,6 +24,8 @@
 		border-bottom: 1px solid $gray-300!important;
 	}
 	&__caption-col{
+		position: relative;
+		overflow: hidden;
 		cursor: pointer;
 		--caption-border: 1px solid #{$gray-500};
 		//border-bottom: var(--caption-border);

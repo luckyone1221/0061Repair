@@ -5,19 +5,19 @@ mixin sData(data)
 			+b.section-title
 				h2 Цены, сроки и фото выполненных проектов:
 				p Мы гарантируем что, заказывая дизайн проект в компании СК «АРТ-ДЕКОР» наши Заказчики получат бонусом бесплатные консультации технических специалистов. Также мы гарантируем, что выполненные проекты не содержат нарушений правил перепланировки и при необходимости мы согласуем наш проект в надлежащих инстанциях.
-			.tabs
-				.tabs__caption
-					+e.caption-row.row.justify-content-center
-						+sDataCaptionItem('планировка')
-						+sDataCaptionItem('полный проект', 'active')
-						+sDataCaptionItem('VR-дизайн')
-				.tabs__wrap
-					.tabs__content.active
-						+sDataSlider()
-					.tabs__content
-						+sDataSlider()
-					.tabs__content
-						+sDataSlider()
+			//- .tabs
+			//- 	.tabs__caption
+			//- 		+e.caption-row.row.justify-content-center
+			//- 			+sDataCaptionItem('планировка')
+			//- 			+sDataCaptionItem('полный проект', 'active')
+			//- 			+sDataCaptionItem('VR-дизайн')
+			//- 	.tabs__wrap
+			//- 		.tabs__content.active
+			//- 			+sDataSlider()
+			//- 		.tabs__content
+			//- 			+sDataSlider()
+			//- 		.tabs__content
+			+sDataSlider()
 	// end sData
 
 mixin sDataCaptionItem(txt,addClasses='')

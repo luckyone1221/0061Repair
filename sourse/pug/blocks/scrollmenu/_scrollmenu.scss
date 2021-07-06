@@ -66,6 +66,7 @@
 		display: block;
 		@include mt();
 		color: $white;
+		cursor: pointer;
 		&:hover{
 			color: $primary;
 		}
