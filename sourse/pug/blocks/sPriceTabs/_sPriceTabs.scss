@@ -104,7 +104,12 @@
 		z-index: 1;
 	}
 	&__aside-bg{
-		background-color: $primary;
+		@include media-breakpoint-up(sm){
+
+			background-color: $primary;
+			display: block;
+		}
+		display: none;
 		position: absolute;
 		z-index: -1;
 		top: 0;
@@ -134,6 +139,13 @@
 	}
 	&__chars-item{
 		padding-bottom: rem(12);
+			@include media-breakpoint-down(sm) {
+				display: block;
+				@include roww(2px);
+				> * {
+					display: inline;
+				}
+			}
 		&:last-child{
 			padding-bottom: 0;
 		}
@@ -146,8 +158,16 @@
 	}
 	&__a-btn{
 		@extend .btn;
-		@extend .btn-white;
-
+		// @extend .btn-white;
+		@include media-breakpoint-up(sm) {
+				border: 1px solid #fff;
+				background-color: #fff;
+		}
+		@include media-breakpoint-down(sm) {
+			background-color: $primary;
+			border-color: $primary;
+			color: #fff;
+		}
 		font-size: rem(23);
 		font-weight: 700;
 		text-transform: uppercase;

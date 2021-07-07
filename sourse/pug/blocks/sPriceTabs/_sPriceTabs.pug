@@ -14,9 +14,18 @@ mixin sPriceTabs(data)
 							+sPriceTabsCationItem(4, 'Демонтаж стяжки')
 							+sPriceTabsCationItem(5, 'Демонтаж сантехкабины')
 							+sPriceTabsCationItem(6, 'Вымоз мусора')
-						+e.big-img-cont.d-none.d-lg-block
-							+e.big-img
-								img(loading="lazy" src="img/@2x/sPrice-Tabs-big.jpg" alt="")
+						.cTabs-content-group-js
+							mixin t()
+								.cTabs-content-js&attributes(attributes)
+									+e.big-img-cont
+										+e.big-img
+											img(loading="lazy" src="img/@2x/sPrice-Tabs-big.jpg" alt="")
+							+t().active
+							+t()
+							+t()
+							+t()
+							+t()
+							+t()
 					.col-lg-5
 						+e.aside.cTabs-content-group-js
 							+sPriceTabsAsideContent('Подготовка к ремонту', 'active')
@@ -38,8 +47,9 @@ mixin sPriceTabsAsideContent(title, addClasses='')
 			+charsItem('Полный демонтаж', 'от 1000 руб/м2 по полу')
 			+charsItem('Демонтаж офисов', 'от 200 руб/м2 по полу')
 			+charsItem('Демонтаж нежилых помещений', 'от 400 руб/м2 по полу')
-		+e.a-btn(data-modal="request") Оставить заявку на демонтаж
-		+e.connect-txt Мы свяжемся с Вами в течение 5 минут
+		.text-sm-start.text-center
+			+e.a-btn(data-modal="request") Оставить заявку на демонтаж
+			+e.connect-txt Мы свяжемся с Вами в течение 5 минут
 
 mixin charsItem(key, val)
 	+e.chars-item.row
@@ -47,7 +57,7 @@ mixin charsItem(key, val)
 		+e.val-col.col-sm-6=val
 
 mixin sPriceTabsCationItem(imgNum, txt, addClasses='')
-	+e.caption-col.col-sm-6.col-md-4.cTabs-btn-js(class=addClasses)
+	+e.caption-col.col-6.col-md-4.cTabs-btn-js(class=addClasses)
 		+e.icon
 			img.img-svg-js(loading="lazy" src=`img/svg/sPriceTabs-icon-${imgNum}.svg` alt="")
 			//+icon(`sPriceTabs-icon-${imgNum}`)

@@ -9,6 +9,8 @@ mixin sCalc(data)
 							| Стоимость электромонтажа
 							br
 							| "под ключ":
+						+e.img.d-sm-none
+							img(loading="lazy" src="img/@2x/sCalc-img.png" alt="")
 					+e.price-sm Стоимость: от 1200 руб./м2
 					+e.calc-row.row
 						.col-lg-auto

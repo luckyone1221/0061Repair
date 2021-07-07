@@ -23,7 +23,7 @@ mixin sProjects(data)
 								+sProjectsProject(i)
 						.text-center
 							+e.btn(href="#")
-								| Показать все услуги
+								| Показать все проекты
 								span +
 					.tabs__content
 					.tabs__content
@@ -59,7 +59,7 @@ mixin sProjectsDoneItem(key, val)
 
 
 mixin sProjectsGaleryItem(imgNum, galeryId)
-	.col-4.col-sm-3.col-md-6.col-lg-4
+	.col-6.col-sm-3.col-md-6.col-lg-4
 		+e.img-link(href=`img/@2x/sProjects-${imgNum}.jpg` data-fancybox=`sProjectsGalery${galeryId}`)
 			img(loading="lazy" src=`img/@2x/sProjects-${imgNum}.jpg` alt="")
 

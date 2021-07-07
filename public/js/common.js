@@ -550,6 +550,16 @@ function eventHandler() {
 			});
 		});
 	}); //end luckyone js
+
+	let sProjectsSlider22 = new Swiper('.sSteps__slider--js', {
+		slidesPerView: 'auto',
+		slideToClickedSlide: false,
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		//slideToClickedSlide: true,
+		freeModeMomentum: true
+	});
 }
 
 ;

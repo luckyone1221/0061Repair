@@ -22,7 +22,7 @@ mixin sInstall(data)
 									.col-sm-6.col-lg-12
 										+e.baner
 											img(loading="lazy" src="img/@2x/sInstall-baner.jpg" alt='')
-									.col-sm-6.col-lg-12
+									.col-sm-6.col-lg-12.d-none.d-sm-block
 										+e.box--black
 											+e.b-row.row
 												+e.b-txt-col.col
@@ -66,6 +66,28 @@ mixin sInstall(data)
 											+sInstallDcItem('Фиксация кабеля в штробе')
 											+sInstallDcItem('Укладка кабеля в гофру')
 											+sInstallDcItem('Уборка строительного мусора')
+									.d-sm-none 
+										+e.box--black
+											+e.b-row.row
+												+e.b-txt-col.col
+													b Недостаточно точек?
+													p
+														| Добавим без
+														br
+														| изменения стоимости!
+												.col-auto
+													+e.b-icon
+														img.img-svg-js(loading="lazy" src="img/svg/sInstall-list.svg" alt="")
+										+e.box--orange
+											+e.b-row.row
+												+e.b-txt-col.col
+													p
+														| Гарантия 5 лет
+														br
+														| на работы и материалы!
+												.col-auto
+													+e.b-icon
+														img(loading="lazy" src="img/svg/sInstall-shield.svg" alt="")
 									.col-md-6
 										+e.result-table
 											+e.rt-row--head.row
@@ -98,6 +120,6 @@ mixin sInstallDcItem(key,val)
 			+e.dc-val.col-auto=val
 
 mixin sInstallTabsBtn(txt, addClasses)
-	.col-sm-auto
+	.col-auto
 		+e.tabs-btn.tabs__btn(class=addClasses)
 			span=txt

@@ -25,7 +25,7 @@ mixin sCalculator(data)
 							+e.c-title.text-center Выберите общую площадь помещения:
 							+e.circle-cont
 								.round-slider-js
-						+e.b-cont
+						+e.b-cont.d-none.d-sm-block
 							+e.black-box
 								+e.b-man.d-none.d-sm-flex
 									img(loading="lazy" src="img/@2x/sCalculator-man.png" alt="")
@@ -62,7 +62,23 @@ mixin sCalculator(data)
 									+sCalculatorOrangeBox({
 										boxId: 3,
 									})
-
+					+e.b-cont.d-sm-none.p-0
+							+e.black-box
+								+e.b-man
+									img(loading="lazy" src="img/@2x/sCalculator-man.png" alt="")
+								+e.b-row.row.align-items-center.gy-2
+									.col-sm-auto
+										+e.b-big Акция!
+									.col-sm
+										+e.b-txt
+											| Закажи ремонт из калькулятора
+											br
+											| и
+											|
+											span.text-primary
+												| получи скидку
+												|
+											b.text-primary до 20%
 mixin sCalculatorOrangeBox(data)
 	+b.orange-box
 		+e.result-row.row.align-items-center.gy-3

@@ -33,7 +33,7 @@ mixin sBathTabConetnt(fancyId)
 	+e.content
 		+e.c-row.row
 			.col-sm-auto
-				+e.scheme-img
+				+e.scheme-img.text-sm-start.text-center
 					img(loading="lazy" src="img/@2x/sBath-sceme.png" alt="")
 			.col-sm
 				+e.sub-row.row
@@ -49,7 +49,8 @@ mixin sBathTabConetnt(fancyId)
 						+sBathGalery()
 		+sBathGalery('mb-4 d-lg-none')
 		+e.slider-wrap.sBath-slider-box-js
-			+arrow()
+			.d-none.d-sm-block
+				+arrow()
 			.swiper-container.sBath-slider-js
 				.swiper-wrapper
 					+sBathSlide(1,fancyId)

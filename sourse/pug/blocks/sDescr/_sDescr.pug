@@ -15,10 +15,14 @@ mixin sDescr(data)
 
 mixin sDescrSlide(imgNum)
 	.swiper-slide
+		.d-md-none 
+			+e.thin Ремонт квартиры
+			+e.bold ЖК Достояние
 		+e.row.row
-			.col-md.text-center.text-md-start
-				+e.thin Ремонт квартиры
-				+e.bold ЖК Достояние
+			.col-md
+				.d-none.d-md-block
+					+e.thin Ремонт квартиры
+					+e.bold ЖК Достояние
 				+e.sub-row.row
 					+sDescrIconItem({
 						imgNum: 1,
@@ -42,7 +46,7 @@ mixin sDescrSlide(imgNum)
 					img(loading="lazy" src=`img/@2x/sAny-${imgNum}.jpg` alt="")
 
 mixin sDescrIconItem(data)
-	.col
+	.col-sm.col-6.text-start
 		+e.item
 			+e.icon
 				img.img-svg-js(loading="lazy" src=`img/svg/sDescr-${data.imgNum}.svg` alt="")

@@ -19,7 +19,12 @@
 		}
 	}
 	&__head{
-		&:not(.disabled) {
+			@include media-breakpoint-down(sm) {
+				background-color: #fff;
+				margin-left: -15px;
+				margin-right: -15px;
+			}
+ 		&:not(.disabled) {
 			cursor: pointer;
 		}
 		display: flex;

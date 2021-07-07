@@ -18,7 +18,7 @@ mixin sServices(data)
 mixin sServicesItem(imgNum, title)
 	+e.col.col-sm-6.col-md-4.col-lg-3
 		+e.item(href="#")
-			+e.title.text-center.text-xl-start=title
+			+e.title=title
 			+e.img
 				img(loading="lazy" src=`img/@2x/sServices-${imgNum}.png` alt="")
 			+e.btn-cont

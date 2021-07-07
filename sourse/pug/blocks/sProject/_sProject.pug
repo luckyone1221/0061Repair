@@ -20,7 +20,8 @@ mixin sProject(data)
 							+sProjectContent(3)
 					+e.sl-title ПРИМЕРЫ ПРОЕКТОВ:
 						+e.slider-wrap.sProject-sliderBox-js
-							+arrow()
+							.d-none.d-sm-block
+								+arrow()
 							.swiper-container.sProject-slider-js
 								.swiper-wrapper
 									+sProjectSlide(1, 1)
@@ -62,5 +63,5 @@ mixin sProjectIconItem(imgNum, boldTxt, txt)
 			span=txt
 
 mixin sProjectCaptionItem(txt,addClasses='')
-	.col-md-auto
+	.col-auto
 		+e.tabs-btn.tabs__btn(class=addClasses)=txt

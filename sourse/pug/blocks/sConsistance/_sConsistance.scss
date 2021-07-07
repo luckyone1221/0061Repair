@@ -1,5 +1,22 @@
 // start .sConsistance
 .sConsistance {
+
+			.section-title {
+				@include media-breakpoint-down(sm) {
+					text-align: center;
+
+					h2 {
+						font-size: 35px;
+					}
+
+					// 	// padding-left: 10px;
+					// 	// padding-right: 10px;
+					// 	margin-left: auto;
+					// 	margin-right: auto;
+					// 	// max-width: 220px;
+					// }
+				}
+			}
 	&__container{
 		@include media-breakpoint-up(lg){
 			max-width: 1040px!important;
@@ -20,12 +37,18 @@
 	&__item{
 		display: flex;
 		align-items: center;
+			@include media-breakpoint-down(sm){
+				font-size: 14px;
+			}
 	}
 	&__icon{
 		flex-shrink: 0;
 		width: rem(50);
 		height: rem(50);
 		margin-right: rem(15);
+			@include media-breakpoint-down(sm){
+				width: 34px;
+			}
 
 		display: flex;
 		align-items: center;

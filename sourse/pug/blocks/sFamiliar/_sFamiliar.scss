@@ -1,6 +1,21 @@
 // start .sFamiliar
 .sFamiliar {
 
+			.section-title {
+				@include media-breakpoint-down(sm) {
+					text-align: center;
+
+					h2 {
+						font-size: 35px;
+					}
+					// 	// padding-left: 10px;
+					// 	// padding-right: 10px;
+					// 	margin-left: auto;
+					// 	margin-right: auto;
+					// 	// max-width: 220px;
+					// }
+				}
+			}
 	.section-title{
 		h2{
 
@@ -29,11 +44,15 @@
 	}
 	&__sliders-cont{
 		position: relative;
+		@include media-breakpoint-down(sm){
+			display: flex;
+			flex-direction: column-reverse;
+		}
 	}
 	&__slider-wrap{
-		margin-bottom: rem(10);
+		margin-top: rem(10);
 		@include media-breakpoint-up(sm){
-			margin-bottom: 0;
+			margin-top: 0;
 		}
 		.swiper-container{}
 		.swiper-wrapper{}

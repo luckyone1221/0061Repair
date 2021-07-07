@@ -120,6 +120,12 @@ body {
 }
 
 .section-title {
+	h2{
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+				font-size: 35px;
+			}
+	}
 	padding-bottom: var(--sTPB);
 
 	& > *:last-child{
@@ -822,4 +828,50 @@ iframe {
 			}
 		}
 	}
+}
+
+@include media-breakpoint-down(sm) {
+.--advantages{
+			.ui-card{
+				&:nth-child(1) {
+				order: 1;
+				}
+				&:nth-child(3) {
+					order: -1;
+				}
+			}
+		}
+		.--price{
+			.ui-price-table__header{
+				box-shadow: 0 0 84px rgba(1, 23, 11, 0.22);
+				border-radius: 5px;
+				background-color: $gray-300;
+				opacity: 0.75;
+				background-color: #fff;
+				padding-top: rem(20);
+				padding-bottom: rem(20);
+				position: relative;
+				&::after{
+					content: '';
+					background-image: url(../img/svg/chevron-down.svg);
+					position: absolute;
+					right: 10px;
+					width: rem(21 * 2);
+					height: rem(12 * 2);
+					background-size: 100% 100%;
+					background-repeat: no-repeat;
+					@include mt;
+
+				}
+			}
+
+			.--current {
+				.ui-price-table__header{
+					&::after{
+						transform: rotateX(180deg);
+					}
+				}
+			}
+		}
+
 }

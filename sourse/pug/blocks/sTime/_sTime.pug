@@ -5,7 +5,8 @@ mixin sTime(data)
 			+b.section-title--pushed
 				h2 Сроки ремонта под ключ:
 			+e.top-row.row.justify-content-lg-end.align-items-center
-				+e.amount-col.col-auto Выберите количество комнат в квартире:
+				+e.amount-col.col-sm-auto Выберите количество комнат #[span.d-none.d-sm-block в квартире:]
+				+e.amount-col.col.d-sm-none в квартире:
 				.col-auto
 					+customSelect('rooms-amount', ['1-комнатная','2-комнатная','3-комнатная'])
 			+e.table
@@ -27,17 +28,16 @@ mixin sTime(data)
 mixin sTimeTr(val1,val2,val3)
 	+e.tr-cont
 		+e.tr.row.align-items-center
-			.col-sm-6.col-md
-				+e.key.d-md-none Виды ремонта:
+			.col-sm-6.col
 				+e.val=val1
-			.col-sm-6.col-md
-				+e.key.d-md-none Сроки выполнения работ:
+			.col-sm-6.col-md.d-none.d-md-block 
 				+e.val=val2
-			.col-sm-6.col-md
-				+e.key.d-md-none Цена за квадратный метр по полу:
+			.col-sm-6.col-md.d-none.d-md-block 
 				+e.val--price=val3
 			+e.btn-col.col-auto
-				+e.btn(data-modal="request") Консультация
+				+e.btn(data-modal="request") 
+					span.d-none.d-sm-block Консультация
+					span.d-sm-none(data-modal="request")= val3
 
 mixin customSelect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], placeholder='', keyClass='custom-select-js')
 	+b.custom-select

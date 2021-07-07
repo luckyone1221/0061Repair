@@ -1,6 +1,21 @@
 // start .sDismantling
 .sDismantling {
+.section-title {
+	@include media-breakpoint-down(sm) {
+		text-align: center;
 
+		h2 {
+			font-size: 35px;
+		}
+
+		// 	// padding-left: 10px;
+		// 	// padding-right: 10px;
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// 	// max-width: 220px;
+		// }
+	}
+}
 	.section-title{
 		h2{
 			margin-bottom: rem(35);

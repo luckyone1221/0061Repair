@@ -3,8 +3,11 @@
 	background-color: $primary;
 	margin-bottom: rem(50);
 	padding-bottom: 0;
+	@include media-breakpoint-up(lg){
 	margin-top: -30px;
 	--sPT: #{rem(75)};
+	}
+	--sPT: #{rem(45)};
 
 	&__container{
 		@include media-breakpoint-up(lg){
@@ -104,7 +107,8 @@
 		width: rem(30);
 		height: rem(30);
 
-		margin: 0 auto rem(10) auto;
+		// margin: 0 auto rem(10) auto;
+		margin-bottom: 10px;
 		@include media-breakpoint-up(md){
 			margin: 0 rem(10) 0 0;
 		}
@@ -141,7 +145,11 @@
 		@extend .btn;
 		@extend .btn-outline-dark;
 		padding: rem(20) rem(30);
-		min-width: rem(315);
+			@include media-breakpoint-up(sm) {
+
+				min-width: rem(315);
+			}
+			min-width: 100%;
 		box-shadow: none!important;
 
 		color: $body-color!important;

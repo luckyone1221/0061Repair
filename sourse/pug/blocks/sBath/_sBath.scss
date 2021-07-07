@@ -1,6 +1,13 @@
 // start .sBath
 .sBath {
 	.section-title{
+		@include media-breakpoint-down(sm){
+			text-align: center;
+			p{
+				font-size: 35px;
+				font-weight: 900;
+			}
+		}
 		h2{
 			margin-bottom: 0;
 		}

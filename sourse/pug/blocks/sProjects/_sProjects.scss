@@ -6,6 +6,12 @@
 
 		}
 	}
+	@include media-breakpoint-down(md){
+		h2{
+
+			text-align: center;
+		}
+	}
 	&__slider-wrap{
 		border-radius: rem(5);
 		background-color: $gray-300;

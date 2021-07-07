@@ -7,6 +7,8 @@ mixin sList(data)
 			+e.row.row.align-items-center
 				+e.txt-col.col-sm
 					+e.bold Осуществляем ремонт и делаем отделку в коттеджах и на дачах без предоплаты, с гарантией по договору
+					+e.img.d-sm-none.text-center.mb-3
+						img(loading="lazy" src="img/svg/sList-img.svg" alt="")
 					ul
 						li Выезд технолога-замерщика по всей области
 						li Соответствие работ ГОСТам, СП, СНиПам
@@ -14,7 +16,7 @@ mixin sList(data)
 						li WhatsApp чат с бригадой и видеоконтроль
 						li Уборка и вывоз строительного мусора
 						li Гарантия на все работы по договору 2 года
-				.col-sm-auto
+				.col-sm-auto.d-none.d-sm-block
 					+e.img
 						img(loading="lazy" src="img/svg/sList-img.svg" alt="")
 	// end sList
