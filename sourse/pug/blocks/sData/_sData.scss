@@ -130,6 +130,9 @@
 		@extend .galery-link;
 		padding-top: (189/234) * 100%;
 		margin-bottom: rem(20);
+		&::after{
+			background-image: none;
+		}
 	}
 	&__content{
 		padding: 0 rem(20);
