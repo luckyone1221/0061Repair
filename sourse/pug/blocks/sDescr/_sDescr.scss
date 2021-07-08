@@ -98,15 +98,15 @@
 	}
 	&__item{
 		@include media-breakpoint-up(md){
-			display: flex;
 		}
+		display: flex;
 		color: $white;
 	}
 	&__icon{
 		flex-shrink: 0;
 		width: rem(30);
 		height: rem(30);
-
+		margin-right: 10px;
 		// margin: 0 auto rem(10) auto;
 		margin-bottom: 10px;
 		@include media-breakpoint-up(md){
@@ -165,7 +165,6 @@
 	}
 	&__img{
 		max-width: 100%;
-
 		margin: 0 auto;
 		width: rem(386);
 		@include media-breakpoint-up(md){
@@ -179,9 +178,10 @@
 		@include media-breakpoint-up(xl){
 			margin-left: rem(100);
 		}
-
+		
 		img{
 			width: 100%;
+			border-radius: 5px;
 			height: auto;
 		}
 	}

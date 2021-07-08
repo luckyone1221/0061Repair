@@ -1,5 +1,20 @@
 // start .sDiscont
 .sDiscont {
+	@include media-breakpoint-down(sm) {
+		.container{
+			padding: 0;
+		}
+		.tabs__caption{
+			padding-bottom: rem(30);
+		}
+		.sDiscont__tabs-btn{
+			font-weight: bold;
+			padding: .825rem 1.25rem;
+		}
+		.sDiscont__icon{
+			display: none;
+		}
+	}
 	@include media-breakpoint-up(xl){
 		--sTPB: #{rem(46)};
 	}
@@ -142,7 +157,7 @@
 	}
 	//
 	&__row{
-		--bs-gutter-y: #{rem(45)};
+		--bs-gutter-y: #{rem(55)};
 
 		--bs-gutter-x: #{rem(20)};
 		@include media-breakpoint-up(lg){
@@ -168,8 +183,14 @@
 
 		border-radius: rem(5);
 		border: 2px solid $body-color;
+			@include media-breakpoint-down(sm){
+				border-radius: 0;
+				border-left: none;
+				border-right: none;
+			}
 		&:hover{
-			border: 2px solid $primary;
+			border-color: primary;
+			--btn-display: block;
 		}
 
 	}

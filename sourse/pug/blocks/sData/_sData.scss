@@ -1,5 +1,10 @@
 // start .sData
 .sData {
+	@include media-breakpoint-down(sm) {
+		.swiper-slide{
+			width: 100%;
+		}
+	}
 
 				.section-title {
 					@include media-breakpoint-down(sm) {
@@ -91,15 +96,29 @@
 	//
 	&__slider-wrap{
 		position: relative;
-
+		@include media-breakpoint-down(sm){
+			.swiper-button-hand-prev{
+				left: -10px !important;
+			}
+			.swiper-button-hand-next{
+				right: -10px !important;
+			}
+			.swiper-button-hand{
+				border: none;
+				top: 162px;
+				padding: 0;
+				// width: auto;
+			}
 		.swiper-container{
+				width: 234px;
+			}
 			@include media-breakpoint-down(md){
-				overflow: visible!important;
+				// overflow: visible!important;
 			}
 		}
 		.swiper-wrapper{}
 		.swiper-slide{
-			width: 270px;
+			// width: 270px;
 			@include media-breakpoint-up(md){
 				width: calc(100%/3 - (10px * 2/3));
 			}

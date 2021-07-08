@@ -6,7 +6,13 @@
 		}
 	}
 	&__caption-row{
+		@include media-breakpoint-down(sm) {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+		@include media-breakpoint-up(md){
 		display: inline-flex;
+		}
 		--bs-gutter-x: 0;
 
 		overflow: hidden;

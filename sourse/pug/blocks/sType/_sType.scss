@@ -52,6 +52,12 @@
 		&:hover{
 			--txt-o: 1;
 			--bg-o: 0.13;
+
+		}
+		&:not(:hover) {
+			.__web-inspector-hide-shortcut__{
+				pointer-events: none
+			}
 		}
 	}
 	&__bg{

@@ -154,6 +154,9 @@
 	display: flex!important;
 	align-items: center;
 
+	input:checked~.c-txt{
+		color: #fff;
+	}
 	input:checked + .c-circle{
 		&:after{
 			opacity: 1;

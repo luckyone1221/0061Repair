@@ -31,6 +31,11 @@ mixin sForm()
 										+e.INPUT.input.form-control(type="date")
 							.col-sm-6
 								+e.send-btn(type="submit") Отправить
+							.col-12.d-sm-none
+								+e.policy
+									| Нажимая "Задать вопрос", Вы даете согласие на обработку
+									|
+									a(href="#") персональных данных
 					.col-lg-auto
 						+e.white-box
 							+e.w-title С кем Вы бы хотели пообщаться после отправки заявки?
@@ -38,7 +43,7 @@ mixin sForm()
 								+customRadio('Инженер-сметчик')(checked)
 								+customRadio('Дизайнер интерьеров')
 								+customRadio('Менеджер проектов')
-				+e.policy
+				+e.policy.d-none.d-sm-block
 					| Нажимая "Задать вопрос", Вы даете согласие на обработку
 					|
 					a(href="#") персональных данных
@@ -47,5 +52,5 @@ mixin sForm()
 mixin customRadio(value, name='name')
 	+b.LABEL.custom-radio
 		input(type="radio" name=name value=value class="invisible")&attributes(attributes)
-		.c-circle
-		.c-txt=value
+		span.c-circle
+		span.c-txt=value

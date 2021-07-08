@@ -127,7 +127,13 @@
 			color: $primary;
 			font-weight: 700;
 			text-transform: uppercase;
-
+			@include media-breakpoint-down(sm){
+				border-left: none;
+				border-right: none;
+				border-radius: 0;
+				margin-left: -15px;
+				margin-right: -15px;
+			}
 			display: flex;
 			align-items: center;
 			justify-content: center;
