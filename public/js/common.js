@@ -560,6 +560,7 @@ function eventHandler() {
 		//slideToClickedSlide: true,
 		freeModeMomentum: true
 	});
+	svg4everybody();
 }
 
 ;

@@ -585,6 +585,9 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
+
+	svg4everybody();
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

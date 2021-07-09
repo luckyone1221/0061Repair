@@ -67,6 +67,7 @@
     "readmore-js": "^2.2.1",
     "round-slider": "^1.6.1",
     "select2": "^4.1.0-rc.0",
+    "svg4everybody": "^1.0.0",
     "swiper": "^6.6.2"
   }
 }
