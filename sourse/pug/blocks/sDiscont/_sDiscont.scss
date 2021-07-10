@@ -160,6 +160,8 @@
 		--bs-gutter-y: #{rem(55)};
 
 		--bs-gutter-x: #{rem(20)};
+		flex-wrap: nowrap;
+		width: calc(100% + var(--bs-gutter-x)) !important;
 		@include media-breakpoint-up(lg){
 			--bs-gutter-x: #{rem(30)};
 		}
@@ -167,9 +169,18 @@
 	&__content{
 		display: block!important;
 		opacity: 1!important;
+			@include media-breakpoint-up(md) {
+				max-width: (100% / 3);
+			}
 
 		&.active{
 			--btn-display: block;
+		}
+	}
+
+	.swiper-wrapper{
+		@include media-breakpoint-up(md){
+			transform: none !important;
 		}
 	}
 	&__item{
@@ -234,6 +245,8 @@
 	}
 	.tabs__caption {
 		overflow-x: auto;
+		z-index: 4;
+		position: relative;
 		scrollbar-color: var(--bs-primary) transparent;
 
 		scrollbar-width: thin;

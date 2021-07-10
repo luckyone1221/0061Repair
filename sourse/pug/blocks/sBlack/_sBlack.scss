@@ -34,8 +34,8 @@
 	//
 	//	counter-reset: list 0;
 	//}
+	counter-reset: list 0;
 	&__slider-wrap{
-		counter-reset: list 0;
 		.swiper-container{
 			overflow: visible!important;
 		}
