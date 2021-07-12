@@ -912,9 +912,20 @@ iframe {
 
 
 @media (max-width: 576px) {
-
+	.ui-home-hero .swiper-slide:not(.swiper-slide-active) {
+		opacity: 0 !important;
+	}
+.ui-home-hero__pagination,
+.ui-home-hero__pagination.swiper-pagination-bullets {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.ui-home-hero__arrow{
+	margin-top: 90px;
+}
 	.ui-home-hero__column.--media {
-		max-width: 100%;
+		max-width: 100% !important;
 	}
 }
 

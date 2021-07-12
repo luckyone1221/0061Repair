@@ -13,7 +13,7 @@ mixin sBlack(data)
 					+sBlackTabsContentMob(1)(class="active")
 					-for(var i = 2; i < 17; i++)
 						+sBlackTabsContentMob(i)
-				+e.caption-col.col-sm-auto.tabs__caption 
+				+e.caption-col.col-auto.tabs__caption 
 					+sBlackTabsBtn('Монтаж перегородок', 'active')
 					+sBlackTabsBtn('Штукатурка стен')
 					+sBlackTabsBtn('Электромонтажные работы')
@@ -54,7 +54,7 @@ mixin sBlackTabsContentMob(number)
 
 mixin sBlackTabsBtn(txt, addClasses)
 	//- .swiper-slide
-	div
-		+e.tabs-btn.tabs__btn(class=addClasses)
-			span=txt
-			+icon('arrow-right')
+	//- div
+	+e.tabs-btn.tabs__btn(class=addClasses)
+		span=txt
+		+icon('arrow-right')

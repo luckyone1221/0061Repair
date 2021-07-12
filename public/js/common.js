@@ -70,22 +70,35 @@ const JSCCommon = {
 	// /modalCall
 	// tabs  .
 	tabscostume(tab) {
-		let tabs = {
-			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
-			BtnParent: [].slice.call(document.querySelectorAll(".".concat(tab, "__caption"))),
-			Content: [].slice.call(document.querySelectorAll(".".concat(tab, "__content")))
-		};
-		tabs.Btn.forEach((element, index) => {
-			element.addEventListener('click', () => {
-				if (!element.classList.contains('active')) {
-					//turn off old
-					let oldActiveEl = element.closest(".".concat(tab)).querySelector(".".concat(tab, "__btn.active"));
-					let oldActiveContent = tabs.Content[index].closest(".".concat(tab)).querySelector(".".concat(tab, "__content.active"));
-					oldActiveEl.classList.remove('active');
-					oldActiveContent.classList.remove('active'); //turn on new(cklicked el)
-
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
+		// let tabs = {
+		// 	Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
+		// 	BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
+		// 	Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
+		// }
+		// tabs.Btn.forEach((element, index) => {
+		// 	element.addEventListener('click', () => {
+		// 		if (!element.classList.contains('active')) {
+		// 			//turn off old
+		// 			let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
+		// 			let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelectorAll(`.${tab}__content.active`);
+		// 			oldActiveEl.classList.remove('active');
+		// 			oldActiveContent.forEach(function(el){
+		// 				el.classList.add('active');
+		// 			})
+		// 			//turn on new(cklicked el)
+		// 			element.classList.add('active');
+		// 			tabs.Content.forEach(function(el){
+		// 				el[index].classList.add('active');
+		// 			})
+		// 		}
+		// 	})
+		// })
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			let th = $(this);
+			th.addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active');
+			th.closest('.' + tab).find('.' + tab + '__content').each(function () {
+				if ($(this).index() == th.index()) {
+					$(this).fadeIn().addClass('active');
 				}
 			});
 		});
@@ -564,8 +577,8 @@ function eventHandler() {
 		slidesPerView: 'auto'
 	});
 	$(".sDiscont__tabs-btn").click(function () {
-		let i = $(this).parents('.sDiscont__col').index();
-		console.log(i);
+		let i = $(this).parents('.sDiscont__col').index(); // console.log(i);
+
 		sDiscontSlider22.slideTo(i);
 	}); // svg4everybody();
 }

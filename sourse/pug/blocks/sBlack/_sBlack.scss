@@ -14,6 +14,7 @@
 		}
 	}
 	&__caption-col{
+		width: rem(360);
 		@include media-breakpoint-up(md){
 			width: rem(360);
 		}
