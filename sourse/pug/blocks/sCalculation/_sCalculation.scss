@@ -22,8 +22,11 @@
 			margin-bottom: rem(37);
 		}
 		&__row{
+			// --bs-gutter-y: #{rem(10)};
+			@include media-breakpoint-up(sm){
+			}
 			--bs-gutter-y: #{rem(20)};
-
+			
 			--bs-gutter-x: #{rem(20)};
 			@include media-breakpoint-up(xl){
 				--bs-gutter-x: #{rem(36)};
@@ -35,11 +38,12 @@
 			text-transform: uppercase;
 		}
 	}
-
-
+	
+	
 	&__row{
+		// @include media-breakpoint-up(sm){
 		--bs-gutter-x: #{rem(30)};
-		--bs-gutter-y: #{rem(48)};
+		--bs-gutter-y: #{rem(20)};
 		@include media-breakpoint-up(xl){
 			--bs-gutter-x: #{rem(48)};
 		}

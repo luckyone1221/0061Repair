@@ -65,6 +65,7 @@
 			color: $primary;
 			--box-bef-o: 1;
 			--det-o: 1;
+			z-index: 5;
 		}
 	}
 	&__box{
@@ -101,6 +102,7 @@
 			--det-bg:#{$body-color};
 			--det-col:#{$white};
 			--det-bb:#{$white};
+			color: #fff;
 		}
 
 		position: absolute;

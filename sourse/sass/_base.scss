@@ -862,7 +862,7 @@ iframe {
 	}
 .--advantages{
 	.ui-card__header{
-		font-size: 50px;
+		font-size: 40px;
 		text-transform: none;
 	}
 			.ui-card{
@@ -971,4 +971,28 @@ iframe {
 
 .replaced-svg{
 	width: 100% 	!important;
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background: $primary !important; 
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{
+
+	background-color: #000000;
+}
+.mCSB_draggerContainer{
+
+}
+.mCSB_draggerContainer{
+	&::before{
+		content: '';
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		// @include a-cent;
+		height: 100%;
+		width: 2px;
+		background-color: #000000;
+	}
 }

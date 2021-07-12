@@ -77,14 +77,14 @@ mixin sWalls(data)
 
 mixin sWallsItem(data)
 	+e.col.col-lg-3(class=data.bootClasses)
-		+e.item(href="#")
+		+e.item
 			+e.box
 				+e.img
 					//img(loading="lazy" src=`img/@2x/sWalls-${data.imgNum}.jpg` alt="")
 					img(loading="lazy" src=`img/@2x/sData-1.png` alt="")
-				+e.detail
+				+e.detail(href="#")
 					span Подробнее
 				//-+e.order-cont.text-center
 					.ui-button.sDiscont__btn(class="--corner --corner-top --black ui-price-download__button")
 						span Подробнее
-			+e.name=data.name
+			+e.name(hef="#")=data.name

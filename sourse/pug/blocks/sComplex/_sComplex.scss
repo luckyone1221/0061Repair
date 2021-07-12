@@ -170,9 +170,10 @@
 		margin-bottom: rem(30);
 	}
 	&__in-list{
-		@extend .custom-scroll2;
-		overflow-y: auto;
-		height: rem(148);
+		// @extend .custom-scroll2;
+		// overflow-y: auto;
+		// height: rem(148)
+		height: 150px;
 		margin-bottom: rem(35);
 
 		li{

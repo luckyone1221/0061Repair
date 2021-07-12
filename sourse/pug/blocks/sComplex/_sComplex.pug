@@ -63,12 +63,13 @@ mixin sComplexItem(data)
 				+e.title=data.title
 				+e.info=data.info
 				+e.included ЧТО ВКЛЮЧЕНО?
-				+e.UL.in-list
-					block
-					li item for scroll
-					li item for scroll
-					li item for scroll
-					li item for scroll
+				+e.in-list.content-js
+					ul
+						block
+						li item for scroll
+						li item for scroll
+						li item for scroll
+						li item for scroll
 				+e.time-txt=data.time
 				+e.price=data.priceWork
 				+e.price=data.priceMaterial

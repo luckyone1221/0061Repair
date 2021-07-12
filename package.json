@@ -64,6 +64,7 @@
     "jquery": "^3.5.1",
     "jquery-datetimepicker": "^2.5.21",
     "loading-attribute-polyfill": "^1.5.4",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "readmore-js": "^2.2.1",
     "round-slider": "^1.6.1",
     "select2": "^4.1.0-rc.0",

@@ -75,32 +75,47 @@ const JSCCommon = {
 		// 	BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
 		// 	Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
 		// }
-		// tabs.Btn.forEach((element, index) => {
+		// tabs.Btn.forEach((element, index, array) => {
 		// 	element.addEventListener('click', () => {
 		// 		if (!element.classList.contains('active')) {
+		// 			// console.log(array);
+		// 			console.log(tabs.Btn.length);
+		// 			// var size = Object.keys(this).length;
+		// 			// console.log(size);
 		// 			//turn off old
 		// 			let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
 		// 			let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelectorAll(`.${tab}__content.active`);
 		// 			oldActiveEl.classList.remove('active');
 		// 			oldActiveContent.forEach(function(el){
-		// 				el.classList.add('active');
+		// 				el.classList.remove('active');
 		// 			})
 		// 			//turn on new(cklicked el)
+		// 			let iN = index;
 		// 			element.classList.add('active');
-		// 			tabs.Content.forEach(function(el){
-		// 				el[index].classList.add('active');
-		// 			})
+		// 			document.querySelectorAll(`.${tab}__content:nth-child(${iN + 1})`).forEach((el) =>  el.classList.add('active')  )
 		// 		}
 		// 	})
 		// })
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			let th = $(this);
-			th.addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active');
-			th.closest('.' + tab).find('.' + tab + '__content').each(function () {
-				if ($(this).index() == th.index()) {
-					$(this).fadeIn().addClass('active');
-				}
-			});
+
+			if (th.siblings().length > 0) {
+				th.addClass('active').siblings().removeClass('active');
+				th.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active');
+				th.closest('.' + tab).find('.' + tab + '__content').each(function () {
+					if ($(this).index() == th.index()) {
+						$(this).fadeIn().addClass('active');
+					}
+				});
+			} else {
+				th.addClass('active').parent().siblings().find('.' + tab + '__btn').removeClass('active');
+				th.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active');
+				th.closest('.' + tab).find('.' + tab + '__content').each(function () {
+					if ($(this).index() == th.parent().index()) {
+						$(this).fadeIn().addClass('active');
+					}
+				});
+			}
 		});
 	},
 
@@ -581,6 +596,12 @@ function eventHandler() {
 
 		sDiscontSlider22.slideTo(i);
 	}); // svg4everybody();
+
+	$(window).on("load", function () {
+		$(".content-js").mCustomScrollbar({
+			theme: 'rounded-dark'
+		});
+	});
 }
 
 ;
