@@ -6,10 +6,15 @@
 		}
 	}
 	&__row{
-		--bs-gutter-y: #{rem(30)};
+		@include media-breakpoint-up(md){
 
+			--bs-gutter-y: #{rem(20)};
+		}
+		
+		--bs-gutter-y: #{rem(10)};
 		--bs-gutter-x: #{rem(30)};
 		@include media-breakpoint-up(xl){
+			--bs-gutter-y: #{rem(30)};
 			--bs-gutter-x: #{rem(42)};
 		}
 

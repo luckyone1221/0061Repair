@@ -1,5 +1,8 @@
 // start .sTechnology
 .sTechnology {
+	@include media-breakpoint-down(sm) {
+		--sPB:0;
+	}
 		.section-title {
 			@include media-breakpoint-down(sm) {
 				text-align: center;

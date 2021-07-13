@@ -1,6 +1,9 @@
 // start .sCalculation
 .sCalculation {
 
+	@include media-breakpoint-down(sm) {
+		--sPB:0;
+	}
 			.section-title {
 				@include media-breakpoint-down(sm) {
 					text-align: center;
@@ -24,8 +27,9 @@
 		&__row{
 			// --bs-gutter-y: #{rem(10)};
 			@include media-breakpoint-up(sm){
+				--bs-gutter-y: #{rem(20)};
 			}
-			--bs-gutter-y: #{rem(20)};
+			--bs-gutter-y: #{rem(10)};
 			
 			--bs-gutter-x: #{rem(20)};
 			@include media-breakpoint-up(xl){
@@ -43,7 +47,12 @@
 	&__row{
 		// @include media-breakpoint-up(sm){
 		--bs-gutter-x: #{rem(30)};
-		--bs-gutter-y: #{rem(20)};
+			@include media-breakpoint-up(sm) {
+				--bs-gutter-y: #{rem(20)};
+			}
+
+			--bs-gutter-y: #{rem(10)};
+		// --bs-gutter-y: #{rem(20)};
 		@include media-breakpoint-up(xl){
 			--bs-gutter-x: #{rem(48)};
 		}

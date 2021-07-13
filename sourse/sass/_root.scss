@@ -4,10 +4,12 @@
 	--fontSizeBase: 14px;
 	@include media-breakpoint-up(md){
 		--fontSizeBase: #{$em-base};
+		--sPT: #{rem(45)};
+		--sPB: #{rem(50)};
 	}
 
-	--sPT: #{rem(45)};
-	--sPB: #{rem(50)};
+	--sPT: #{rem(35)};
+	--sPB: #{rem(30)};
 	--sTPB: #{rem(40)};
 
 	--swiperArrowSize: #{rem(68)};
