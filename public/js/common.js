@@ -611,3 +611,12 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+$(".btn-project-more-js").click(function () {
+	let th = $(this);
+	let tabContentCardsHidden = th.parents('.ui-block__tabs-section ').find(".ui-block__tabs-list .g-cell-1-3:hidden");
+
+	if (tabContentCardsHidden) {
+		tabContentCardsHidden.fadeIn();
+	}
+});
