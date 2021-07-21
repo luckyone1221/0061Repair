@@ -3885,8 +3885,9 @@ mixin sUsefullOld()
 
 mixin sMapOld()
 	.ui-page__map
-		.ui-map.js-map(data-lat='55.7031299' data-lng='37.565282' data-zoom='15' data-pin='local/assets/images/pinmap.png' style='position: relative; overflow: hidden;')
-
+		.ui-map.js-map(data-lat='55.7031299' data-lng='37.565282' data-zoom='15' data-pin='local/assets/images/pinmap.png')
+		script(defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA3_b3EhD0YXwMp0q8DObsfavvJTbJ4M7I&language=ru&libraries=places,geometry')
+	script(src='local/build-stable/main.bundle.js?_=1.4')
 
 mixin footerOld()
 	.ui-page__footer
