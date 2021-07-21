@@ -623,8 +623,14 @@ function eventHandler() {
 		//slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+	let sDiscontSlideNav = new Swiper('.sDiscont__slider-nav--js', {
+		slidesPerView: 'auto',
+	});
 	let sDiscontSlider22 = new Swiper('.sDiscont__slider--js', {
 		slidesPerView: 'auto',
+		thumbs: {
+			swiper: sDiscontSlideNav
+		}
 	});
 
 	$(".sDiscont__tabs-btn").click(function(){

@@ -111,7 +111,10 @@
 	}
 	&__row{
 		--bs-gutter-x: #{rem(48)};
+		@include media-breakpoint-up(md){
 		--bs-gutter-y: #{rem(48)};
+	}
+	--bs-gutter-y: #{rem(15)};
 		@include media-breakpoint-up(xl){
 			--bs-gutter-x: #{rem(48)};
 			--bs-gutter-y: #{rem(48)};

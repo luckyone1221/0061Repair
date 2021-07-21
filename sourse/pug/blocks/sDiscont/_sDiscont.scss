@@ -44,6 +44,9 @@
 	&__caption-row{
 		// --bs-gutter-y: 5px;
 		@include roww(0);
+		@include media-breakpoint-up(md){
+		transform: none;
+		}
 	}
 	&__col{
 		position: relative;
@@ -79,8 +82,32 @@
 			height: 1px;
 		}
 	}
+
+
+	&__slider-nav{
+		overflow: visible !important;
+		z-index: 10;
+	}
+
+	.tabs__caption{
+		z-index: 20;
+		position: relative;
+	}
 	//
-	&__tabs-btn{
+		@include media-breakpoint-down(md){
+
+			.swiper-slide-thumb-active &__tabs-btn{
+				background-color: $primary;
+				color: $white;
+				--img1-o: 1;
+				--img2-o: 0;
+				
+				&:after {
+					opacity: 1;
+				}
+			}
+	}
+	&__tabs-btn{ 
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -96,7 +123,8 @@
 		@include media-breakpoint-up(lg){
 			min-width: rem(270);
 		}
-
+		
+		@include media-breakpoint-up(md){
 		&.active{
 			background-color: $primary;
 			color: $white;
@@ -105,6 +133,7 @@
 			&:after{
 				opacity: 1;
 			}
+		}
 		}
 
 		position: relative;
@@ -239,58 +268,62 @@
 	}
 	&__col{
 		min-width: 200px;
+		width: auto !important;
+		@include media-breakpoint-up(md) {
+		width: 33.33333% !important; 
+		}
 			@include media-breakpoint-down(md) {
 				background-color: $gray-300;
 			}
 	}
-	.tabs__caption {
-		overflow-x: auto;
-		z-index: 4;
-		position: relative;
-		scrollbar-color: var(--bs-primary) transparent;
+	// .tabs__caption {
+	// 	overflow-x: auto;
+	// 	z-index: 4;
+	// 	position: relative;
+	// 	scrollbar-color: var(--bs-primary) transparent;
 
-		scrollbar-width: thin;
-		scrollbar-color: var(--bs-primary) transparent;
+	// 	scrollbar-width: thin;
+	// 	scrollbar-color: var(--bs-primary) transparent;
 
-		&::-webkit-scrollbar-thumb {
-			opacity: 1;
-			display: block
-		}
+	// 	&::-webkit-scrollbar-thumb {
+	// 		opacity: 1;
+	// 		display: block
+	// 	}
 
-		&::-webkit-scrollbar-track {
-			border: none;
-			background-color: transparent;
-			border-color: transparent;
-			-webkit-box-shadow: none;
-		}
+	// 	&::-webkit-scrollbar-track {
+	// 		border: none;
+	// 		background-color: transparent;
+	// 		border-color: transparent;
+	// 		-webkit-box-shadow: none;
+	// 	}
 
-		&::-webkit-scrollbar {
-			width: 0;
-			height: 0;
-			background-color: transparent;
-			// border-right: 2px;
-			/* or add it to the track */
-			border-color: transparent;
-			opacity: 0;
-			-webkit-box-shadow: none;
+	// 	&::-webkit-scrollbar {
+	// 		width: 0;
+	// 		height: 0;
+	// 		background-color: transparent;
+	// 		// border-right: 2px;
+	// 		/* or add it to the track */
+	// 		border-color: transparent;
+	// 		opacity: 0;
+	// 		-webkit-box-shadow: none;
 
-		}
+	// 	}
 
-		/* Add a thumb */
-		&::-webkit-scrollbar-thumb {
-			background: var(--bs-primary);
-			border-radius: 2.5px;
-		}
+	// 	/* Add a thumb */
+	// 	&::-webkit-scrollbar-thumb {
+	// 		background: var(--bs-primary);
+	// 		border-radius: 2.5px;
+	// 	}
 
-		&::-webkit-scrollbar-button {
-			display: none
-		}
-		// margin-bottom: 0;
-		// margin-bottom: 1.5625rem;
+	// 	&::-webkit-scrollbar-button {
+	// 		display: none
+	// 	}
+	// 	// margin-bottom: 0;
+	// 	// margin-bottom: 1.5625rem;
 		.sDiscont__caption-row {
 			
 			flex-wrap: nowrap;
 			background-color: $gray-300;
 		}
-	}
+	// }
 } // end.sDiscont

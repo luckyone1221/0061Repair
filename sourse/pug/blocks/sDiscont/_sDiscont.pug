@@ -6,10 +6,11 @@ mixin sDiscont(data)
 				h2 Выберите свою скидку:
 			.tabs
 				.tabs__caption
-					+e.caption-row.row
-						+sDiscountTabsBtn(1, 'Скидка новоселам', 'col-md-4 col-auto ' ,'active')
-						+sDiscountTabsBtn(2, 'Скидка семьям', 'col-md-4 col-auto  text-center ')
-						+sDiscountTabsBtn(3, 'Скидка пенсионерам', 'col-md-4 col-auto  text-end')
+					+e.slider-nav--js.swiper-container
+						+e.caption-row.swiper-wrapper
+							+sDiscountTabsBtn(1, 'Скидка новоселам', 'swiper-slide col-md-4 col-auto ' ,'active')
+							+sDiscountTabsBtn(2, 'Скидка семьям', 'swiper-slide col-md-4 col-auto  text-center ')
+							+sDiscountTabsBtn(3, 'Скидка пенсионерам', 'swiper-slide  col-md-4 col-auto text-end')
 				+e.slider--js
 					.swiper-wrapper.tabs__wrap.sDiscont__row.row
 						+sDiscountPlate('АКЦИЯ ДЛЯ НОВОСЁЛОВ', '5%', 'active')
