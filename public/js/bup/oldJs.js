@@ -5637,125 +5637,125 @@
     }
 
     te(ne, "timestamp", (new Date).getTime()), te(ne, "file", "/local/assets/icons.svg?_=".concat(ne.timestamp)), te(ne, "revision", "");
-    var ue = function (e) {
-      !function (e, t) {
-        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
-        e.prototype = Object.create(t && t.prototype, {
-          constructor: {
-            value: e,
-            writable: !0,
-            configurable: !0
-          }
-        }), t && se(e, t)
-      }(r, e);
-      var t, n, i, o = ae(r);
-
-      function r() {
-        return oe(this, r), o.apply(this, arguments)
-      }
-
-      return t = r, i = [{
-        key: "init", value: function () {
-          var e = {
-            initialize: function () {
-              e.map = null, e.mapContainer = null, e.nodes = {
-                map: document.querySelectorAll(".js-map"),
-                mapToggle: document.querySelector(".js-map-toggle"),
-                mapClose: document.querySelector(".js-map-close")
-              }, e.nodes.map.length > 0 && e.nodes.map.forEach((function (t) {
-                e.mapInstance(t)
-              }))
-            }, getCoors: function (e, t) {
-              return new google.maps.LatLng(parseFloat(e), parseFloat(t))
-            }, fetchRequest: function (e, t) {
-              Loader.show(), Request(e, "", "GET", !1, "json", (function (e) {
-                setTimeout((function () {
-                  Loader.hide(), e && "" !== e && t && t(e)
-                }), 100)
-              }))
-            }, mapInstance: function (t) {
-              if (e.mapContainer = t, e.markers = [], null !== e.mapContainer) {
-                e.geocodeAddress();
-                var n = e.getCoors(e.mapContainer.dataset.lat, e.mapContainer.dataset.lng),
-                  i = parseFloat(e.mapContainer.dataset.zoom) || 16;
-                void 0 !== e.mapContainer.dataset.jsonUrl ? (e.fetchRequest(e.mapContainer.dataset.jsonUrl, (function (t) {
-                  null === e.map && (e.map = e.initMap(n, i));
-                  var o = [];
-                  Object.keys(t).forEach((function (n, i) {
-                    o.push(e.createMarker({
-                      position: e.getCoors(t[n].lat, t[n].lng),
-                      id: t[n].id || "",
-                      title: t[n].title || "",
-                      description: t[n].text || ""
-                    }))
-                  })), e.markers = o, e.setCenter()
-                })), google.maps.event.addDomListener(window, "resize", (function () {
-                  e.setCenter(), google.maps.event.trigger(e.map, "resize")
-                }))) : (null === e.map && (e.map = e.initMap(n, i)), e.createMarker({
-                  pin: e.mapContainer.dataset.pin,
-                  position: n
-                }))
-              }
-            }, initMap: function (t, n) {
-              var i = {
-                center: t,
-                zoom: n,
-                maxZoom: 20,
-                minZoom: 0,
-                mapTypeId: "roadmap",
-                mapTypeControl: !1,
-                scrollwheel: !1,
-                zoomControl: !0,
-                gestureHandling: "greedy",
-                streetViewControl: !1,
-                fullscreenControl: !1,
-                styles: []
-              };
-              return new google.maps.Map(e.mapContainer, i)
-            }, geocodeAddress: function () {
-              var t = new google.maps.Geocoder, n = e.mapContainer.dataset.geocode || null;
-              null !== n && t.geocode({address: n}, (function (e, t) {
-                if ("OK" != t) throw new TypeError("Geocode was not successful for the following reason: " + t);
-                console.warn(e[0].geometry.location.lat(), e[0].geometry.location.lng())
-              }))
-            }, createMarker: function (t) {
-              var n = {
-                map: e.map,
-                position: t.position,
-                optimized: !1,
-                icon: {url: t.pin || "", scaledSize: new google.maps.Size(50, 64)},
-                zIndex: 1
-              }, i = new google.maps.Marker(n);
-              if (new google.maps.InfoWindow({map: e.map}), e.mapContainer.dataset.address) {
-                var o = "https://google.com/maps/dir//" + encodeURIComponent(e.mapContainer.dataset.address);
-                google.maps.event.addListener(i, "click", (function () {
-                  window.open(o, "_blank")
-                }))
-              }
-              return google.maps.event.addListener(i, "mouseover", function (e) {
-                return function () {
-                  e.setOptions({zIndex: 2})
-                }
-              }(i)), google.maps.event.addListener(i, "mouseout", (function () {
-                i.setOptions({zIndex: 1})
-              })), i
-            }, setCenter: function () {
-              var t = new google.maps.LatLngBounds;
-              e.markers.forEach((function (e) {
-                t.extend(e.position)
-              })), e.map.fitBounds(t, {top: 60})
-            }, setHandlers: function () {
-              e.nodes.mapToggle.addEventListener("click", (function () {
-                e.showMap()
-              })), e.nodes.mapClose.addEventListener("click", (function () {
-                e.closeMap()
-              }))
-            }
-          };
-          e.initialize()
-        }
-      }], (n = null) && re(t.prototype, n), i && re(t, i), r
-    }(x);
+    // var ue = function (e) {
+    //   !function (e, t) {
+    //     if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
+    //     e.prototype = Object.create(t && t.prototype, {
+    //       constructor: {
+    //         value: e,
+    //         writable: !0,
+    //         configurable: !0
+    //       }
+    //     }), t && se(e, t)
+    //   }(r, e);
+    //   var t, n, i, o = ae(r);
+    //
+    //   function r() {
+    //     return oe(this, r), o.apply(this, arguments)
+    //   }
+    //
+    //   return t = r, i = [{
+    //     key: "init", value: function () {
+    //       var e = {
+    //         initialize: function () {
+    //           e.map = null, e.mapContainer = null, e.nodes = {
+    //             map: document.querySelectorAll(".js-map"),
+    //             mapToggle: document.querySelector(".js-map-toggle"),
+    //             mapClose: document.querySelector(".js-map-close")
+    //           }, e.nodes.map.length > 0 && e.nodes.map.forEach((function (t) {
+    //             e.mapInstance(t)
+    //           }))
+    //         }, getCoors: function (e, t) {
+    //           return new google.maps.LatLng(parseFloat(e), parseFloat(t))
+    //         }, fetchRequest: function (e, t) {
+    //           Loader.show(), Request(e, "", "GET", !1, "json", (function (e) {
+    //             setTimeout((function () {
+    //               Loader.hide(), e && "" !== e && t && t(e)
+    //             }), 100)
+    //           }))
+    //         }, mapInstance: function (t) {
+    //           if (e.mapContainer = t, e.markers = [], null !== e.mapContainer) {
+    //             e.geocodeAddress();
+    //             var n = e.getCoors(e.mapContainer.dataset.lat, e.mapContainer.dataset.lng),
+    //               i = parseFloat(e.mapContainer.dataset.zoom) || 16;
+    //             void 0 !== e.mapContainer.dataset.jsonUrl ? (e.fetchRequest(e.mapContainer.dataset.jsonUrl, (function (t) {
+    //               null === e.map && (e.map = e.initMap(n, i));
+    //               var o = [];
+    //               Object.keys(t).forEach((function (n, i) {
+    //                 o.push(e.createMarker({
+    //                   position: e.getCoors(t[n].lat, t[n].lng),
+    //                   id: t[n].id || "",
+    //                   title: t[n].title || "",
+    //                   description: t[n].text || ""
+    //                 }))
+    //               })), e.markers = o, e.setCenter()
+    //             })), google.maps.event.addDomListener(window, "resize", (function () {
+    //               e.setCenter(), google.maps.event.trigger(e.map, "resize")
+    //             }))) : (null === e.map && (e.map = e.initMap(n, i)), e.createMarker({
+    //               pin: e.mapContainer.dataset.pin,
+    //               position: n
+    //             }))
+    //           }
+    //         }, initMap: function (t, n) {
+    //           var i = {
+    //             center: t,
+    //             zoom: n,
+    //             maxZoom: 20,
+    //             minZoom: 0,
+    //             mapTypeId: "roadmap",
+    //             mapTypeControl: !1,
+    //             scrollwheel: !1,
+    //             zoomControl: !0,
+    //             gestureHandling: "greedy",
+    //             streetViewControl: !1,
+    //             fullscreenControl: !1,
+    //             styles: []
+    //           };
+    //           return new google.maps.Map(e.mapContainer, i)
+    //         }, geocodeAddress: function () {
+    //           var t = new google.maps.Geocoder, n = e.mapContainer.dataset.geocode || null;
+    //           null !== n && t.geocode({address: n}, (function (e, t) {
+    //             if ("OK" != t) throw new TypeError("Geocode was not successful for the following reason: " + t);
+    //             console.warn(e[0].geometry.location.lat(), e[0].geometry.location.lng())
+    //           }))
+    //         }, createMarker: function (t) {
+    //           var n = {
+    //             map: e.map,
+    //             position: t.position,
+    //             optimized: !1,
+    //             icon: {url: t.pin || "", scaledSize: new google.maps.Size(50, 64)},
+    //             zIndex: 1
+    //           }, i = new google.maps.Marker(n);
+    //           if (new google.maps.InfoWindow({map: e.map}), e.mapContainer.dataset.address) {
+    //             var o = "https://google.com/maps/dir//" + encodeURIComponent(e.mapContainer.dataset.address);
+    //             google.maps.event.addListener(i, "click", (function () {
+    //               window.open(o, "_blank")
+    //             }))
+    //           }
+    //           return google.maps.event.addListener(i, "mouseover", function (e) {
+    //             return function () {
+    //               e.setOptions({zIndex: 2})
+    //             }
+    //           }(i)), google.maps.event.addListener(i, "mouseout", (function () {
+    //             i.setOptions({zIndex: 1})
+    //           })), i
+    //         }, setCenter: function () {
+    //           var t = new google.maps.LatLngBounds;
+    //           e.markers.forEach((function (e) {
+    //             t.extend(e.position)
+    //           })), e.map.fitBounds(t, {top: 60})
+    //         }, setHandlers: function () {
+    //           e.nodes.mapToggle.addEventListener("click", (function () {
+    //             e.showMap()
+    //           })), e.nodes.mapClose.addEventListener("click", (function () {
+    //             e.closeMap()
+    //           }))
+    //         }
+    //       };
+    //       e.initialize()
+    //     }
+    //   }], (n = null) && re(t.prototype, n), i && re(t, i), r
+    // }(x);
     n(155);
 
     function de(e, t) {
@@ -5888,16 +5888,11 @@
           try{
             var t = this;
             e.getAttribute("discount-range").split(",").forEach((function (e) {
-              try {
-                e = e.split(":"), t.rangeBuffer[e[0]] = parseInt(e[1])
-              }
-              catch{
-                console.log('get 5');
-              }
+              e = e.split(":"), t.rangeBuffer[e[0]] = parseInt(e[1])
             }))
           }
           catch{
-            console.log('get 1');
+            console.log('got u bitch');
           }
         }
       }, {
@@ -5910,7 +5905,7 @@
             })), document.querySelector(this.nodes.result).innerHTML = "".concat(this.discount, " %")
           }
           catch{
-            console.log('get 2');
+            console.log('');
           }
         }
       }], (i = null) && fe(n.prototype, i), o && fe(n, o), e
@@ -8203,23 +8198,22 @@
         key: "render", value: function () {
           try{
             var e = new (o());
-            document.documentElement.classList.add(m() ? "--mobile" : "--desktop", "--browser-" + e.getBrowser().name.toLowerCase().replace(/\s/gi, "-"), "--os-" + e.getOS().name.toLowerCase().replace(/\s/gi, "-")), F.init(), $.init(), ue.init(), V.init(), J.init(), pe.init(), he.init();
+            document.documentElement.classList.add(m() ? "--mobile" : "--desktop", "--browser-" + e.getBrowser().name.toLowerCase().replace(/\s/gi, "-"), "--os-" + e.getOS().name.toLowerCase().replace(/\s/gi, "-")), F.init(), $.init(), V.init(), J.init(), pe.init(), he.init();
             var t = document.querySelector(".ui-page__main");
             window.addEventListener("scroll", (function () {
-              try {
-                var e, n = t.offsetTop || 0;
+              var e, n = t.offsetTop || 0;
+              try{
                 e = document.documentElement, (window.pageYOffset || e.scrollTop) - (e.clientTop || 0) > n ? document.querySelector(".ui-header__scrolled").classList.add("--visible") : document.querySelector(".ui-header__scrolled").classList.remove("--visible")
               }
-              catch {
-                console.log('get 4');
+              catch{
+
               }
             })), Ot.init(), At.init(), Lt.init()
           }
-          catch{
-            console.log('get 3');
+          catch {
+            console.log('la');
           }
         }
-
       }]) && jt(t.prototype, n), i && jt(t, i), e
     }();
     window.Components = Dt, window.addEventListener("load", (function () {

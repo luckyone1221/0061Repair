@@ -125,15 +125,7 @@
       swiperInstance &&
       !swiperInstance.destroyed
     ) {
-      updateSwiper({
-        swiper: swiperInstance,
-        passedParams,
-        changedParams,
-        nextEl,
-        prevEl,
-        scrollbarEl,
-        paginationEl,
-      });
+      updateSwiper(swiperInstance, passedParams, changedParams);
     }
     breakpointChanged = false;
     oldPassedParams = passedParams;

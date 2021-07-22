@@ -68,10 +68,6 @@ var Swiper = {
       type: Boolean,
       default: undefined
     },
-    focusableElements: {
-      type: Boolean,
-      default: undefined
-    },
     width: {
       type: Number,
       default: undefined
@@ -587,16 +583,7 @@ var Swiper = {
       oldPassedParamsRef.value = newPassedParams;
 
       if ((changedParams.length || breakpointChanged.value) && swiperRef.value && !swiperRef.value.destroyed) {
-        (0, _updateSwiper.updateSwiper)({
-          swiper: swiperRef.value,
-          slides: slidesRef.value,
-          passedParams: newPassedParams,
-          changedParams: changedParams,
-          nextEl: nextElRef.value,
-          prevEl: prevElRef.value,
-          scrollbarEl: scrollbarElRef.value,
-          paginationEl: paginationElRef.value
-        });
+        (0, _updateSwiper.updateSwiper)(swiperRef.value, slidesRef.value, newPassedParams, changedParams);
       }
 
       breakpointChanged.value = false;
